@@ -1,0 +1,11 @@
+{
+	"MarketApiKey": "v71TObVoqy2o2kI25tk4A70d3hXGHhu",
+	"SecondaryMarketApiKey" : "k2D4fbRaJBL2H30C1EF4hAN9v31gqmF",
+	"Username": "dnjhjqacc2",
+	"Password": "Dvadcat8",
+	"SharedSecret": "MSNG8My/FxL0e3FSRwOCx5iLS8k=",
+	"IdentitySecret": "6dswG9WyCZ2iwnHCChIKMZv81M0=",
+	"DmarketPublicKey": "",
+	"DmarketPrivateKey": "",
+	"MinimumPercent" : "1.35"
+}

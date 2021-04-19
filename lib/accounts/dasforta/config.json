@@ -1,0 +1,11 @@
+{
+	"MarketApiKey": "mEdPeq7VctBQP0llyVX3q229MHH9Sbo",
+	"SecondaryMarketApiKey" : "0Lr65Ufx4T5A8Z345sqkDoiwLCaPYhS",
+	"Username": "dasforta",
+	"Password": "V9u5rI7x",
+	"SharedSecret": "lGOyXNRU+iE5dA/9V9eEHL97bYM=",
+	"IdentitySecret": "cFpQZZ1+jpnhn5ANbdOKuFLAkqs=",
+	"DmarketPublicKey": "",
+	"DmarketPrivateKey": "",
+	"MinimumPercent" : "1.35"
+}

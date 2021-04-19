@@ -1,0 +1,11 @@
+{
+	"MarketApiKey": "ATT3D35e2E098HCKMTvRX7p1mD1cUFz",
+	"SecondaryMarketApiKey" : "Gpil76d5MnIF243Klyl8PaSV5T894xT",
+	"Username": "steambotcsgo1551",
+	"Password": "Dvadcat1",
+	"SharedSecret": "WLdnCbMFoeC5mBcYX6T/76Y3A8A=",
+	"IdentitySecret": "T0YIOEbIWEG9F2JufGZesyXNmas=",
+	"DmarketPublicKey": "",
+	"DmarketPrivateKey": "",
+	"MinimumPercent" : "1.35"
+}
