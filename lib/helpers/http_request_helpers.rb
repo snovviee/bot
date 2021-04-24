@@ -5,6 +5,9 @@ module Bot
 
     def get(url, headers = nil)
       HTTParty.get(url, headers: headers)
+    rescue Net::OpenTimeout, Net::ReadTimeout, SocketError,
+           OpenSSL::SSL::SSLError
+      retry
     end
 
     def post(url, body, headers)

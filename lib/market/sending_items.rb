@@ -17,7 +17,6 @@ module Bot
     end
 
     def start_sending
-      # byebug
       how_many_account_costs
       current_balance
       try_to_send_offers
@@ -74,7 +73,11 @@ module Bot
         try_to_send_offers
       end
 
-      try_to_send_offer_from(response) if response['success'] == true
+      if response['success'] == true
+        try_to_send_offer_from(response)
+
+        current_balance
+      end
 
       sleep(30)
 

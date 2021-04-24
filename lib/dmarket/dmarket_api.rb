@@ -15,8 +15,10 @@ module Bot
                   :request_body, :title
 
     def initialize
+      super
+
       @public_key = config['DmarketPublicKey']
-      @private_key = config['DmarketPrivateKey']
+      @private_key = config['DmarketPrivateKey'].gsub @public_key, ''
     end
 
     def start_buying

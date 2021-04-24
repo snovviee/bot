@@ -55,11 +55,11 @@ module Bot
     end
 
     def buy_percent
-      @buy_percent ||= config['buy_percent'].to_f
+      @buy_percent ||= config['BuyPercent'].to_f
     end
 
     def dmarket_user_inventory
-      set_dmarket_params '/marketplace-api/v1/user-inventory?BasicFilters.InMarket=true&Presentation=InventoryPresentationDetailed'
+      set_dmarket_params '/marketplace-api/v1/user-inventory?GameID=a8db&BasicFilters.InMarket=true&Presentation=InventoryPresentationDetailed'
 
       get(dmarket_url, headers)
     end
@@ -73,17 +73,17 @@ module Bot
       post(dmarket_url, body, headers)
     end
 
+    def process_withdrawing
+      dmarket_user_inventory['Items'].each do |item|
+        @id = item['AssetID']
+        @class_id = item['ClassID']
+        @request_id = item['Attributes'].detect { |el| el['Name'] == 'linkId' }['Value']
+        dmarket_withdraw_items
+      end
+    end
+
     def body_for_withdraw
-      {
-        "assets": [
-          {
-            "classId": "519977179:4141779296",
-            "gameId": "a8db",
-            "id": ""
-          }
-        ],
-        "requestId": ""
-      }.to_json
+      { "assets": [ { "classId": "#{@class_id}", "gameId": "a8db", "id": "#{@id}" } ], "requestId": "#{@request_id}" }.to_json
     end
 
     def dmarket_buy(offers)

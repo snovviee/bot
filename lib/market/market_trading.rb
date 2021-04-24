@@ -14,8 +14,8 @@ module Bot
     end
 
     def start_trading
-      remove_items_from_trade if ENV['REMOVING'] == true
-      money_send if ENV['MONEY'] == true
+      remove_items_from_trade if ENV['REMOVING'] == "true"
+      money_send if ENV['MONEY'] == "true"
 
       p "Items left: #{market_items.count}"
 

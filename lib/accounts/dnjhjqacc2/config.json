@@ -5,7 +5,8 @@
 	"Password": "Dvadcat8",
 	"SharedSecret": "MSNG8My/FxL0e3FSRwOCx5iLS8k=",
 	"IdentitySecret": "6dswG9WyCZ2iwnHCChIKMZv81M0=",
-	"DmarketPublicKey": "",
-	"DmarketPrivateKey": "",
-	"MinimumPercent" : "1.35"
+	"DmarketPublicKey": "434950f1414d8b7c4ee6ab0a556c613081abcf4c61d8fd6e3e75046609a972b3",
+	"DmarketPrivateKey": "28064b65675c4af260e5fc657dfe653651e0c3b44f9e677348af0d0503fce19c434950f1414d8b7c4ee6ab0a556c613081abcf4c61d8fd6e3e75046609a972b3",
+	"MinimumPercent" : "1.35",
+	"BuyPercent" : "1.7"
 }

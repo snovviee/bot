@@ -54,7 +54,7 @@ module Bot
     def current_balance
       p "Current balance: #{get(request('api/GetMoney'))['money'] * 0.01} RUB"
     rescue NoMethodError
-      byebug
+      retry
     end
 
     def p2p_request
