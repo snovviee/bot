@@ -1,6 +1,8 @@
 module Bot
   module DmarketApiMethods
 
+    SEARCHING_API_KEY = '36aE1oXFB3hMDU30Q2PdZ5K7qjb1w12'
+
     private
 
     def get_dmarket_offers(avg)
@@ -59,7 +61,7 @@ module Bot
     end
 
     def dmarket_user_inventory
-      set_dmarket_params '/marketplace-api/v1/user-inventory?GameID=a8db&BasicFilters.InMarket=true&Presentation=InventoryPresentationDetailed'
+      set_dmarket_params "/marketplace-api/v1/user-inventory?GameID=a8db&BasicFilters.InMarket=true&Presentation=InventoryPresentationDetailed&Limit=500"
 
       get(dmarket_url, headers)
     end
@@ -73,12 +75,25 @@ module Bot
       post(dmarket_url, body, headers)
     end
 
+    def update_dmarket_inventory
+      url = '/marketplace-api/v1/user-inventory/sync'
+      body = { 'Type': 'Inventory', 'GameID': 'CSGO' }.to_json
+      method = 'POST'
+      set_dmarket_params(url, method: method, body: body)
+
+      post(dmarket_url, body, headers)
+    end
+
     def process_withdrawing
-      dmarket_user_inventory['Items'].each do |item|
+      update_dmarket_inventory
+      response = dmarket_user_inventory
+
+      response['Items'].each do |item|
         @id = item['AssetID']
         @class_id = item['ClassID']
         @request_id = item['Attributes'].detect { |el| el['Name'] == 'linkId' }['Value']
-        dmarket_withdraw_items
+        p dmarket_withdraw_items
+        sleep(8)
       end
     end
 
@@ -99,6 +114,71 @@ module Bot
       end
 
       p dmarket_balance
+    end
+
+    def aggregated_prices
+      url = "/price-aggregator/v1/aggregated-prices"
+      set_dmarket_params(url)
+      csgo_items = get(dmarket_url, headers)['AggregatedTitles'].select { |item| item['GameID'] == 'a8db' }
+
+      middle_items = csgo_items.select { |item| item['Offers']['BestPrice'].to_f > 2 && item['Offers']['BestPrice'].to_f <= 5 && item['MarketHashName'][/\A\'/].nil? }
+
+      low_items = csgo_items.select { |item| item['Offers']['BestPrice'].to_f <= 2 && item['MarketHashName'][/\A\'/].nil? }
+
+      high_items = csgo_items.select { |item| item['Offers']['BestPrice'].to_f > 5 && item['Offers']['BestPrice'].to_f <= 100 && item['MarketHashName'][/\A\'/].nil? }
+
+      super_items = csgo_items.select { |item| item['Offers']['BestPrice'].to_f > 100 && item['MarketHashName'][/\A\'/].nil? }
+
+      handle_items(low_items)
+      byebug
+    end
+
+    def handle_items(expensive_items)
+      profit = 0
+      cost = 0
+      index = 0
+
+      expensive_items.each do |item|
+        name = item['MarketHashName']
+        byebug if name == 'Cache Pin'
+        dm_price = item['Offers']['BestPrice'].to_f
+        if dm_price.zero?
+          puts "NOT FOUND #{name}"
+
+          next
+        end
+
+        market_price = current_market_price(name)
+        unless market_price
+          puts "ERROR #{name}"
+
+          next
+        end
+        diff = (market_price - dm_price).round(2)
+        next if diff < 0
+
+        puts "#{name}: #{dm_price} - #{market_price}, diff: #{diff}\n"
+        profit += diff
+        cost += dm_price
+        index += 1
+      end
+
+      byebug
+    end
+
+    def current_market_price(name)
+      value = get_list_items_info(name)['data'][name]['average'] / 73
+      value.round(2)
+    # rescue NoMethodError
+    #   retry
+    rescue
+      byebug
+    end
+
+    def get_list_items_info(name)
+      url = "https://market.csgo.com/api/v2/get-list-items-info?key="\
+            "#{SEARCHING_API_KEY}&list_hash_name[]=#{URI.encode(name)}"
+      get(url)
     end
 
     def dmarket_user_info

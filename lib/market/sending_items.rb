@@ -17,6 +17,7 @@ module Bot
     end
 
     def start_sending
+      # byebug
       how_many_account_costs
       current_balance
       try_to_send_offers

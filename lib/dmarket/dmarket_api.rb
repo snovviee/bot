@@ -9,8 +9,6 @@ module Bot
     include SignatureBuilder
     include RedefinedMarketApiMethods
 
-    SEARCHING_API_KEY = '36aE1oXFB3hMDU30Q2PdZ5K7qjb1w12'
-
     attr_accessor :public_key, :private_key, :request_url, :request_method,
                   :request_body, :title
 
@@ -22,6 +20,7 @@ module Bot
     end
 
     def start_buying
+      # aggregated_prices
       process_buy_items
     end
   end

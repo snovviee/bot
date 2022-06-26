@@ -4,6 +4,8 @@ module Bot
   module RedefinedMarketApiMethods
     include MarketApiMethods
 
+    SEARCHING_API_KEY = '36aE1oXFB3hMDU30Q2PdZ5K7qjb1w12'
+
     private
 
     def get_average_for(title)
@@ -18,6 +20,8 @@ module Bot
       return if prices.detect { |el| el > avg * 5 }
 
       avg
+    rescue NoMethodError
+      retry
     end
 
     def to_dollar(rub)

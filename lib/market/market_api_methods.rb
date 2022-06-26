@@ -6,10 +6,6 @@ module Bot
 
     private
 
-    def ping
-      get request('api/PingPong/direct')
-    end
-
     def update_inventory
       get request('api/UpdateInventory')
     end
@@ -17,6 +13,7 @@ module Bot
     def add_items_to_sale
       get_items('my-inventory').each { |item| add_to_sale(item['id']) }
     rescue NoMethodError
+      p 'NoMethodError'
       retry
     end
 
@@ -25,22 +22,26 @@ module Bot
         classid, instanceid = values[:classid], values[:instanceid]
 
         values[:best_offer] = get_best_offer(classid, instanceid)
-        next if values[:price] == values[:best_offer]
+        next if values[:price] == values[:best_offer] &&
+          values[:best_offer] <= values[:max]
 
         values[:price] = correct_price_with(values)
-        set_price_with values
+        set_price_with(values)
+        p "#{Time.now}, #{values[:price].round(2)}"
       end
     end
 
     def set_price_with(values)
       price = (values[:price] * 100).round
+      # byebug
       req = request("api/MassSetPrice/#{values[:classid]}_#{values[:instanceid]}/#{price}")
-      get req
+      # req = request("api/MassSetPrice/#{values[:name]}/#{price}")
+      get URI.encode(req), timeout: 10
     end
 
     def correct_price_with(values)
       max = values[:max]
-      return max if values[:best_offer].zero?
+      return max if values[:best_offer].zero? || max == values[:best_offer]
 
       price = values[:best_offer] - 0.01
       price = max unless (values[:min]..max).include?(price)
@@ -90,7 +91,7 @@ module Bot
     end
 
     def get_item_limits
-      items = market_items.uniq { |i| i['classid'] && i['market_hash_name'] }
+      items = market_items#.uniq { |i| i['classid'] && i['market_hash_name'] }
 
       items.each_with_object([]) do |market_item, limits|
         average = get_average_for market_item['market_hash_name']
@@ -99,7 +100,9 @@ module Bot
                     instanceid: market_item['instanceid'].to_i,
                     min: average * minimum_percent,
                     max: average * maximum_percent,
-                    price: 666666 }
+                    price: 666666,
+                    name: market_item['market_hash_name'],
+                    id: market_item['item_id'] }
       end
     rescue NoMethodError
       retry
@@ -118,7 +121,7 @@ module Bot
     end
 
     def get_items(items_type)
-      get(request("api/v2/#{items_type}"))['items']
+      get(request("api/v2/#{items_type}"), timeout: 10)['items']
     end
 
     def add_to_sale(item_id)

@@ -3,15 +3,15 @@ module Bot
 
     private
 
-    def get(url, headers = nil)
-      HTTParty.get(url, headers: headers)
+    def get(url, headers = nil, timeout: 10)
+      HTTParty.get(url, headers: headers, timeout: timeout)
     rescue Net::OpenTimeout, Net::ReadTimeout, SocketError,
-           OpenSSL::SSL::SSLError
+           OpenSSL::SSL::SSLError, Errno::EPIPE, Errno::ECONNRESET
       retry
     end
 
-    def post(url, body, headers)
-      HTTParty.post(url, body: body, headers: headers)
+    def post(url, body, headers, timeout = nil)
+      HTTParty.post(url, body: body, headers: headers, timeout: timeout)
     end
 
     def patch(url, body, headers)

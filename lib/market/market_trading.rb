@@ -13,29 +13,44 @@ module Bot
       @market_api_key = config['MarketApiKey']
     end
 
+    def ws_auth
+      get request('api/v2/get-ws-auth')
+    end
+
+    def ping
+      p (get request('api/PingPong/direct'))['ping']
+    end
+
     def start_trading
-      remove_items_from_trade if ENV['REMOVING'] == "true"
-      money_send if ENV['MONEY'] == "true"
+      loop do
+        remove_items_from_trade if ENV['REMOVING'] == "true"
+        if ENV['MONEY'] == "true"
+          money_send
+          p 'Balance was transfered'
+        end
 
-      p "Items left: #{market_items.count}"
-
-      ping
-      update_inventory
-      add_items_to_sale
-
-      item_limits = get_item_limits
-
-      300.times do
         ping
-        change_item_price_with item_limits
+        trade_check
+        update_inventory
+        p 'Inventory was updated'
+        add_items_to_sale
+        p 'Items was added'
+        tmp_limits = get_item_limits
+        p 'Limits was got'
+        300.times do
+          ping
+          change_item_price_with tmp_limits
+        end
       end
-
-      start_trading
-    rescue NoMethodError
-      retry
     end
 
     private
+
+    def trade_check
+      result = (get request('api/Test') )['status']['trade_check']
+      msg = result ? 'ALL IS GOOD, NO BAN' : 'WHOOOOOOPS, YOUR WAS BANNED'
+      puts msg
+    end
 
     def searching_api_key
       config['SecondaryMarketApiKey']

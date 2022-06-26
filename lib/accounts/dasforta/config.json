@@ -5,7 +5,8 @@
 	"Password": "V9u5rI7x",
 	"SharedSecret": "lGOyXNRU+iE5dA/9V9eEHL97bYM=",
 	"IdentitySecret": "cFpQZZ1+jpnhn5ANbdOKuFLAkqs=",
-	"DmarketPublicKey": "",
-	"DmarketPrivateKey": "",
-	"MinimumPercent" : "1.35"
+	"DmarketPublicKey": "18d431a3a6fe885a0693b06156fadab9bdb7c5fcf5b55e7040f53dc98cb99c2b",
+	"DmarketPrivateKey": "0035f5042694eb6308bf6b8c3d2a9d920b5da0d80bbc483a0af56baa96b436b518d431a3a6fe885a0693b06156fadab9bdb7c5fcf5b55e7040f53dc98cb99c2b",
+	"MinimumPercent" : "1",
+	"BuyPercent" : "1.7"
 }

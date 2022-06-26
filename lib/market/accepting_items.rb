@@ -10,7 +10,7 @@ module Bot
             next unless offer['message'].size == 36
 
             logged.accept_trade_offer(offer['tradeofferid'])
-            sleep(2)
+            sleep(1)
           end
         rescue
           sleep(10)
