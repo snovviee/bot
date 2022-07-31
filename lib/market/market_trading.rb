@@ -18,6 +18,8 @@ module Bot
     end
 
     def ping
+      # p "PING SUPER PUPER"
+      # byebug
       p (get request('api/PingPong/direct'))['ping']
     end
 
@@ -37,7 +39,7 @@ module Bot
         p 'Items was added'
         tmp_limits = get_item_limits
         p 'Limits was got'
-        300.times do
+        150.times do
           ping
           change_item_price_with tmp_limits
         end

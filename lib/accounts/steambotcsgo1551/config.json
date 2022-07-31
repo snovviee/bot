@@ -7,6 +7,6 @@
 	"IdentitySecret": "T0YIOEbIWEG9F2JufGZesyXNmas=",
 	"DmarketPublicKey": "a281d62a7925deb21bc461981be44ce4d88f246b37349eae633ab3a2af032742",
 	"DmarketPrivateKey": "756db8c789b14a7ef9654700379b1f39458381043241c12aca72a75c8b3f2e53a281d62a7925deb21bc461981be44ce4d88f246b37349eae633ab3a2af032742",
-	"MinimumPercent" : "1.2",
-	"BuyPercent" : "2.0"
+	"MinimumPercent" : "1.5",
+	"BuyPercent" : "1.85"
 }
