@@ -98,7 +98,8 @@ module Bot
     end
 
     def body_for_withdraw
-      { "assets": [ { "classId": "#{@class_id}", "gameId": "a8db", "id": "#{@id}" } ], "requestId": "#{@request_id}" }.to_json
+      { "assets": [ { "classId": "#{@class_id}", "gameId": "a8db", "id": "#{@id}" } ],
+      "requestId": "#{@request_id}" }.to_json
     end
 
     def dmarket_buy(offers)
