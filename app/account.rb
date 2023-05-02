@@ -1,9 +1,9 @@
 require 'market_api'
 require 'byebug'
 require 'active_support/core_ext/module/delegation'
-require_relative 'dmarket_account'
-require_relative 'steam_account'
-require_relative 'market_account'
+require_relative 'account/dmarket_account'
+require_relative 'account/steam_account'
+require_relative 'account/market_account'
 
 class Account
   def self.all
@@ -11,6 +11,8 @@ class Account
   end
 
   attr_reader :market_account, :dmarket_account, :steam_account
+
+  DOLLAR_TO_RUB = 81.0
 
   def initialize(market:, dmarket:, steam:)
     @dmarket_account = DmarketAccount.new(dmarket)
@@ -36,7 +38,7 @@ class Account
       market_data = market_response.body[:data]
 
       s_titles.each do |title|
-        market_price = (market_data[title.to_sym][:average] / 81.0).round(2)
+        market_price = (market_data[title.to_sym][:average] / DOLLAR_TO_RUB).round(2)
 
         Thread.new do
           dm_response = dmarket_account.title_offers(title: title)
