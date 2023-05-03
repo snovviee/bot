@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/steam-trade
-  revision: 6abfd0127b2e913a5fba424f7daf2ddc01b3b0cd
+  revision: d9dc3752f6af527ecced55da3a1c1848177167c6
   specs:
     steam-trade (0.3.2)
       mechanize (~> 2.7, >= 2.7.0)

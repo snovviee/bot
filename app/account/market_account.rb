@@ -16,6 +16,9 @@ class MarketAccount
            :bind_steam_api_key, :best_offer, :set_prices, :balance, :p2p, to: :client
 
   def trading!
+    puts "Handled percent: #{min_percent}"
+    puts "Current sum: #{items_sum}"
+
     remove_all if removing?
     money_send if allow_money_transfer
 
@@ -51,11 +54,15 @@ class MarketAccount
   end
 
   def min_percent
-    ENV.fetch('MIN_PERCENT', 1.0)
+    ENV.fetch('MIN_PERCENT', 1.0).to_f
   end
 
   def max_percent
     min_percent + 0.5
+  end
+
+  def items_sum
+    items.map { |e| e[:price] }.sum
   end
 
   def add_items_to_sale
@@ -93,8 +100,8 @@ class MarketAccount
 
         new_market_hash_name = market_hash_name
         if result[market_hash_name]
-          unless result[:class_id] == item[:classid].to_i
-            new_market_hash_name = market_hash_name + "_" + item[:classid]
+          unless result[:class_id] == item[:classid].to_i && result[:instance_id] == item[:instanceid].to_i
+            new_market_hash_name = market_hash_name + "_" + item[:classid] + "_" + item[:instanceid]
           end
         end
         next if result[new_market_hash_name]
@@ -123,17 +130,25 @@ class MarketAccount
   end
 
   def change_price(limits)
-    limits.each do |name, limit|
-      response = best_offer(limit[:class_id], limit[:instance_id])
-      offer = 0.0
-      if response.success?
-        offer = response.body[:best_offer].to_f / 100
+    limits.each_slice(5) do |s_limits|
+      threads = []
+
+      s_limits.each do |name, limit|
+        threads << Thread.new do
+          response = best_offer(limit[:class_id], limit[:instance_id])
+          offer = 0.0
+          if response.success?
+            offer = response.body[:best_offer].to_f / 100
+          end
+
+          next if offer == limit[:price] && offer <= limit[:max]
+
+          limit[:price] = correct_price(offer, limit)
+          set_prices(limit[:class_id], limit[:instance_id], (limit[:price] * 100).round)
+        end
       end
 
-      next if offer == limit[:price] && offer <= limit[:max]
-
-      limit[:price] = correct_price(offer, limit)
-      response = set_prices(limit[:class_id], limit[:instance_id], (limit[:price] * 100).round)
+      threads.each(&:join)
     end
   rescue => err
     puts err
