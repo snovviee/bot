@@ -51,7 +51,7 @@ class MarketAccount
   end
 
   def min_percent
-    ENV.fetch('MIN_PERCENT', 1.5)
+    ENV.fetch('MIN_PERCENT', 1.0)
   end
 
   def max_percent
