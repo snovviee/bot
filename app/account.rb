@@ -3,31 +3,58 @@ require 'byebug'
 require 'active_support/core_ext/module/delegation'
 require_relative 'account/dmarket_account'
 require_relative 'account/steam_account'
-require_relative 'account/market_account'
+require_relative 'account/market_account/trade'
+require_relative 'account/market_account/order'
 
 class Account
   def self.all
     @all ||= []
   end
 
-  attr_reader :market_account, :dmarket_account, :steam_account
+  attr_reader :market_account, :dmarket_account, :steam_account, :order
 
   DOLLAR_TO_RUB = 81.0
 
   def initialize(market:, dmarket:, steam:)
     @dmarket_account = DmarketAccount.new(dmarket)
     @steam_account = SteamAccount.new(steam)
-    @market_account = MarketAccount.new(market)
+    @market_account = MarketAccount::Trade.new(market)
+    @order = MarketAccount::Order.new(market)
     Account.all << self
   end
 
   delegate :withdraw!, :get_items_into_file!, to: :dmarket_account
   delegate :accept_offers!, to: :steam_account
   delegate :trading!,       to: :market_account
+  delegate :build!,       to: :order
+  delegate :buy!,       to: :order, prefix: :order
 
   def send_offers!
     show_market_balance
     try_to_send_offers
+  end
+
+  def accept_market_offers!
+    loop do
+      begin
+        inventory
+        logged.get_trade_offers['trade_offers_received'].each do |offer|
+          trades = market_account.client.trades(extended: 1).body[:trades]
+          is_trade = trades.detect { |e| e[:trade_id] == offer["tradeofferid"] }
+          next unless offer['message'].size == 36 || is_trade
+
+          logged.accept_trade_offer(offer['tradeofferid'])
+          sleep(1)
+        end
+
+      rescue => err
+        puts err
+        sleep(10)
+        retry
+      end
+
+      sleep(30)
+    end
   end
 
   def buy!

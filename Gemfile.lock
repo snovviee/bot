@@ -8,9 +8,9 @@ GIT
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/market_api
-  revision: 3ce7188c5fa889f6343771b4bc8e0e8f02dd29a8
+  revision: fc690541c25ddc9fe96fe3e9a1f6fa63012fd7eb
   specs:
-    market_api (0.1.1)
+    market_api (0.2.0)
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/steam-trade
@@ -62,8 +62,8 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
-    nokogiri (1.14.3)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.15.0)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     public_suffix (5.0.1)
     racc (1.6.2)
