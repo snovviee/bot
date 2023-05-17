@@ -87,8 +87,10 @@ module MarketAccount
           price += 1
 
           response = process_order(class_id, instance_id, price.round)
-          puts response.body
-          save_seats!(class_id, instance_id, result[:info][:market_hash_name], average, price)
+	  if response.success?
+          	puts response.body
+          	save_seats!(class_id, instance_id, result[:info][:market_hash_name], average, price)
+          end
         end
 
         index += 1
