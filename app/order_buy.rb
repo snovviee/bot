@@ -17,5 +17,5 @@ Account.new(
   }
 )
 
-Account.all.each { |acc| Thread.new { acc.order_buy! } }
+Account.all.each { |acc| Thread.new { acc.order_trade! } }
 Account.all.each { |acc| acc.accept_market_offers! }

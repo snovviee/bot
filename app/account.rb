@@ -57,6 +57,13 @@ class Account
     end
   end
 
+  def order_trade!
+    loop do
+      build!
+      order_buy!
+    end
+  end
+
   def buy!
     titles = File.read("items.txt").split("\n").uniq
 
