@@ -136,45 +136,43 @@ module MarketAccount
     end
 
     def buy!
-      loop do
-        limits = seats_json.transform_values do |value|
-          avg = value[:calculated_average]
-          percent = generate_percent(avg)
+      limits = seats_json.transform_values do |value|
+        avg = value[:calculated_average]
+        percent = generate_percent(avg)
 
-          avg / percent
-        end
+        avg / percent
+      end
 
-        current_timestamp = Time.now.to_i
+      current_timestamp = Time.now.to_i
 
-        while (Time.now.to_i - current_timestamp) < 7200 # 2 hours
-          current_orders.each_slice(100) do |slice|
-            c_i_slice = slice.map { |s| s[:i_classid] + '_' + s[:i_instanceid] }
-            response = mass_info_rec(c_i_slice)
-            results = JSON.parse(response.body, symbolize_names: true)[:results]
-            results.each_slice(5) do |s_results|
-              threads = []
+      while (Time.now.to_i - current_timestamp) < 7200 # 2 hours
+        current_orders.each_slice(100) do |slice|
+          c_i_slice = slice.map { |s| s[:i_classid] + '_' + s[:i_instanceid] }
+          response = mass_info_rec(c_i_slice)
+          results = JSON.parse(response.body, symbolize_names: true)[:results]
+          results.each_slice(5) do |s_results|
+            threads = []
 
-              s_results.each do |s_result|
-                threads << Thread.new do
-                  buy_offers = s_result[:buy_offers]
-                  my_offer = buy_offers[:my_offer]
-                  best_offer = buy_offers[:best_offer]
+            s_results.each do |s_result|
+              threads << Thread.new do
+                buy_offers = s_result[:buy_offers]
+                my_offer = buy_offers[:my_offer]
+                best_offer = buy_offers[:best_offer]
 
-                  class_id = s_result[:classid]
-                  instance_id = s_result[:instanceid]
-                  limit_key = class_id + '_' + instance_id
-                  max_offer_limit = (limits[limit_key.to_sym] * 100).round
+                class_id = s_result[:classid]
+                instance_id = s_result[:instanceid]
+                limit_key = class_id + '_' + instance_id
+                max_offer_limit = (limits[limit_key.to_sym] * 100).round
 
-                  if my_offer < best_offer && (0..max_offer_limit).include?(best_offer)
-                    price = best_offer + 1
+                if my_offer < best_offer && (0..max_offer_limit).include?(best_offer)
+                  price = best_offer + 1
 
-                    process_order(class_id, instance_id, price.round)
-                  end
+                  process_order(class_id, instance_id, price.round)
                 end
               end
-
-              threads.each(&:join)
             end
+
+            threads.each(&:join)
           end
         end
       end
