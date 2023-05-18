@@ -67,16 +67,21 @@ class Account
   def buy!
     titles = File.read("items.txt").split("\n").uniq
 
-    titles.each_slice(16) do |s_titles|
+    titles.each_slice(8) do |s_titles|
       market_response = market_account.list_items('list_hash_name' => s_titles)
       market_data = market_response.body[:data]
 
       s_titles.each do |title|
-        market_price = (market_data[title.to_sym][:average] / DOLLAR_TO_RUB).round(2)
+        row = market_data[title.to_sym]
+        market_price = calculated_average(row)
+        next unless market_price
+
+        market_price = (market_price / DOLLAR_TO_RUB).round(2)
+        # market_price = (market_data[title.to_sym][:average] / DOLLAR_TO_RUB).round(2)
 
         Thread.new do
           dm_response = dmarket_account.title_offers(title: title)
-          dm_response_objects = dm_response.body[:objects]
+          dm_response_objects = dm_response.body[:objects][0..2]
           sorted_objects = dm_response_objects.sort_by { |e| e[:price][:USD].to_f }
 
           result_offers = sorted_objects.map do |obj|
@@ -114,6 +119,33 @@ class Account
   end
 
   private
+
+  def calculated_average(row)
+    result_10 = {
+      count: 0,
+      prices: []
+    }
+    range_10 = ten_days_range
+
+    row[:history].each do |e|
+      if range_10.include?(e.first)
+        result_10[:count] += 1
+        result_10[:prices].push(e.last)
+      end
+    end
+    return if result_10[:count] < 10
+
+    sorted_prices = result_10[:prices].sort
+    without_gap_prices = sorted_prices[2..-3]
+    actual_count = (without_gap_prices.size * 0.35).round
+    without_gap_prices[-actual_count..-1].sum / actual_count
+  end
+
+  def ten_days_range
+    now = Time.now
+    past = now - 10.days
+    (past.to_i..now.to_i)
+  end
 
   def logged
     @logged ||= steam_account.logged
