@@ -157,6 +157,8 @@ module MarketAccount
               threads << Thread.new do
                 buy_offers = s_result[:buy_offers]
                 my_offer = buy_offers[:my_offer]
+		next unless my_offer
+
                 best_offer = buy_offers[:best_offer]
 
                 class_id = s_result[:classid]
