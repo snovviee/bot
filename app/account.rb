@@ -67,9 +67,16 @@ class Account
   def buy!
     titles = File.read("items.txt").split("\n").uniq
 
-    titles.each_slice(8) do |s_titles|
+    titles.each_slice(10) do |s_titles|
       market_response = market_account.list_items('list_hash_name' => s_titles)
+      next unless market_response.success?
+
+      begin
       market_data = market_response.body[:data]
+    rescue => err
+      byebug
+    end
+
 
       s_titles.each do |title|
         row = market_data[title.to_sym]
@@ -133,7 +140,7 @@ class Account
         result_10[:prices].push(e.last)
       end
     end
-    return if result_10[:count] < 10
+    return if result_10[:count] < 6
 
     sorted_prices = result_10[:prices].sort
     without_gap_prices = sorted_prices[2..-3]
