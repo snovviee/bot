@@ -87,7 +87,7 @@ module MarketAccount
           price += 1
 
           response = process_order(class_id, instance_id, price.round)
-	  if response.success?
+	        if response.success?
           	puts response.body
           	save_seats!(class_id, instance_id, result[:info][:market_hash_name], average, price)
           end
@@ -109,29 +109,29 @@ module MarketAccount
     def generate_percent(avg)
       case avg
       when 0..5
-        percent = 3
+        percent = 2.7
       when 5..6
-        percent = 2.9
-      when 6..9
-        percent = 2.8
-      when 9..12
         percent = 2.6
-      when 12..18
+      when 6..9
         percent = 2.5
-      when 18..22
-        percent = 2.4
-      when 22..35
+      when 9..12
         percent = 2.3
+      when 12..18
+        percent = 2.2
+      when 18..22
+        percent = 2.1
+      when 22..35
+        percent = 2.0
       when 35..120
-        percent = 2.15
-      when 120..320
         percent = 1.8
-      when 320..600
-        percent = 1.6
-      when 600..950
+      when 120..320
         percent = 1.5
-      else
+      when 320..600
+        percent = 1.4
+      when 600..950
         percent = 1.3
+      else
+        percent = 1.2
       end
     end
 
@@ -253,7 +253,10 @@ module MarketAccount
           result_10[:prices].push(e.last)
         end
       end
-      return if result_5[:count] < 10
+
+      condition_of_block = result_5[:count] < 10 && result_10[:count] < 10
+
+      return if condition_of_block
 
       sorted_prices = result_5[:prices].sort
       without_gap_prices = sorted_prices[2..-3]

@@ -62,6 +62,8 @@ class Account
       build!
       order_buy!
     end
+  rescue
+    retry
   end
 
   def buy!
