@@ -62,8 +62,6 @@ class Account
       build!
       order_buy!
     end
-  rescue
-    retry
   end
 
   def buy!
@@ -73,12 +71,7 @@ class Account
       market_response = market_account.list_items('list_hash_name' => s_titles)
       next unless market_response.success?
 
-      begin
       market_data = market_response.body[:data]
-    rescue => err
-      byebug
-    end
-
 
       s_titles.each do |title|
         row = market_data[title.to_sym]
