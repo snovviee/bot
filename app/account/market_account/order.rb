@@ -166,29 +166,29 @@ module MarketAccount
     def generate_percent(avg)
       case avg
       when 0..5
-        percent = 2.7
+        percent = 2.8
       when 5..6
-        percent = 2.6
+        percent = 2.7
       when 6..9
-        percent = 2.5
+        percent = 2.6
       when 9..12
-        percent = 2.3
+        percent = 2.4
       when 12..18
-        percent = 2.2
+        percent = 2.3
       when 18..22
-        percent = 2.1
+        percent = 2.2
       when 22..35
-        percent = 2.0
+        percent = 2.1
       when 35..120
-        percent = 1.8
+        percent = 2.0
       when 120..320
-        percent = 1.5
+        percent = 1.8
       when 320..600
-        percent = 1.4
+        percent = 1.7
       when 600..950
-        percent = 1.3
+        percent = 1.6
       else
-        percent = 1.2
+        percent = 5.0
       end
     end
 
