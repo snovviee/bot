@@ -1,1957 +1,1092 @@
 {
-  "310776509_302028390": {
-    "market_hash_name": "SCAR-20 | Sand Mesh (Minimal Wear)",
-    "calculated_average": 3.54,
-    "order_price": 1.18
+  "310776714_0": {
+    "market_hash_name": "Galil AR | Hunting Blind (Field-Tested)",
+    "calculated_average": 105.47,
+    "order_price": 27.08
   },
-  "310776563_188530139": {
-    "market_hash_name": "MP9 | Hypnotic (Factory New)",
-    "calculated_average": 1208.43,
-    "order_price": 933.21
-  },
-  "310776691_302028390": {
-    "market_hash_name": "PP-Bizon | Sand Dashed (Minimal Wear)",
-    "calculated_average": 22.04,
-    "order_price": 3.49
-  },
-  "310776693_302028390": {
-    "market_hash_name": "Nova | Sand Dune (Battle-Scarred)",
-    "calculated_average": 3.25,
-    "order_price": 1.02
-  },
-  "310776722_302028390": {
-    "market_hash_name": "P250 | Sand Dune (Well-Worn)",
-    "calculated_average": 6.5,
-    "order_price": 1.15
-  },
-  "310776977_188530139": {
-    "market_hash_name": "M4A1-S | Bright Water (Minimal Wear)",
-    "calculated_average": 3474.5,
-    "order_price": 2734.67
-  },
-  "310776987_302028390": {
-    "market_hash_name": "P90 | Sand Spray (Well-Worn)",
-    "calculated_average": 3.62,
-    "order_price": 1.04
-  },
-  "310777182_302028390": {
-    "market_hash_name": "P250 | Sand Dune (Battle-Scarred)",
-    "calculated_average": 3.95,
-    "order_price": 1.14
-  },
-  "310777194_302028390": {
-    "market_hash_name": "UMP-45 | Urban DDPAT (Battle-Scarred)",
-    "calculated_average": 3.37,
-    "order_price": 0.55
-  },
-  "310777235_302028390": {
-    "market_hash_name": "SG 553 | Waves Perforated (Well-Worn)",
-    "calculated_average": 3.32,
-    "order_price": 1.02
-  },
-  "310777338_480085569": {
-    "market_hash_name": "Tec-9 | VariCamo (Field-Tested)",
-    "calculated_average": 8.34,
-    "order_price": 3.26
-  },
-  "310777871_302028390": {
-    "market_hash_name": "MAC-10 | Palm (Minimal Wear)",
-    "calculated_average": 13.4,
-    "order_price": 4.16
+  "310777259_0": {
+    "market_hash_name": "G3SG1 | VariCamo (Field-Tested)",
+    "calculated_average": 8.63,
+    "order_price": 3.05
   },
   "310777913_302028390": {
     "market_hash_name": "PP-Bizon | Urban Dashed (Well-Worn)",
-    "calculated_average": 7.27,
-    "order_price": 1.93
+    "calculated_average": 12.46,
+    "order_price": 3.71
   },
-  "310778455_302028390": {
-    "market_hash_name": "Tec-9 | Groundwater (Well-Worn)",
-    "calculated_average": 3.48,
-    "order_price": 1.07
-  },
-  "310778478_302028390": {
-    "market_hash_name": "Tec-9 | Army Mesh (Battle-Scarred)",
-    "calculated_average": 3.69,
-    "order_price": 1.01
-  },
-  "310778500_188530139": {
-    "market_hash_name": "M4A1-S | Guardian (Field-Tested)",
-    "calculated_average": 1987.66,
-    "order_price": 1597.43
-  },
-  "310778596_0": {
-    "market_hash_name": "UMP-45 | Urban DDPAT (Minimal Wear)",
-    "calculated_average": 4.6,
-    "order_price": 0.74
-  },
-  "310778596_302028390": {
-    "market_hash_name": "UMP-45 | Urban DDPAT (Minimal Wear)",
-    "calculated_average": 4.58,
-    "order_price": 1.05
-  },
-  "310778617_302028390": {
-    "market_hash_name": "SCAR-20 | Sand Mesh (Well-Worn)",
-    "calculated_average": 3.14,
-    "order_price": 0.57
+  "310777918_302028390": {
+    "market_hash_name": "AUG | Contractor (Factory New)",
+    "calculated_average": 10.28,
+    "order_price": 4.22
   },
   "310778710_302028390": {
     "market_hash_name": "Nova | Polar Mesh (Well-Worn)",
-    "calculated_average": 3.18,
-    "order_price": 0.54
+    "calculated_average": 3.83,
+    "order_price": 1.13
   },
-  "310778877_302028390": {
-    "market_hash_name": "G3SG1 | Polar Camo (Well-Worn)",
-    "calculated_average": 4.77,
-    "order_price": 1.31
+  "310779372_302028390": {
+    "market_hash_name": "Tec-9 | Army Mesh (Well-Worn)",
+    "calculated_average": 3.1,
+    "order_price": 0.94
   },
-  "310779062_302028390": {
-    "market_hash_name": "Nova | Predator (Minimal Wear)",
-    "calculated_average": 3.77,
-    "order_price": 1.15
-  },
-  "310779143_188530139": {
-    "market_hash_name": "M4A1-S | Bright Water (Field-Tested)",
-    "calculated_average": 3340.91,
-    "order_price": 2539.39
-  },
-  "310779197_188530139": {
-    "market_hash_name": "Nova | Ghost Camo (Minimal Wear)",
-    "calculated_average": 128.0,
-    "order_price": 84.21
-  },
-  "310779212_188530139": {
-    "market_hash_name": "SCAR-20 | Crimson Web (Battle-Scarred)",
-    "calculated_average": 245.91,
-    "order_price": 163.19
-  },
-  "310779508_0": {
-    "market_hash_name": "Glock-18 | Brass (Well-Worn)",
-    "calculated_average": 1085.72,
-    "order_price": 847.07
-  },
-  "310779768_188530139": {
-    "market_hash_name": "P90 | Death by Kitty (Field-Tested)",
-    "calculated_average": 3130.5,
-    "order_price": 2598.35
-  },
-  "310780755_302028390": {
-    "market_hash_name": "Nova | Predator (Well-Worn)",
-    "calculated_average": 3.31,
-    "order_price": 0.56
-  },
-  "310785939_188530139": {
-    "market_hash_name": "USP-S | Serum (Field-Tested)",
-    "calculated_average": 3235.76,
-    "order_price": 2670.42
-  },
-  "310787460_302028390": {
-    "market_hash_name": "XM1014 | Blue Spruce (Well-Worn)",
+  "310779393_302028390": {
+    "market_hash_name": "UMP-45 | Urban DDPAT (Well-Worn)",
     "calculated_average": 4.52,
-    "order_price": 1.02
+    "order_price": 1.45
   },
-  "310790755_188530170": {
-    "market_hash_name": "StatTrak™ FAMAS | Pulse (Field-Tested)",
-    "calculated_average": 963.03,
-    "order_price": 735.17
+  "310779921_0": {
+    "market_hash_name": "G3SG1 | VariCamo (Minimal Wear)",
+    "calculated_average": 11.78,
+    "order_price": 4.39
   },
-  "310791460_188530139": {
-    "market_hash_name": "P250 | Mehndi (Battle-Scarred)",
-    "calculated_average": 1004.13,
-    "order_price": 833.14
+  "310780536_302028390": {
+    "market_hash_name": "SCAR-20 | Sand Mesh (Factory New)",
+    "calculated_average": 23.46,
+    "order_price": 9.12
   },
-  "310794437_302028390": {
-    "market_hash_name": "Nova | Sand Dune (Factory New)",
-    "calculated_average": 31.43,
-    "order_price": 11.66
+  "310809333_302028390": {
+    "market_hash_name": "Five-SeveN | Forest Night (Factory New)",
+    "calculated_average": 24.77,
+    "order_price": 11.64
   },
-  "310801121_302028390": {
-    "market_hash_name": "SSG 08 | Blue Spruce (Factory New)",
-    "calculated_average": 43.28,
-    "order_price": 19.34
+  "310824839_302028390": {
+    "market_hash_name": "MP7 | Army Recon (Factory New)",
+    "calculated_average": 16.78,
+    "order_price": 5.73
   },
-  "310807370_302028390": {
-    "market_hash_name": "FAMAS | Teardown (Well-Worn)",
-    "calculated_average": 48.21,
-    "order_price": 11.1
+  "360454763_188530139": {
+    "market_hash_name": "Tec-9 | Sandstorm (Field-Tested)",
+    "calculated_average": 21.41,
+    "order_price": 7.73
   },
-  "310811232_302028390": {
-    "market_hash_name": "M249 | Gator Mesh (Well-Worn)",
-    "calculated_average": 7.91,
-    "order_price": 3.03
-  },
-  "350665905_188530170": {
-    "market_hash_name": "StatTrak™ USP-S | Stainless (Battle-Scarred)",
-    "calculated_average": 1069.99,
-    "order_price": 847.68
-  },
-  "360464735_188530139": {
-    "market_hash_name": "UMP-45 | Corporal (Battle-Scarred)",
-    "calculated_average": 27.4,
-    "order_price": 13.48
-  },
-  "360475072_480085569": {
-    "market_hash_name": "AUG | Chameleon (Minimal Wear)",
-    "calculated_average": 530.0,
-    "order_price": 336.21
-  },
-  "360484039_188530144": {
-    "market_hash_name": "StatTrak™ SG 553 | Pulse (Field-Tested)",
-    "calculated_average": 324.52,
-    "order_price": 217.58
-  },
-  "360553047_188530139": {
-    "market_hash_name": "AUG | Chameleon (Battle-Scarred)",
-    "calculated_average": 522.67,
-    "order_price": 355.09
-  },
-  "360603119_188530139": {
-    "market_hash_name": "AUG | Chameleon (Well-Worn)",
-    "calculated_average": 465.28,
-    "order_price": 320.68
-  },
-  "360764513_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Redline (Battle-Scarred)",
-    "calculated_average": 2207.74,
-    "order_price": 1814.3
-  },
-  "384277218_188530170": {
-    "market_hash_name": "StatTrak™ AUG | Chameleon (Battle-Scarred)",
-    "calculated_average": 974.99,
-    "order_price": 806.86
-  },
-  "469440574_302028390": {
-    "market_hash_name": "Nova | Caged Steel (Factory New)",
-    "calculated_average": 19.77,
-    "order_price": 8.71
-  },
-  "469440574_480085569": {
-    "market_hash_name": "Nova | Caged Steel (Factory New)",
-    "calculated_average": 19.3,
-    "order_price": 8.35
-  },
-  "469446195_302028390": {
-    "market_hash_name": "Sawed-Off | Forest DDPAT (Minimal Wear)",
-    "calculated_average": 4.16,
-    "order_price": 1.33
+  "469439583_188530139": {
+    "market_hash_name": "CZ75-Auto | Poison Dart (Field-Tested)",
+    "calculated_average": 296.86,
+    "order_price": 153.02
   },
   "469450632_302028390": {
     "market_hash_name": "Sawed-Off | Forest DDPAT (Battle-Scarred)",
-    "calculated_average": 3.09,
-    "order_price": 0.66
+    "calculated_average": 3.02,
+    "order_price": 0.85
   },
-  "469455734_302028390": {
-    "market_hash_name": "MP7 | Forest DDPAT (Well-Worn)",
-    "calculated_average": 4.94,
-    "order_price": 1.06
+  "519980528_519977179": {
+    "market_hash_name": "Glock-18 | Night (Field-Tested)",
+    "calculated_average": 131.96,
+    "order_price": 0.14
   },
-  "469455876_188530139": {
-    "market_hash_name": "MAC-10 | Curse (Minimal Wear)",
-    "calculated_average": 764.96,
-    "order_price": 578.07
+  "519990832_302028390": {
+    "market_hash_name": "Glock-18 | Night (Battle-Scarred)",
+    "calculated_average": 131.31,
+    "order_price": 62.25
   },
-  "506855352_188530139": {
-    "market_hash_name": "CZ75-Auto | Twist (Battle-Scarred)",
-    "calculated_average": 146.92,
-    "order_price": 91.85
+  "937244326_188530139": {
+    "market_hash_name": "MAG-7 | Heat (Field-Tested)",
+    "calculated_average": 63.72,
+    "order_price": 31.42
   },
-  "506858548_188530139": {
-    "market_hash_name": "CZ75-Auto | Twist (Well-Worn)",
-    "calculated_average": 134.85,
-    "order_price": 68.47
+  "937244326_480085569": {
+    "market_hash_name": "MAG-7 | Heat (Field-Tested)",
+    "calculated_average": 64.69,
+    "order_price": 31.42
   },
-  "520027329_188530139": {
-    "market_hash_name": "MP7 | Urban Hazard (Battle-Scarred)",
-    "calculated_average": 13.99,
-    "order_price": 6.27
+  "1432177464_302028390": {
+    "market_hash_name": "R8 Revolver | Bone Mask (Factory New)",
+    "calculated_average": 22.41,
+    "order_price": 10.26
   },
-  "520033241_188530170": {
-    "market_hash_name": "StatTrak™ MP7 | Urban Hazard (Battle-Scarred)",
-    "calculated_average": 35.12,
-    "order_price": 14.68
+  "1440503929_188530139": {
+    "market_hash_name": "R8 Revolver | Crimson Web (Field-Tested)",
+    "calculated_average": 23.96,
+    "order_price": 5.01
   },
-  "520072249_188530144": {
-    "market_hash_name": "StatTrak™ P90 | Asiimov (Battle-Scarred)",
-    "calculated_average": 1416.23,
-    "order_price": 1087.86
+  "1440505869_188530139": {
+    "market_hash_name": "R8 Revolver | Crimson Web (Well-Worn)",
+    "calculated_average": 17.54,
+    "order_price": 7.05
   },
-  "520073597_188530170": {
-    "market_hash_name": "StatTrak™ Desert Eagle | Conspiracy (Field-Tested)",
-    "calculated_average": 1564.33,
-    "order_price": 1157.56
+  "1440510146_188530170": {
+    "market_hash_name": "StatTrak™ Sawed-Off | Yorick (Well-Worn)",
+    "calculated_average": 19.48,
+    "order_price": 8.72
   },
-  "520089737_188530170": {
-    "market_hash_name": "StatTrak™ Glock-18 | Water Elemental (Battle-Scarred)",
-    "calculated_average": 976.5,
-    "order_price": 789.46
+  "1440843729_188530170": {
+    "market_hash_name": "StatTrak™ Sawed-Off | Yorick (Battle-Scarred)",
+    "calculated_average": 18.38,
+    "order_price": 7.54
   },
-  "527645227_188530139": {
-    "market_hash_name": "AWP | Corticera (Minimal Wear)",
-    "calculated_average": 1656.74,
-    "order_price": 1289.52
+  "1560431673_188530139": {
+    "market_hash_name": "SSG 08 | Necropos (Battle-Scarred)",
+    "calculated_average": 36.07,
+    "order_price": 15.35
   },
-  "527658486_188530144": {
-    "market_hash_name": "StatTrak™ Desert Eagle | Crimson Web (Field-Tested)",
-    "calculated_average": 1632.71,
-    "order_price": 1174.97
+  "1560439664_188530170": {
+    "market_hash_name": "StatTrak™ Tec-9 | Jambiya (Well-Worn)",
+    "calculated_average": 39.12,
+    "order_price": 18.4
   },
-  "527744317_188530170": {
-    "market_hash_name": "StatTrak™ Desert Eagle | Crimson Web (Battle-Scarred)",
-    "calculated_average": 1709.22,
-    "order_price": 1215.11
+  "1703379109_188530139": {
+    "market_hash_name": "MP9 | Bioleak (Battle-Scarred)",
+    "calculated_average": 14.47,
+    "order_price": 5.45
   },
-  "638242652_188530139": {
-    "market_hash_name": "P250 | Cartel (Well-Worn)",
-    "calculated_average": 536.26,
-    "order_price": 349.37
+  "1704777359_188530170": {
+    "market_hash_name": "StatTrak™ MP9 | Bioleak (Well-Worn)",
+    "calculated_average": 85.73,
+    "order_price": 41.09
   },
-  "638242765_188530139": {
-    "market_hash_name": "SCAR-20 | Cardiac (Battle-Scarred)",
-    "calculated_average": 352.09,
-    "order_price": 236.62
+  "1812814354_188530170": {
+    "market_hash_name": "StatTrak™ Tec-9 | Ice Cap (Field-Tested)",
+    "calculated_average": 75.21,
+    "order_price": 31.52
   },
-  "638243423_188530139": {
-    "market_hash_name": "MAG-7 | Firestarter (Battle-Scarred)",
-    "calculated_average": 106.74,
-    "order_price": 58.17
+  "1813372252_188530170": {
+    "market_hash_name": "StatTrak™ Tec-9 | Ice Cap (Battle-Scarred)",
+    "calculated_average": 76.44,
+    "order_price": 28.74
   },
-  "720327387_188530139": {
-    "market_hash_name": "M249 | System Lock (Well-Worn)",
-    "calculated_average": 220.0,
-    "order_price": 61.07
+  "1934862075_188530139": {
+    "market_hash_name": "G3SG1 | Ventilator (Well-Worn)",
+    "calculated_average": 15.99,
+    "order_price": 6.33
   },
-  "720338571_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | 龍王 (Dragon King) (Battle-Scarred)",
-    "calculated_average": 1356.66,
-    "order_price": 1068.34
+  "2076472053_188530139": {
+    "market_hash_name": "Nova | Gila (Field-Tested)",
+    "calculated_average": 57.37,
+    "order_price": 26.55
   },
-  "720357195_188530139": {
-    "market_hash_name": "Galil AR | Chatterbox (Battle-Scarred)",
-    "calculated_average": 616.14,
-    "order_price": 460.21
+  "2076472328_188530139": {
+    "market_hash_name": "MAG-7 | Sonar (Minimal Wear)",
+    "calculated_average": 22.78,
+    "order_price": 10.0
   },
-  "937277640_188530139": {
-    "market_hash_name": "M4A1-S | Hyper Beast (Battle-Scarred)",
-    "calculated_average": 1265.26,
-    "order_price": 1013.83
+  "2076517092_188530139": {
+    "market_hash_name": "CZ75-Auto | Polymer (Battle-Scarred)",
+    "calculated_average": 18.97,
+    "order_price": 8.53
   },
-  "937348442_188530139": {
-    "market_hash_name": "M4A1-S | Hyper Beast (Well-Worn)",
-    "calculated_average": 1656.68,
-    "order_price": 1355.63
-  },
-  "937370320_188530170": {
-    "market_hash_name": "StatTrak™ MAC-10 | Neon Rider (Field-Tested)",
-    "calculated_average": 1421.99,
-    "order_price": 1156.43
-  },
-  "992094386_519977179": {
-    "market_hash_name": "M249 | Impact Drill (Battle-Scarred)",
-    "calculated_average": 105.78,
+  "2220008739_188530139": {
+    "market_hash_name": "P250 | Ripple (Field-Tested)",
+    "calculated_average": 16.23,
     "order_price": 7.04
-  },
-  "1011935949_188530139": {
-    "market_hash_name": "FAMAS | Neural Net (Factory New)",
-    "calculated_average": 225.73,
-    "order_price": 148.11
-  },
-  "1011941705_188530139": {
-    "market_hash_name": "MP7 | Nemesis (Field-Tested)",
-    "calculated_average": 608.23,
-    "order_price": 413.24
-  },
-  "1011942929_188530139": {
-    "market_hash_name": "AK-47 | Aquamarine Revenge (Well-Worn)",
-    "calculated_average": 2206.79,
-    "order_price": 1838.78
-  },
-  "1013050155_188530170": {
-    "market_hash_name": "StatTrak™ SG 553 | Cyrex (Battle-Scarred)",
-    "calculated_average": 834.41,
-    "order_price": 587.25
-  },
-  "1014731009_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Aquamarine Revenge (Battle-Scarred)",
-    "calculated_average": 4394.43,
-    "order_price": 3612.76
-  },
-  "1311269863_188530139": {
-    "market_hash_name": "USP-S | Kill Confirmed (Well-Worn)",
-    "calculated_average": 4149.59,
-    "order_price": 3417.66
-  },
-  "1312373963_188530139": {
-    "market_hash_name": "★ Shadow Daggers | Safari Mesh (Field-Tested)",
-    "calculated_average": 10308.33,
-    "order_price": 8464.18
-  },
-  "1325736403_1309594166": {
-    "market_hash_name": "StatTrak™ Music Kit | Skog, II-Headshot",
-    "calculated_average": 350.81,
-    "order_price": 237.87
-  },
-  "1432223459_302028390": {
-    "market_hash_name": "R8 Revolver | Amber Fade (Well-Worn)",
-    "calculated_average": 207.42,
-    "order_price": 121.56
-  },
-  "1440539153_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | Royal Paladin (Field-Tested)",
-    "calculated_average": 2384.82,
-    "order_price": 1968.83
-  },
-  "1440541528_188530139": {
-    "market_hash_name": "AK-47 | Point Disarray (Well-Worn)",
-    "calculated_average": 1320.78,
-    "order_price": 1040.92
-  },
-  "1440543873_902658099": {
-    "market_hash_name": "StatTrak™ SG 553 | Tiger Moth (Field-Tested)",
-    "calculated_average": 159.64,
-    "order_price": 105.27
-  },
-  "1441245807_188530139": {
-    "market_hash_name": "R8 Revolver | Fade (Minimal Wear)",
-    "calculated_average": 890.99,
-    "order_price": 647.05
-  },
-  "1441245807_480085569": {
-    "market_hash_name": "R8 Revolver | Fade (Minimal Wear)",
-    "calculated_average": 865.16,
-    "order_price": 658.68
-  },
-  "1441634228_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Point Disarray (Battle-Scarred)",
-    "calculated_average": 1727.45,
-    "order_price": 1434.44
-  },
-  "1441905494_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | Royal Paladin (Battle-Scarred)",
-    "calculated_average": 2390.12,
-    "order_price": 1978.0
-  },
-  "1560432042_188530139": {
-    "market_hash_name": "Desert Eagle | Kumicho Dragon (Field-Tested)",
-    "calculated_average": 1505.93,
-    "order_price": 1191.81
-  },
-  "1560432042_480085569": {
-    "market_hash_name": "Desert Eagle | Kumicho Dragon (Field-Tested)",
-    "calculated_average": 1464.17,
-    "order_price": 1192.01
-  },
-  "1560432555_188530139": {
-    "market_hash_name": "Glock-18 | Royal Legion (Field-Tested)",
-    "calculated_average": 254.13,
-    "order_price": 136.84
-  },
-  "1560433642_188530139": {
-    "market_hash_name": "AWP | Elite Build (Field-Tested)",
-    "calculated_average": 1234.07,
-    "order_price": 1007.49
-  },
-  "1560441601_188530139": {
-    "market_hash_name": "Desert Eagle | Kumicho Dragon (Battle-Scarred)",
-    "calculated_average": 1444.26,
-    "order_price": 1172.81
-  },
-  "1560459830_480085569": {
-    "market_hash_name": "Glock-18 | Royal Legion (Battle-Scarred)",
-    "calculated_average": 247.34,
-    "order_price": 126.17
-  },
-  "1560470850_188530139": {
-    "market_hash_name": "Nova | Hyper Beast (Battle-Scarred)",
-    "calculated_average": 1074.5,
-    "order_price": 887.43
-  },
-  "1560473805_188530139": {
-    "market_hash_name": "Five-SeveN | Triumvirate (Battle-Scarred)",
-    "calculated_average": 178.3,
-    "order_price": 109.48
-  },
-  "1703549643_902658099": {
-    "market_hash_name": "StatTrak™ P250 | Asiimov (Field-Tested)",
-    "calculated_average": 1100.0,
-    "order_price": 823.5
-  },
-  "1704464652_480085569": {
-    "market_hash_name": "M4A1-S | Chantico's Fire (Battle-Scarred)",
-    "calculated_average": 1289.69,
-    "order_price": 1070.24
-  },
-  "1706431956_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Chantico's Fire (Battle-Scarred)",
-    "calculated_average": 3411.36,
-    "order_price": 2778.74
-  },
-  "1707787668_188530170": {
-    "market_hash_name": "StatTrak™ PP-Bizon | Judgement of Anubis (Well-Worn)",
-    "calculated_average": 1473.34,
-    "order_price": 1062.82
-  },
-  "1812819179_188530139": {
-    "market_hash_name": "P2000 | Imperial Dragon (Field-Tested)",
-    "calculated_average": 395.75,
-    "order_price": 249.5
-  },
-  "1812819179_480085569": {
-    "market_hash_name": "P2000 | Imperial Dragon (Field-Tested)",
-    "calculated_average": 354.79,
-    "order_price": 240.42
-  },
-  "1812832980_188530139": {
-    "market_hash_name": "M4A1-S | Mecha Industries (Field-Tested)",
-    "calculated_average": 2276.02,
-    "order_price": 1872.29
-  },
-  "1813021137_188530170": {
-    "market_hash_name": "StatTrak™ MAC-10 | Carnivore (Battle-Scarred)",
-    "calculated_average": 29.53,
-    "order_price": 13.17
-  },
-  "1813440959_188530139": {
-    "market_hash_name": "M4A1-S | Mecha Industries (Battle-Scarred)",
-    "calculated_average": 1931.12,
-    "order_price": 1487.59
-  },
-  "1813667485_188530139": {
-    "market_hash_name": "P2000 | Imperial Dragon (Well-Worn)",
-    "calculated_average": 396.08,
-    "order_price": 242.52
-  },
-  "1813667485_480085569": {
-    "market_hash_name": "P2000 | Imperial Dragon (Well-Worn)",
-    "calculated_average": 392.64,
-    "order_price": 213.91
-  },
-  "1814155728_188530170": {
-    "market_hash_name": "StatTrak™ SCAR-20 | Bloodsport (Field-Tested)",
-    "calculated_average": 611.08,
-    "order_price": 392.59
-  },
-  "1815241069_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | Desolate Space (Well-Worn)",
-    "calculated_average": 1200.36,
-    "order_price": 984.75
-  },
-  "1815268127_188530170": {
-    "market_hash_name": "StatTrak™ Glock-18 | Wasteland Rebel (Battle-Scarred)",
-    "calculated_average": 1825.74,
-    "order_price": 1415.93
-  },
-  "1815369251_188530170": {
-    "market_hash_name": "StatTrak™ Glock-18 | Wasteland Rebel (Field-Tested)",
-    "calculated_average": 1520.51,
-    "order_price": 1236.03
-  },
-  "1934412870_188530139": {
-    "market_hash_name": "Negev | Dazzle (Battle-Scarred)",
-    "calculated_average": 13.51,
-    "order_price": 5.11
-  },
-  "1934413729_188530139": {
-    "market_hash_name": "CZ75-Auto | Imprint (Field-Tested)",
-    "calculated_average": 19.47,
-    "order_price": 8.0
-  },
-  "1934443225_902658099": {
-    "market_hash_name": "StatTrak™ Glock-18 | Weasel (Well-Worn)",
-    "calculated_average": 190.49,
-    "order_price": 124.57
-  },
-  "1934550021_188530139": {
-    "market_hash_name": "Tec-9 | Fuel Injector (Field-Tested)",
-    "calculated_average": 324.26,
-    "order_price": 195.74
-  },
-  "1936098220_188530170": {
-    "market_hash_name": "StatTrak™ FAMAS | Roll Cage (Battle-Scarred)",
-    "calculated_average": 666.58,
-    "order_price": 482.8
-  },
-  "2076467091_188530139": {
-    "market_hash_name": "P2000 | Turf (Well-Worn)",
-    "calculated_average": 22.38,
-    "order_price": 9.21
-  },
-  "2076475449_480085569": {
-    "market_hash_name": "Dual Berettas | Royal Consorts (Battle-Scarred)",
-    "calculated_average": 44.98,
-    "order_price": 22.92
-  },
-  "2076478154_188530139": {
-    "market_hash_name": "FAMAS | Mecha Industries (Well-Worn)",
-    "calculated_average": 384.91,
-    "order_price": 272.73
-  },
-  "2076481797_902658099": {
-    "market_hash_name": "StatTrak™ M4A1-S | Flashback (Field-Tested)",
-    "calculated_average": 433.75,
-    "order_price": 293.48
-  },
-  "2076493974_188530139": {
-    "market_hash_name": "CZ75-Auto | Polymer (Well-Worn)",
-    "calculated_average": 19.75,
-    "order_price": 8.83
-  },
-  "2077703064_188530139": {
-    "market_hash_name": "SSG 08 | Dragonfire (Well-Worn)",
-    "calculated_average": 1071.82,
-    "order_price": 876.22
-  },
-  "2077980890_188530139": {
-    "market_hash_name": "M4A4 | Buzz Kill (Well-Worn)",
-    "calculated_average": 1031.15,
-    "order_price": 849.99
-  },
-  "2078614831_188530139": {
-    "market_hash_name": "SSG 08 | Dragonfire (Battle-Scarred)",
-    "calculated_average": 1053.98,
-    "order_price": 849.2
-  },
-  "2220010332_480085569": {
-    "market_hash_name": "M4A1-S | Decimator (Minimal Wear)",
-    "calculated_average": 1374.7,
-    "order_price": 1138.48
-  },
-  "2220014235_188530139": {
-    "market_hash_name": "AWP | Fever Dream (Factory New)",
-    "calculated_average": 1263.41,
-    "order_price": 1050.12
-  },
-  "2220096261_188530170": {
-    "market_hash_name": "StatTrak™ AWP | Fever Dream (Field-Tested)",
-    "calculated_average": 1489.29,
-    "order_price": 1160.71
-  },
-  "2220135608_188530170": {
-    "market_hash_name": "StatTrak™ XM1014 | Seasons (Field-Tested)",
-    "calculated_average": 250.43,
-    "order_price": 166.64
-  },
-  "2220948961_188530139": {
-    "market_hash_name": "M4A1-S | Decimator (Well-Worn)",
-    "calculated_average": 1183.8,
-    "order_price": 974.3
-  },
-  "2220978432_188530170": {
-    "market_hash_name": "StatTrak™ CZ75-Auto | Xiangliu (Battle-Scarred)",
-    "calculated_average": 1322.1,
-    "order_price": 1083.59
-  },
-  "2220982924_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Decimator (Battle-Scarred)",
-    "calculated_average": 2069.43,
-    "order_price": 1632.2
-  },
-  "2221487534_188530170": {
-    "market_hash_name": "StatTrak™ USP-S | Neo-Noir (Battle-Scarred)",
-    "calculated_average": 2653.22,
-    "order_price": 2117.22
-  },
-  "2222022174_188530139": {
-    "market_hash_name": "★ Shadow Daggers | Tiger Tooth (Factory New)",
-    "calculated_average": 24148.81,
-    "order_price": 19100.9
-  },
-  "2316447719_480085569": {
-    "market_hash_name": "Five-SeveN | Hyper Beast (Field-Tested)",
-    "calculated_average": 2392.67,
-    "order_price": 1855.46
-  },
-  "2316448341_188530139": {
-    "market_hash_name": "AK-47 | Orbit Mk01 (Field-Tested)",
-    "calculated_average": 1076.46,
-    "order_price": 871.09
-  },
-  "2316448341_480085569": {
-    "market_hash_name": "AK-47 | Orbit Mk01 (Field-Tested)",
-    "calculated_average": 1073.24,
-    "order_price": 870.67
-  },
-  "2316455287_188530170": {
-    "market_hash_name": "StatTrak™ SSG 08 | Death's Head (Field-Tested)",
-    "calculated_average": 1267.16,
-    "order_price": 880.01
-  },
-  "2316509228_188530139": {
-    "market_hash_name": "M4A4 | Hellfire (Field-Tested)",
-    "calculated_average": 3671.57,
-    "order_price": 3024.02
-  },
-  "2316702932_188530170": {
-    "market_hash_name": "StatTrak™ USP-S | Blueprint (Battle-Scarred)",
-    "calculated_average": 1028.99,
-    "order_price": 845.53
-  },
-  "2531852646_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Leaded Glass (Field-Tested)",
-    "calculated_average": 976.78,
-    "order_price": 799.83
   },
   "2531867518_188530139": {
     "market_hash_name": "SCAR-20 | Jungle Slipstream (Minimal Wear)",
-    "calculated_average": 9.4,
-    "order_price": 3.49
+    "calculated_average": 15.8,
+    "order_price": 6.57
   },
-  "2532053313_188530139": {
-    "market_hash_name": "AK-47 | The Empress (Field-Tested)",
-    "calculated_average": 3036.86,
-    "order_price": 2474.36
+  "2531874957_188530170": {
+    "market_hash_name": "StatTrak™ Tec-9 | Cracked Opal (Well-Worn)",
+    "calculated_average": 18.31,
+    "order_price": 8.21
   },
-  "2532053313_480085569": {
-    "market_hash_name": "AK-47 | The Empress (Field-Tested)",
-    "calculated_average": 3118.27,
-    "order_price": 2473.6
+  "2735395122_188530139": {
+    "market_hash_name": "PP-Bizon | Night Riot (Field-Tested)",
+    "calculated_average": 8.72,
+    "order_price": 2.45
   },
-  "2533375215_188530139": {
-    "market_hash_name": "P250 | See Ya Later (Factory New)",
-    "calculated_average": 1046.63,
-    "order_price": 848.79
+  "2735409497_188530139": {
+    "market_hash_name": "SG 553 | Aloha (Battle-Scarred)",
+    "calculated_average": 13.45,
+    "order_price": 5.63
   },
-  "2534092926_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Leaded Glass (Battle-Scarred)",
-    "calculated_average": 987.74,
-    "order_price": 811.11
+  "2735434256_188530170": {
+    "market_hash_name": "StatTrak™ P2000 | Urban Hazard (Battle-Scarred)",
+    "calculated_average": 18.47,
+    "order_price": 8.14
   },
-  "2735544081_188530139": {
-    "market_hash_name": "USP-S | Cortex (Factory New)",
-    "calculated_average": 965.98,
-    "order_price": 791.02
+  "2960964943_188530139": {
+    "market_hash_name": "Glock-18 | Warhawk (Field-Tested)",
+    "calculated_average": 33.44,
+    "order_price": 15.12
   },
-  "2735544081_480085569": {
-    "market_hash_name": "USP-S | Cortex (Factory New)",
-    "calculated_average": 998.31,
-    "order_price": 791.05
-  },
-  "2735765448_902658099": {
-    "market_hash_name": "StatTrak™ AWP | Mortis (Field-Tested)",
-    "calculated_average": 706.64,
-    "order_price": 468.16
-  },
-  "2736247385_188530170": {
-    "market_hash_name": "StatTrak™ AUG | Stymphalian (Battle-Scarred)",
-    "calculated_average": 269.05,
-    "order_price": 168.82
-  },
-  "2736341288_188530139": {
-    "market_hash_name": "AWP | Mortis (Well-Worn)",
-    "calculated_average": 322.63,
-    "order_price": 211.31
-  },
-  "2736765235_188530139": {
-    "market_hash_name": "★ Specialist Gloves | Crimson Web (Battle-Scarred)",
-    "calculated_average": 13049.68,
-    "order_price": 10853.51
-  },
-  "2737056596_188530170": {
-    "market_hash_name": "StatTrak™ MP7 | Bloodsport (Factory New)",
-    "calculated_average": 1539.99,
-    "order_price": 1238.76
-  },
-  "2737103473_902658099": {
-    "market_hash_name": "StatTrak™ USP-S | Cortex (Battle-Scarred)",
-    "calculated_average": 526.19,
-    "order_price": 363.59
-  },
-  "2738041737_188530139": {
-    "market_hash_name": "★ Specialist Gloves | Buckshot (Battle-Scarred)",
-    "calculated_average": 6668.2,
-    "order_price": 5444.75
-  },
-  "2960966361_188530139": {
-    "market_hash_name": "Dual Berettas | Shred (Factory New)",
-    "calculated_average": 27.46,
-    "order_price": 13.48
-  },
-  "2960973194_188530139": {
-    "market_hash_name": "Desert Eagle | Code Red (Well-Worn)",
-    "calculated_average": 1908.86,
-    "order_price": 1569.86
-  },
-  "2962683724_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Nightmare (Battle-Scarred)",
-    "calculated_average": 1396.91,
-    "order_price": 1115.55
-  },
-  "2964498758_188530139": {
-    "market_hash_name": "★ Navaja Knife | Boreal Forest (Field-Tested)",
-    "calculated_average": 8827.67,
-    "order_price": 7213.62
-  },
-  "2966720363_188530139": {
-    "market_hash_name": "★ Navaja Knife | Safari Mesh (Field-Tested)",
-    "calculated_average": 10269.06,
-    "order_price": 7700.09
+  "2963482575_188530170": {
+    "market_hash_name": "StatTrak™ MP7 | Powercore (Well-Worn)",
+    "calculated_average": 148.53,
+    "order_price": 71.04
   },
   "3035567651_302028390": {
     "market_hash_name": "MP5-SD | Dirt Drop (Minimal Wear)",
-    "calculated_average": 3.74,
-    "order_price": 1.38
-  },
-  "3035568564_302028390": {
-    "market_hash_name": "Five-SeveN | Coolant (Minimal Wear)",
-    "calculated_average": 5.53,
-    "order_price": 2.0
+    "calculated_average": 5.29,
+    "order_price": 1.89
   },
   "3035569020_302028390": {
     "market_hash_name": "Five-SeveN | Coolant (Battle-Scarred)",
-    "calculated_average": 5.07,
-    "order_price": 1.25
-  },
-  "3035569189_302028390": {
-    "market_hash_name": "MP9 | Slide (Minimal Wear)",
-    "calculated_average": 3.93,
-    "order_price": 1.05
-  },
-  "3035569517_302028390": {
-    "market_hash_name": "MP9 | Slide (Field-Tested)",
-    "calculated_average": 3.21,
-    "order_price": 0.96
-  },
-  "3035569977_302028390": {
-    "market_hash_name": "Five-SeveN | Coolant (Field-Tested)",
-    "calculated_average": 6.97,
-    "order_price": 1.1
-  },
-  "3035570280_302028390": {
-    "market_hash_name": "P250 | Facility Draft (Well-Worn)",
-    "calculated_average": 4.03,
-    "order_price": 0.9
-  },
-  "3035570399_302028390": {
-    "market_hash_name": "P250 | Facility Draft (Battle-Scarred)",
-    "calculated_average": 4.42,
-    "order_price": 1.02
-  },
-  "3035570506_302028390": {
-    "market_hash_name": "M4A1-S | Control Panel (Well-Worn)",
-    "calculated_average": 1099.91,
-    "order_price": 850.65
-  },
-  "3035570962_302028390": {
-    "market_hash_name": "P250 | Facility Draft (Factory New)",
-    "calculated_average": 6.6,
-    "order_price": 2.47
+    "calculated_average": 3.54,
+    "order_price": 0.81
   },
   "3035573486_302028390": {
     "market_hash_name": "UMP-45 | Mudder (Battle-Scarred)",
-    "calculated_average": 2.81,
-    "order_price": 0.71
+    "calculated_average": 2.36,
+    "order_price": 0.78
   },
-  "3035575040_302028390": {
-    "market_hash_name": "MAC-10 | Calf Skin (Minimal Wear)",
-    "calculated_average": 25.49,
-    "order_price": 9.79
+  "3035573880_302028390": {
+    "market_hash_name": "AUG | Sweeper (Well-Worn)",
+    "calculated_average": 4.11,
+    "order_price": 1.47
   },
-  "3035707039_302028390": {
-    "market_hash_name": "M4A1-S | Control Panel (Battle-Scarred)",
-    "calculated_average": 1226.7,
-    "order_price": 820.06
+  "3035581942_302028390": {
+    "market_hash_name": "MP9 | Slide (Well-Worn)",
+    "calculated_average": 2.84,
+    "order_price": 0.59
   },
-  "3035707039_480085569": {
-    "market_hash_name": "M4A1-S | Control Panel (Battle-Scarred)",
-    "calculated_average": 1191.49,
-    "order_price": 816.76
+  "469440539_0": {
+    "market_hash_name": "G3SG1 | Green Apple (Minimal Wear)",
+    "calculated_average": 13.33,
+    "order_price": 5.8
   },
-  "3035809991_302028390": {
-    "market_hash_name": "M4A1-S | Control Panel (Field-Tested)",
-    "calculated_average": 1353.8,
-    "order_price": 1126.94
+  "519990832_480085569": {
+    "market_hash_name": "Glock-18 | Night (Battle-Scarred)",
+    "calculated_average": 133.32,
+    "order_price": 65.65
   },
-  "3113366932_902658099": {
-    "market_hash_name": "StatTrak™ USP-S | Flashback (Field-Tested)",
-    "calculated_average": 214.22,
-    "order_price": 137.66
+  "520026309_188530139": {
+    "market_hash_name": "P2000 | Ivory (Well-Worn)",
+    "calculated_average": 13.91,
+    "order_price": 5.67
   },
-  "3114313133_188530170": {
-    "market_hash_name": "StatTrak™ Glock-18 | Oxide Blaze (Well-Worn)",
-    "calculated_average": 40.0,
-    "order_price": 19.85
+  "520028244_188530139": {
+    "market_hash_name": "MP7 | Urban Hazard (Well-Worn)",
+    "calculated_average": 16.79,
+    "order_price": 7.29
   },
-  "3114391869_188530170": {
-    "market_hash_name": "StatTrak™ Desert Eagle | Mecha Industries (Battle-Scarred)",
-    "calculated_average": 860.5,
-    "order_price": 650.37
+  "1934445391_188530139": {
+    "market_hash_name": "CZ75-Auto | Imprint (Well-Worn)",
+    "calculated_average": 13.25,
+    "order_price": 5.7
   },
-  "3175594781_143865972": {
-    "market_hash_name": "Katowice 2019 Returning Challengers (Holo-Foil)",
-    "calculated_average": 1067.59,
-    "order_price": 883.79
+  "2532209103_188530170": {
+    "market_hash_name": "StatTrak™ Tec-9 | Cracked Opal (Battle-Scarred)",
+    "calculated_average": 18.15,
+    "order_price": 8.13
   },
-  "3175594782_143865972": {
-    "market_hash_name": "Katowice 2019 Minor Challengers (Holo-Foil)",
-    "calculated_average": 836.36,
-    "order_price": 580.55
+  "3035589042_302028390": {
+    "market_hash_name": "Five-SeveN | Coolant (Well-Worn)",
+    "calculated_average": 6.27,
+    "order_price": 1.65
   },
-  "3220795198_188530139": {
-    "market_hash_name": "P90 | Off World (Field-Tested)",
-    "calculated_average": 45.46,
-    "order_price": 13.24
+  "3035701551_302028390": {
+    "market_hash_name": "MAG-7 | Core Breach (Battle-Scarred)",
+    "calculated_average": 129.91,
+    "order_price": 58.02
   },
-  "3220797742_902658099": {
-    "market_hash_name": "StatTrak™ Desert Eagle | Light Rail (Field-Tested)",
-    "calculated_average": 356.32,
-    "order_price": 237.84
+  "3113365123_188530139": {
+    "market_hash_name": "Glock-18 | Oxide Blaze (Field-Tested)",
+    "calculated_average": 24.4,
+    "order_price": 8.19
   },
-  "3220807623_188530139": {
-    "market_hash_name": "M4A4 | The Emperor (Field-Tested)",
-    "calculated_average": 1404.58,
-    "order_price": 1160.56
+  "3113365131_188530170": {
+    "market_hash_name": "StatTrak™ Sawed-Off | Black Sand (Minimal Wear)",
+    "calculated_average": 19.05,
+    "order_price": 4.42
   },
-  "3220807623_480085569": {
-    "market_hash_name": "M4A4 | The Emperor (Field-Tested)",
-    "calculated_average": 1401.43,
-    "order_price": 1068.67
+  "3113736828_188530170": {
+    "market_hash_name": "StatTrak™ SG 553 | Danger Close (Well-Worn)",
+    "calculated_average": 25.89,
+    "order_price": 12.25
   },
-  "3220810660_188530139": {
-    "market_hash_name": "Five-SeveN | Angry Mob (Minimal Wear)",
-    "calculated_average": 678.12,
-    "order_price": 476.67
+  "3220794861_188530139": {
+    "market_hash_name": "MP7 | Mischief (Battle-Scarred)",
+    "calculated_average": 16.96,
+    "order_price": 7.3
   },
-  "3554126929_188530139": {
-    "market_hash_name": "P250 | X-Ray (Field-Tested)",
-    "calculated_average": 59.48,
-    "order_price": 32.19
-  },
-  "3574239014_188530139": {
-    "market_hash_name": "Dual Berettas | Elite 1.6 (Minimal Wear)",
-    "calculated_average": 13.26,
-    "order_price": 5.69
-  },
-  "3574239269_188530139": {
-    "market_hash_name": "FAMAS | Commemoration (Field-Tested)",
-    "calculated_average": 1290.84,
-    "order_price": 1059.78
+  "3574239523_188530139": {
+    "market_hash_name": "MAG-7 | Popdog (Battle-Scarred)",
+    "calculated_average": 15.9,
+    "order_price": 6.16
   },
   "3574241707_188530139": {
     "market_hash_name": "Dual Berettas | Elite 1.6 (Battle-Scarred)",
-    "calculated_average": 12.12,
-    "order_price": 5.46
+    "calculated_average": 13.08,
+    "order_price": 5.69
   },
-  "3574244587_188530139": {
-    "market_hash_name": "M249 | Aztec (Battle-Scarred)",
-    "calculated_average": 33.66,
-    "order_price": 10.4
+  "3770669427_188530139": {
+    "market_hash_name": "Sawed-Off | Apocalypto (Well-Worn)",
+    "calculated_average": 47.85,
+    "order_price": 23.29
   },
-  "3574480417_188530139": {
-    "market_hash_name": "FAMAS | Commemoration (Battle-Scarred)",
-    "calculated_average": 1159.94,
-    "order_price": 901.44
+  "3770669427_480085569": {
+    "market_hash_name": "Sawed-Off | Apocalypto (Well-Worn)",
+    "calculated_average": 46.33,
+    "order_price": 22.75
   },
-  "3600917171_188530139": {
-    "market_hash_name": "Nova | Plume (Field-Tested)",
-    "calculated_average": 43.7,
-    "order_price": 23.77
-  },
-  "3608084036_188530139": {
-    "market_hash_name": "Tec-9 | Decimator (Field-Tested)",
-    "calculated_average": 986.18,
-    "order_price": 782.86
-  },
-  "3608084186_188530170": {
-    "market_hash_name": "StatTrak™ G3SG1 | Black Sand (Battle-Scarred)",
-    "calculated_average": 76.12,
-    "order_price": 39.45
-  },
-  "3608084394_188530170": {
-    "market_hash_name": "StatTrak™ MP5-SD | Acid Wash (Field-Tested)",
-    "calculated_average": 60.96,
-    "order_price": 33.62
-  },
-  "3608091370_188530139": {
-    "market_hash_name": "MAC-10 | Stalker (Well-Worn)",
-    "calculated_average": 1145.14,
-    "order_price": 845.78
-  },
-  "3770684270_188530139": {
-    "market_hash_name": "AUG | Tom Cat (Battle-Scarred)",
-    "calculated_average": 12.13,
-    "order_price": 3.25
-  },
-  "3770685021_188530139": {
-    "market_hash_name": "AK-47 | Phantom Disruptor (Factory New)",
-    "calculated_average": 1182.3,
-    "order_price": 981.28
-  },
-  "3770717234_480085569": {
-    "market_hash_name": "M4A1-S | Player Two (Battle-Scarred)",
-    "calculated_average": 1158.85,
-    "order_price": 958.93
-  },
-  "3770791299_480085569": {
-    "market_hash_name": "Glock-18 | Bullet Queen (Well-Worn)",
-    "calculated_average": 628.54,
-    "order_price": 469.58
-  },
-  "3770880885_188530139": {
-    "market_hash_name": "Glock-18 | Bullet Queen (Minimal Wear)",
-    "calculated_average": 1511.29,
-    "order_price": 1256.22
-  },
-  "3771907747_188530170": {
-    "market_hash_name": "StatTrak™ Glock-18 | Bullet Queen (Battle-Scarred)",
-    "calculated_average": 1446.0,
-    "order_price": 1176.51
-  },
-  "3771989324_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Player Two (Battle-Scarred)",
-    "calculated_average": 3125.86,
-    "order_price": 2368.26
-  },
-  "3772273633_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Phantom Disruptor (Battle-Scarred)",
-    "calculated_average": 1100.55,
-    "order_price": 893.84
-  },
-  "3955266673_188530139": {
-    "market_hash_name": "SSG 08 | Mainframe 001 (Field-Tested)",
-    "calculated_average": 12.13,
-    "order_price": 5.1
-  },
-  "3955268199_188530139": {
-    "market_hash_name": "P250 | Cassette (Minimal Wear)",
-    "calculated_average": 12.49,
-    "order_price": 3.57
-  },
-  "3955315250_188530139": {
-    "market_hash_name": "Desert Eagle | Printstream (Minimal Wear)",
-    "calculated_average": 6376.83,
-    "order_price": 5100.02
-  },
-  "3955317693_480085569": {
-    "market_hash_name": "AK-47 | Legion of Anubis (Minimal Wear)",
-    "calculated_average": 1415.97,
-    "order_price": 1177.7
-  },
-  "3955318089_188530170": {
-    "market_hash_name": "StatTrak™ P90 | Freight (Field-Tested)",
+  "3770678268_188530139": {
+    "market_hash_name": "CZ75-Auto | Distressed (Well-Worn)",
     "calculated_average": 11.99,
-    "order_price": 5.14
+    "order_price": 4.86
   },
-  "3956646134_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Legion of Anubis (Battle-Scarred)",
-    "calculated_average": 1733.21,
-    "order_price": 1435.12
+  "3955266678_188530170": {
+    "market_hash_name": "StatTrak™ PP-Bizon | Runic (Battle-Scarred)",
+    "calculated_average": 12.36,
+    "order_price": 5.05
   },
-  "4141778921_519977179": {
-    "market_hash_name": "MP9 | Army Sheen (Minimal Wear)",
-    "calculated_average": 9.97,
-    "order_price": 3.58
+  "4124553025_188530170": {
+    "market_hash_name": "StatTrak™ MP5-SD | Condition Zero (Well-Worn)",
+    "calculated_average": 61.98,
+    "order_price": 30.01
   },
-  "4141779096_188530139": {
-    "market_hash_name": "MP5-SD | Condition Zero (Battle-Scarred)",
-    "calculated_average": 31.2,
-    "order_price": 15.55
+  "4136012293_188530139": {
+    "market_hash_name": "P90 | Cocoa Rampage (Field-Tested)",
+    "calculated_average": 31.32,
+    "order_price": 14.43
   },
-  "4141779226_480085569": {
-    "market_hash_name": "USP-S | Monster Mashup (Field-Tested)",
-    "calculated_average": 1435.31,
-    "order_price": 1188.42
+  "4141779978_188530139": {
+    "market_hash_name": "P250 | Contaminant (Battle-Scarred)",
+    "calculated_average": 31.48,
+    "order_price": 13.74
   },
-  "4141779239_188530170": {
-    "market_hash_name": "StatTrak™ CZ75-Auto | Vendetta (Field-Tested)",
-    "calculated_average": 28.2,
-    "order_price": 3.02
+  "4141779997_188530139": {
+    "market_hash_name": "G3SG1 | Digital Mesh (Factory New)",
+    "calculated_average": 96.33,
+    "order_price": 6.09
   },
-  "4141779269_188530170": {
-    "market_hash_name": "StatTrak™ USP-S | Monster Mashup (Battle-Scarred)",
-    "calculated_average": 1532.51,
-    "order_price": 1252.52
+  "4141810259_188530170": {
+    "market_hash_name": "StatTrak™ MP5-SD | Condition Zero (Battle-Scarred)",
+    "calculated_average": 46.57,
+    "order_price": 22.79
   },
-  "4141779290_519977179": {
-    "market_hash_name": "R8 Revolver | Night (Battle-Scarred)",
-    "calculated_average": 18.13,
-    "order_price": 1.43
+  "4428755456_188530139": {
+    "market_hash_name": "SG 553 | Heavy Metal (Minimal Wear)",
+    "calculated_average": 31.9,
+    "order_price": 14.06
   },
-  "4141779339_519977179": {
-    "market_hash_name": "Sawed-Off | Clay Ambush (Battle-Scarred)",
-    "calculated_average": 9.75,
-    "order_price": 2.17
+  "4428758298_188530170": {
+    "market_hash_name": "StatTrak™ Desert Eagle | Trigger Discipline (Field-Tested)",
+    "calculated_average": 252.77,
+    "order_price": 126.76
   },
-  "4141779987_188530139": {
-    "market_hash_name": "M4A4 | Cyber Security (Well-Worn)",
-    "calculated_average": 1294.49,
-    "order_price": 958.33
+  "4428758298_902658099": {
+    "market_hash_name": "StatTrak™ Desert Eagle | Trigger Discipline (Field-Tested)",
+    "calculated_average": 235.26,
+    "order_price": 126.18
   },
-  "4141779995_188530139": {
-    "market_hash_name": "Nova | Clear Polymer (Minimal Wear)",
-    "calculated_average": 323.73,
-    "order_price": 218.84
+  "4428763892_902658099": {
+    "market_hash_name": "StatTrak™ Desert Eagle | Trigger Discipline (Battle-Scarred)",
+    "calculated_average": 206.62,
+    "order_price": 106.07
   },
-  "4141780000_188530139": {
-    "market_hash_name": "Five-SeveN | Fairy Tale (Battle-Scarred)",
-    "calculated_average": 1175.57,
-    "order_price": 975.32
+  "4428767806_188530170": {
+    "market_hash_name": "StatTrak™ Nova | Windblown (Minimal Wear)",
+    "calculated_average": 45.23,
+    "order_price": 22.02
   },
-  "4141780281_519977179": {
-    "market_hash_name": "AUG | Carved Jade (Minimal Wear)",
-    "calculated_average": 1049.88,
-    "order_price": 858.27
+  "4428817157_188530170": {
+    "market_hash_name": "StatTrak™ CZ75-Auto | Circaetus (Well-Worn)",
+    "calculated_average": 25.83,
+    "order_price": 3.05
   },
-  "4141780441_519977179": {
-    "market_hash_name": "MAG-7 | Carbon Fiber (Minimal Wear)",
-    "calculated_average": 161.33,
-    "order_price": 107.56
+  "4571592936_519977179": {
+    "market_hash_name": "P90 | Desert DDPAT (Factory New)",
+    "calculated_average": 37.73,
+    "order_price": 16.53
   },
-  "4141780736_519977179": {
-    "market_hash_name": "AUG | Surveillance (Battle-Scarred)",
-    "calculated_average": 9.87,
-    "order_price": 3.59
+  "4578344035_188530139": {
+    "market_hash_name": "MP7 | Guerrilla (Well-Worn)",
+    "calculated_average": 25.27,
+    "order_price": 3.89
   },
-  "4141789102_188530139": {
-    "market_hash_name": "M249 | Deep Relief (Factory New)",
-    "calculated_average": 70.04,
-    "order_price": 2.01
+  "4578726266_519977179": {
+    "market_hash_name": "P2000 | Space Race (Battle-Scarred)",
+    "calculated_average": 217.12,
+    "order_price": 88.96
   },
-  "4141812734_188530170": {
-    "market_hash_name": "StatTrak™ Five-SeveN | Fairy Tale (Battle-Scarred)",
-    "calculated_average": 1596.31,
-    "order_price": 1310.25
-  },
-  "4141846779_188530139": {
-    "market_hash_name": "★ Moto Gloves | 3rd Commando Company (Well-Worn)",
-    "calculated_average": 7198.25,
-    "order_price": 5950.2
-  },
-  "4141919915_188530139": {
-    "market_hash_name": "★ Moto Gloves | 3rd Commando Company (Field-Tested)",
-    "calculated_average": 7899.58,
-    "order_price": 6169.77
-  },
-  "4141922949_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | Cyber Security (Battle-Scarred)",
-    "calculated_average": 1548.65,
-    "order_price": 1267.55
-  },
-  "4142166391_188530139": {
-    "market_hash_name": "★ Broken Fang Gloves | Unhinged (Battle-Scarred)",
-    "calculated_average": 5943.62,
-    "order_price": 4904.54
-  },
-  "4142196889_188530139": {
-    "market_hash_name": "★ Broken Fang Gloves | Needle Point (Well-Worn)",
-    "calculated_average": 5795.8,
-    "order_price": 4731.33
-  },
-  "4142219379_188530170": {
-    "market_hash_name": "StatTrak™ Glock-18 | Weasel (Well-Worn)",
-    "calculated_average": 171.05,
-    "order_price": 111.08
-  },
-  "4142635552_188530139": {
-    "market_hash_name": "★ Driver Gloves | Black Tie (Battle-Scarred)",
-    "calculated_average": 12256.21,
-    "order_price": 9356.48
-  },
-  "4144074205_188530139": {
-    "market_hash_name": "★ Moto Gloves | Blood Pressure (Battle-Scarred)",
-    "calculated_average": 8462.37,
-    "order_price": 7009.96
-  },
-  "4428757272_188530139": {
-    "market_hash_name": "Glock-18 | Clear Polymer (Well-Worn)",
-    "calculated_average": 16.77,
-    "order_price": 7.13
-  },
-  "4428759268_188530139": {
-    "market_hash_name": "M4A4 | In Living Color (Minimal Wear)",
-    "calculated_average": 1412.0,
-    "order_price": 1163.02
-  },
-  "4428809160_188530139": {
-    "market_hash_name": "M249 | O.S.I.P.R. (Well-Worn)",
-    "calculated_average": 10.43,
-    "order_price": 3.21
-  },
-  "4428828851_188530139": {
-    "market_hash_name": "USP-S | The Traitor (Well-Worn)",
-    "calculated_average": 1211.6,
-    "order_price": 945.84
-  },
-  "4428828851_480085569": {
-    "market_hash_name": "USP-S | The Traitor (Well-Worn)",
-    "calculated_average": 1232.42,
-    "order_price": 1026.24
-  },
-  "4428871802_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | In Living Color (Field-Tested)",
-    "calculated_average": 1351.52,
-    "order_price": 1028.15
-  },
-  "4428988395_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | In Living Color (Battle-Scarred)",
-    "calculated_average": 1285.49,
-    "order_price": 897.43
-  },
-  "4428988395_902658099": {
-    "market_hash_name": "StatTrak™ M4A4 | In Living Color (Battle-Scarred)",
-    "calculated_average": 1272.99,
-    "order_price": 884.49
-  },
-  "4430284205_188530170": {
-    "market_hash_name": "StatTrak™ USP-S | The Traitor (Well-Worn)",
-    "calculated_average": 2789.84,
-    "order_price": 2262.41
-  },
-  "4571592889_519977179": {
-    "market_hash_name": "USP-S | Purple DDPAT (Field-Tested)",
-    "calculated_average": 995.65,
-    "order_price": 806.78
-  },
-  "4571593159_519977179": {
-    "market_hash_name": "R8 Revolver | Desert Brush (Field-Tested)",
-    "calculated_average": 21.06,
-    "order_price": 8.01
-  },
-  "4571593578_519977179": {
-    "market_hash_name": "SG 553 | Bleached (Well-Worn)",
-    "calculated_average": 18.13,
-    "order_price": 1.02
-  },
-  "4578724092_519977179": {
-    "market_hash_name": "P2000 | Space Race (Field-Tested)",
-    "calculated_average": 252.46,
-    "order_price": 157.58
-  },
-  "4578724241_480085569": {
-    "market_hash_name": "Glock-18 | Gamma Doppler (Field-Tested)",
-    "calculated_average": 2302.91,
-    "order_price": 1881.5
-  },
-  "4578724241_519977179": {
-    "market_hash_name": "Glock-18 | Gamma Doppler (Field-Tested)",
-    "calculated_average": 2371.16,
-    "order_price": 1883.57
-  },
-  "4578724332_519977179": {
-    "market_hash_name": "M4A4 | The Coalition (Well-Worn)",
-    "calculated_average": 1176.01,
-    "order_price": 975.38
-  },
-  "4578724566_519977179": {
-    "market_hash_name": "USP-S | Whiteout (Battle-Scarred)",
-    "calculated_average": 1378.76,
-    "order_price": 1021.02
-  },
-  "4578724568_519977179": {
-    "market_hash_name": "FAMAS | Meltdown (Field-Tested)",
-    "calculated_average": 1511.61,
-    "order_price": 1222.51
-  },
-  "4578724592_519977179": {
-    "market_hash_name": "SSG 08 | Spring Twilly (Well-Worn)",
-    "calculated_average": 51.09,
-    "order_price": 23.4
-  },
-  "4578724696_480085569": {
-    "market_hash_name": "M4A4 | The Coalition (Battle-Scarred)",
-    "calculated_average": 1138.35,
-    "order_price": 897.66
-  },
-  "4578724696_519977179": {
-    "market_hash_name": "M4A4 | The Coalition (Battle-Scarred)",
-    "calculated_average": 1132.15,
-    "order_price": 931.36
-  },
-  "4578724719_480085569": {
-    "market_hash_name": "Desert Eagle | Ocean Drive (Battle-Scarred)",
-    "calculated_average": 1237.98,
-    "order_price": 1017.91
-  },
-  "4578725140_519977179": {
-    "market_hash_name": "'Medium Rare' Crasswater | Guerrilla Warfare",
-    "calculated_average": 1372.99,
-    "order_price": 1102.79
-  },
-  "4578726880_519977179": {
-    "market_hash_name": "AK-47 | Green Laminate (Field-Tested)",
-    "calculated_average": 1065.07,
-    "order_price": 832.68
-  },
-  "4578728338_519977179": {
-    "market_hash_name": "Dual Berettas | Oil Change (Well-Worn)",
-    "calculated_average": 40.38,
-    "order_price": 16.08
-  },
-  "4578729434_519977179": {
-    "market_hash_name": "MAC-10 | Propaganda (Battle-Scarred)",
-    "calculated_average": 1234.5,
-    "order_price": 1007.29
-  },
-  "4578729563_188530139": {
-    "market_hash_name": "Desert Eagle | Ocean Drive (Well-Worn)",
-    "calculated_average": 1661.06,
-    "order_price": 1294.24
-  },
-  "4578730676_188530170": {
-    "market_hash_name": "StatTrak™ MAG-7 | BI83 Spectrum (Battle-Scarred)",
-    "calculated_average": 156.18,
-    "order_price": 96.93
-  },
-  "4578897772_188530170": {
-    "market_hash_name": "StatTrak™ Desert Eagle | Ocean Drive (Battle-Scarred)",
-    "calculated_average": 2958.43,
-    "order_price": 2450.13
-  },
-  "4722215931_188530139": {
-    "market_hash_name": "MAG-7 | Foresight (Minimal Wear)",
-    "calculated_average": 10.19,
-    "order_price": 3.48
-  },
-  "4725614750_188530139": {
-    "market_hash_name": "P2000 | Lifted Spirits (Field-Tested)",
-    "calculated_average": 6.96,
-    "order_price": 2.67
-  },
-  "4726068058_188530139": {
-    "market_hash_name": "PP-Bizon | Space Cat (Well-Worn)",
-    "calculated_average": 50.28,
-    "order_price": 23.27
-  },
-  "4726068058_480085569": {
-    "market_hash_name": "PP-Bizon | Space Cat (Well-Worn)",
-    "calculated_average": 49.52,
-    "order_price": 22.93
+  "4726068670_188530139": {
+    "market_hash_name": "Sawed-Off | Spirit Board (Battle-Scarred)",
+    "calculated_average": 10.02,
+    "order_price": 3.24
   },
   "4726068698_188530139": {
     "market_hash_name": "Five-SeveN | Scrawl (Battle-Scarred)",
-    "calculated_average": 9.27,
-    "order_price": 3.53
-  },
-  "4726070136_188530139": {
-    "market_hash_name": "Dual Berettas | Melondrama (Field-Tested)",
-    "calculated_average": 275.85,
-    "order_price": 180.61
-  },
-  "4726070980_188530170": {
-    "market_hash_name": "StatTrak™ MAC-10 | Ensnared (Field-Tested)",
-    "calculated_average": 18.77,
-    "order_price": 3.03
-  },
-  "4726072850_188530139": {
-    "market_hash_name": "P2000 | Lifted Spirits (Minimal Wear)",
-    "calculated_average": 12.36,
-    "order_price": 5.15
+    "calculated_average": 14.52,
+    "order_price": 5.81
   },
   "4726072851_188530139": {
     "market_hash_name": "MP5-SD | Necro Jr. (Battle-Scarred)",
-    "calculated_average": 10.35,
-    "order_price": 3.3
+    "calculated_average": 9.49,
+    "order_price": 3.89
   },
-  "4726075413_188530139": {
-    "market_hash_name": "Five-SeveN | Scrawl (Well-Worn)",
-    "calculated_average": 10.66,
-    "order_price": 4.37
+  "4726111817_188530139": {
+    "market_hash_name": "MAG-7 | Foresight (Well-Worn)",
+    "calculated_average": 9.5,
+    "order_price": 3.45
   },
-  "4726075983_188530170": {
-    "market_hash_name": "StatTrak™ MAG-7 | Foresight (Field-Tested)",
-    "calculated_average": 11.19,
-    "order_price": 4.05
-  },
-  "4726084198_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Nightwish (Battle-Scarred)",
-    "calculated_average": 3421.44,
-    "order_price": 1802.33
-  },
-  "4726086272_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Night Terror (Field-Tested)",
-    "calculated_average": 332.88,
-    "order_price": 237.63
-  },
-  "4726090946_188530170": {
-    "market_hash_name": "StatTrak™ FAMAS | Rapid Eye Movement (Well-Worn)",
-    "calculated_average": 347.31,
-    "order_price": 197.2
-  },
-  "4726093315_188530139": {
-    "market_hash_name": "Sawed-Off | Spirit Board (Factory New)",
-    "calculated_average": 19.82,
-    "order_price": 2.02
-  },
-  "4726095085_188530170": {
-    "market_hash_name": "StatTrak™ Five-SeveN | Scrawl (Field-Tested)",
-    "calculated_average": 25.86,
-    "order_price": 12.33
-  },
-  "4726137669_188530170": {
-    "market_hash_name": "StatTrak™ USP-S | Ticket to Hell (Factory New)",
-    "calculated_average": 994.04,
-    "order_price": 812.47
-  },
-  "4726167206_188530170": {
-    "market_hash_name": "StatTrak™ PP-Bizon | Space Cat (Battle-Scarred)",
-    "calculated_average": 53.12,
-    "order_price": 28.52
-  },
-  "4727438494_902658099": {
-    "market_hash_name": "StatTrak™ MP9 | Starlight Protector (Battle-Scarred)",
-    "calculated_average": 739.99,
-    "order_price": 491.83
-  },
-  "4727461505_188530170": {
-    "market_hash_name": "StatTrak™ XM1014 | Zombie Offensive (Well-Worn)",
-    "calculated_average": 61.53,
-    "order_price": 32.71
-  },
-  "4910469815_188530139": {
-    "market_hash_name": "UMP-45 | Roadblock (Minimal Wear)",
-    "calculated_average": 15.41,
-    "order_price": 1.07
-  },
-  "4910470002_188530139": {
-    "market_hash_name": "FAMAS | Meow 36 (Field-Tested)",
-    "calculated_average": 10.1,
-    "order_price": 3.04
-  },
-  "4910470003_188530139": {
-    "market_hash_name": "M4A4 | Poly Mag (Field-Tested)",
-    "calculated_average": 21.32,
-    "order_price": 7.75
+  "4726111987_188530139": {
+    "market_hash_name": "SCAR-20 | Poultrygeist (Well-Worn)",
+    "calculated_average": 10.97,
+    "order_price": 4.32
   },
   "4910470004_188530139": {
     "market_hash_name": "M4A4 | Poly Mag (Well-Worn)",
-    "calculated_average": 14.32,
-    "order_price": 5.7
+    "calculated_average": 45.2,
+    "order_price": 5.02
   },
-  "4910470008_188530139": {
-    "market_hash_name": "Galil AR | Destroyer (Field-Tested)",
-    "calculated_average": 10.59,
-    "order_price": 4.07
+  "4910470006_188530139": {
+    "market_hash_name": "M4A4 | Poly Mag (Battle-Scarred)",
+    "calculated_average": 12.28,
+    "order_price": 5.31
   },
-  "4910470204_188530139": {
-    "market_hash_name": "M4A4 | Poly Mag (Minimal Wear)",
-    "calculated_average": 16.58,
-    "order_price": 1.2
+  "4910472644_188530139": {
+    "market_hash_name": "UMP-45 | Roadblock (Field-Tested)",
+    "calculated_average": 8.42,
+    "order_price": 2.03
   },
-  "4910470216_480085569": {
-    "market_hash_name": "AK-47 | Ice Coaled (Field-Tested)",
-    "calculated_average": 1053.06,
-    "order_price": 862.1
+  "4910473711_188530139": {
+    "market_hash_name": "Dual Berettas | Flora Carnivora (Battle-Scarred)",
+    "calculated_average": 77.73,
+    "order_price": 35.14
   },
-  "4910470652_188530139": {
-    "market_hash_name": "UMP-45 | Roadblock (Battle-Scarred)",
-    "calculated_average": 12.29,
-    "order_price": 4.2
+  "4910475892_188530139": {
+    "market_hash_name": "MAC-10 | Monkeyflage (Well-Worn)",
+    "calculated_average": 13.96,
+    "order_price": 5.27
   },
-  "4910475398_188530139": {
-    "market_hash_name": "Dual Berettas | Flora Carnivora (Minimal Wear)",
-    "calculated_average": 159.05,
-    "order_price": 91.19
-  },
-  "4910475515_188530139": {
-    "market_hash_name": "AWP | Chromatic Aberration (Field-Tested)",
-    "calculated_average": 1511.54,
-    "order_price": 1250.41
-  },
-  "4910475515_480085569": {
-    "market_hash_name": "AWP | Chromatic Aberration (Field-Tested)",
-    "calculated_average": 1539.48,
-    "order_price": 1250.03
-  },
-  "4910481000_188530170": {
-    "market_hash_name": "StatTrak™ FAMAS | Meow 36 (Minimal Wear)",
-    "calculated_average": 69.83,
-    "order_price": 31.95
-  },
-  "4910506187_188530170": {
-    "market_hash_name": "StatTrak™ MAC-10 | Monkeyflage (Battle-Scarred)",
-    "calculated_average": 10.92,
-    "order_price": 3.41
-  },
-  "4910512581_188530139": {
-    "market_hash_name": "P90 | Vent Rush (Well-Worn)",
-    "calculated_average": 99.14,
-    "order_price": 46.41
-  },
-  "4910512581_480085569": {
-    "market_hash_name": "P90 | Vent Rush (Well-Worn)",
-    "calculated_average": 99.95,
-    "order_price": 51.12
-  },
-  "4910520252_188530139": {
-    "market_hash_name": "P250 | Visions (Well-Worn)",
-    "calculated_average": 490.02,
-    "order_price": 318.33
+  "4910538581_188530170": {
+    "market_hash_name": "StatTrak™ Glock-18 | Winterized (Battle-Scarred)",
+    "calculated_average": 15.23,
+    "order_price": 2.05
   },
   "4910614706_188530170": {
     "market_hash_name": "StatTrak™ R8 Revolver | Crazy 8 (Field-Tested)",
-    "calculated_average": 129.61,
-    "order_price": 64.82
+    "calculated_average": 120.99,
+    "order_price": 31.45
   },
-  "4910730622_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Ice Coaled (Battle-Scarred)",
-    "calculated_average": 1438.43,
-    "order_price": 1172.58
+  "4922362904_188530139": {
+    "market_hash_name": "M4A4 | Magnesium (Field-Tested)",
+    "calculated_average": 10.0,
+    "order_price": 4.04
   },
-  "4911081783_188530139": {
-    "market_hash_name": "P250 | Visions (Battle-Scarred)",
-    "calculated_average": 483.72,
-    "order_price": 334.86
+  "4961628610_188530139": {
+    "market_hash_name": "AWP | Capillary (Battle-Scarred)",
+    "calculated_average": 25.0,
+    "order_price": 9.2
   },
-  "4911989247_188530170": {
-    "market_hash_name": "StatTrak™ AWP | Chromatic Aberration (Battle-Scarred)",
-    "calculated_average": 2545.56,
-    "order_price": 1920.89
+  "5199656222_188530139": {
+    "market_hash_name": "R8 Revolver | Banana Cannon (Minimal Wear)",
+    "calculated_average": 226.25,
+    "order_price": 91.25
   },
-  "4975154978_188530170": {
-    "market_hash_name": "StatTrak™ Music Kit | Knock2, dashstar*",
-    "calculated_average": 1992.75,
-    "order_price": 1221.62
+  "5199667517_188530139": {
+    "market_hash_name": "R8 Revolver | Banana Cannon (Battle-Scarred)",
+    "calculated_average": 90.58,
+    "order_price": 44.03
   },
-  "5199656211_188530170": {
-    "market_hash_name": "StatTrak™ SG 553 | Cyberforce (Minimal Wear)",
-    "calculated_average": 56.78,
-    "order_price": 28.4
+  "5199667517_480085569": {
+    "market_hash_name": "R8 Revolver | Banana Cannon (Battle-Scarred)",
+    "calculated_average": 86.64,
+    "order_price": 43.03
   },
-  "5199656382_188530139": {
-    "market_hash_name": "AWP | Duality (Minimal Wear)",
-    "calculated_average": 2457.04,
-    "order_price": 2010.62
+  "5199675492_188530139": {
+    "market_hash_name": "P250 | Re.built (Factory New)",
+    "calculated_average": 79.98,
+    "order_price": 36.14
   },
-  "5199656439_188530139": {
-    "market_hash_name": "AWP | Duality (Field-Tested)",
-    "calculated_average": 1403.09,
-    "order_price": 1094.74
+  "5199676239_188530170": {
+    "market_hash_name": "StatTrak™ R8 Revolver | Banana Cannon (Battle-Scarred)",
+    "calculated_average": 124.08,
+    "order_price": 10.39
   },
-  "5199656439_480085569": {
-    "market_hash_name": "AWP | Duality (Field-Tested)",
-    "calculated_average": 1411.81,
-    "order_price": 1094.97
+  "5199734958_188530170": {
+    "market_hash_name": "StatTrak™ P250 | Re.built (Well-Worn)",
+    "calculated_average": 21.2,
+    "order_price": 1.54
   },
-  "5199656874_188530170": {
-    "market_hash_name": "StatTrak™ MAG-7 | Insomnia (Minimal Wear)",
-    "calculated_average": 55.36,
-    "order_price": 27.69
-  },
-  "5199656875_188530170": {
-    "market_hash_name": "StatTrak™ MAG-7 | Insomnia (Field-Tested)",
-    "calculated_average": 30.33,
-    "order_price": 2.08
-  },
-  "5199657204_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Emphorosaur-S (Field-Tested)",
-    "calculated_average": 447.23,
-    "order_price": 316.85
-  },
-  "5199657414_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | Temukau (Battle-Scarred)",
-    "calculated_average": 4254.84,
-    "order_price": 3370.35
-  },
-  "5199657696_188530139": {
-    "market_hash_name": "SCAR-20 | Fragments (Minimal Wear)",
-    "calculated_average": 25.33,
-    "order_price": 1.84
-  },
-  "5199657698_188530139": {
-    "market_hash_name": "AK-47 | Head Shot (Well-Worn)",
-    "calculated_average": 3878.12,
-    "order_price": 3225.22
-  },
-  "5199658684_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Emphorosaur-S (Minimal Wear)",
-    "calculated_average": 907.46,
-    "order_price": 696.4
-  },
-  "5199659027_480085569": {
-    "market_hash_name": "P90 | Neoqueen (Minimal Wear)",
-    "calculated_average": 252.66,
-    "order_price": 135.04
-  },
-  "5199667440_480085569": {
-    "market_hash_name": "M4A1-S | Emphorosaur-S (Battle-Scarred)",
-    "calculated_average": 156.12,
-    "order_price": 98.27
-  },
-  "5199667759_188530139": {
-    "market_hash_name": "M4A4 | Temukau (Field-Tested)",
-    "calculated_average": 4795.47,
-    "order_price": 3812.22
-  },
-  "5199667760_480085569": {
-    "market_hash_name": "M4A1-S | Emphorosaur-S (Factory New)",
-    "calculated_average": 726.03,
-    "order_price": 552.0
-  },
-  "5199667762_188530139": {
-    "market_hash_name": "AK-47 | Head Shot (Battle-Scarred)",
-    "calculated_average": 2829.97,
-    "order_price": 2112.14
-  },
-  "5199671607_188530139": {
-    "market_hash_name": "M4A4 | Temukau (Battle-Scarred)",
-    "calculated_average": 3196.37,
-    "order_price": 1898.48
-  },
-  "5199678776_188530139": {
-    "market_hash_name": "Tec-9 | Rebel (Factory New)",
-    "calculated_average": 48.0,
-    "order_price": 3.01
-  },
-  "5199678780_188530170": {
-    "market_hash_name": "StatTrak™ P90 | Neoqueen (Field-Tested)",
-    "calculated_average": 282.78,
-    "order_price": 184.84
-  },
-  "5199680108_188530139": {
-    "market_hash_name": "P90 | Neoqueen (Well-Worn)",
-    "calculated_average": 131.59,
-    "order_price": 84.01
-  },
-  "5199684085_188530139": {
-    "market_hash_name": "AK-47 | Head Shot (Field-Tested)",
-    "calculated_average": 7273.01,
-    "order_price": 5730.36
-  },
-  "5199685051_188530170": {
-    "market_hash_name": "StatTrak™ SCAR-20 | Fragments (Well-Worn)",
-    "calculated_average": 37.05,
-    "order_price": 18.8
-  },
-  "5199685052_188530170": {
-    "market_hash_name": "StatTrak™ AWP | Duality (Field-Tested)",
-    "calculated_average": 2677.72,
-    "order_price": 2157.47
-  },
-  "5199701871_188530170": {
-    "market_hash_name": "StatTrak™ M4A1-S | Emphorosaur-S (Battle-Scarred)",
-    "calculated_average": 444.44,
-    "order_price": 284.01
-  },
-  "5199701871_902658099": {
-    "market_hash_name": "StatTrak™ M4A1-S | Emphorosaur-S (Battle-Scarred)",
-    "calculated_average": 440.92,
-    "order_price": 284.01
-  },
-  "5199731360_188530170": {
-    "market_hash_name": "StatTrak™ P90 | Neoqueen (Well-Worn)",
-    "calculated_average": 331.35,
-    "order_price": 207.28
-  },
-  "5200928269_188530170": {
-    "market_hash_name": "StatTrak™ M4A4 | Temukau (Field-Tested)",
-    "calculated_average": 8036.3,
-    "order_price": 6485.01
+  "5199739295_188530170": {
+    "market_hash_name": "StatTrak™ Tec-9 | Rebel (Factory New)",
+    "calculated_average": 169.71,
+    "order_price": 13.39
   },
   "5201006958_188530170": {
     "market_hash_name": "StatTrak™ M4A1-S | Emphorosaur-S (Well-Worn)",
-    "calculated_average": 681.56,
-    "order_price": 488.25
+    "calculated_average": 711.96,
+    "order_price": 422.12
   },
-  "5201198103_188530139": {
-    "market_hash_name": "AWP | Duality (Well-Worn)",
-    "calculated_average": 1585.24,
-    "order_price": 1248.35
+  "5290281584_188530139": {
+    "market_hash_name": "USP-S | Torque (Field-Tested)",
+    "calculated_average": 105.06,
+    "order_price": 48.12
   },
-  "5201653746_188530170": {
-    "market_hash_name": "StatTrak™ AWP | Duality (Battle-Scarred)",
-    "calculated_average": 2234.03,
-    "order_price": 1808.35
-  },
-  "5202283062_188530170": {
-    "market_hash_name": "StatTrak™ AK-47 | Head Shot (Battle-Scarred)",
-    "calculated_average": 5433.27,
-    "order_price": 4383.12
-  },
-  "5301015647_188530139": {
-    "market_hash_name": "USP-S | The Traitor (Minimal Wear)",
-    "calculated_average": 2295.83,
-    "order_price": 1805.27
-  },
-  "5304208039_302028390": {
-    "market_hash_name": "MAC-10 | Silver (Factory New)",
-    "calculated_average": 23.18,
-    "order_price": 3.02
-  },
-  "5304212184_302028390": {
-    "market_hash_name": "P90 | Ash Wood (Field-Tested)",
-    "calculated_average": 19.33,
-    "order_price": 3.03
+  "5304204653_188530139": {
+    "market_hash_name": "M4A4 | Faded Zebra (Field-Tested)",
+    "calculated_average": 189.43,
+    "order_price": 80.07
   },
   "5312942814_188530139": {
     "market_hash_name": "R8 Revolver | Inlay (Minimal Wear)",
-    "calculated_average": 5.94,
-    "order_price": 1.23
+    "calculated_average": 7.12,
+    "order_price": 2.14
   },
   "5312942815_188530139": {
     "market_hash_name": "M249 | Submerged (Field-Tested)",
-    "calculated_average": 4.04,
-    "order_price": 1.09
+    "calculated_average": 4.29,
+    "order_price": 1.54
   },
   "5312942816_188530139": {
     "market_hash_name": "MAC-10 | Echoing Sands (Battle-Scarred)",
-    "calculated_average": 19.39,
-    "order_price": 5.02
-  },
-  "5312942819_188530139": {
-    "market_hash_name": "AUG | Snake Pit (Field-Tested)",
-    "calculated_average": 4.93,
-    "order_price": 0.77
+    "calculated_average": 20.15,
+    "order_price": 5.06
   },
   "5312942820_188530139": {
     "market_hash_name": "M249 | Submerged (Minimal Wear)",
-    "calculated_average": 5.68,
-    "order_price": 1.04
+    "calculated_average": 5.65,
+    "order_price": 1.64
   },
-  "5312942822_188530139": {
-    "market_hash_name": "R8 Revolver | Inlay (Field-Tested)",
+  "5312942824_188530139": {
+    "market_hash_name": "XM1014 | Hieroglyph (Field-Tested)",
     "calculated_average": 4.92,
-    "order_price": 1.52
+    "order_price": 1.07
   },
-  "5312942823_188530139": {
-    "market_hash_name": "R8 Revolver | Inlay (Factory New)",
-    "calculated_average": 11.55,
-    "order_price": 1.05
-  },
-  "5312942825_188530139": {
-    "market_hash_name": "MP7 | Sunbaked (Battle-Scarred)",
-    "calculated_average": 4.91,
-    "order_price": 1.02
+  "5312942829_188530139": {
+    "market_hash_name": "R8 Revolver | Inlay (Battle-Scarred)",
+    "calculated_average": 4.69,
+    "order_price": 1.57
   },
   "5312942845_188530139": {
     "market_hash_name": "MP7 | Sunbaked (Minimal Wear)",
-    "calculated_average": 6.33,
-    "order_price": 2.17
+    "calculated_average": 7.19,
+    "order_price": 2.15
+  },
+  "5312942869_188530139": {
+    "market_hash_name": "XM1014 | Hieroglyph (Factory New)",
+    "calculated_average": 10.29,
+    "order_price": 0.83
   },
   "5312942870_188530139": {
     "market_hash_name": "MP7 | Sunbaked (Well-Worn)",
-    "calculated_average": 4.95,
-    "order_price": 0.63
+    "calculated_average": 4.1,
+    "order_price": 0.53
   },
-  "5312942871_188530139": {
-    "market_hash_name": "XM1014 | Hieroglyph (Battle-Scarred)",
-    "calculated_average": 4.56,
-    "order_price": 1.03
+  "5312942873_188530139": {
+    "market_hash_name": "MP7 | Sunbaked (Field-Tested)",
+    "calculated_average": 4.94,
+    "order_price": 1.56
   },
-  "5312942872_188530139": {
-    "market_hash_name": "MAC-10 | Echoing Sands (Field-Tested)",
-    "calculated_average": 22.17,
-    "order_price": 10.65
+  "5312942882_188530139": {
+    "market_hash_name": "USP-S | Desert Tactical (Battle-Scarred)",
+    "calculated_average": 18.81,
+    "order_price": 6.01
   },
-  "5312942874_188530139": {
-    "market_hash_name": "XM1014 | Hieroglyph (Well-Worn)",
-    "calculated_average": 5.36,
-    "order_price": 0.78
+  "5312942883_188530139": {
+    "market_hash_name": "XM1014 | Hieroglyph (Minimal Wear)",
+    "calculated_average": 7.42,
+    "order_price": 1.85
   },
-  "5312942877_188530139": {
-    "market_hash_name": "M249 | Submerged (Battle-Scarred)",
-    "calculated_average": 4.69,
-    "order_price": 1.13
+  "5312942884_188530139": {
+    "market_hash_name": "SSG 08 | Azure Glyph (Battle-Scarred)",
+    "calculated_average": 19.02,
+    "order_price": 5.14
   },
-  "5312942880_188530139": {
-    "market_hash_name": "AUG | Snake Pit (Minimal Wear)",
-    "calculated_average": 6.65,
-    "order_price": 1.59
+  "5312942888_188530139": {
+    "market_hash_name": "MAC-10 | Echoing Sands (Minimal Wear)",
+    "calculated_average": 38.32,
+    "order_price": 18.05
   },
-  "5312942885_188530139": {
-    "market_hash_name": "MAG-7 | Copper Coated (Well-Worn)",
-    "calculated_average": 124.03,
-    "order_price": 59.8
-  },
-  "5312942886_188530139": {
-    "market_hash_name": "M249 | Submerged (Well-Worn)",
-    "calculated_average": 3.3,
-    "order_price": 1.02
-  },
-  "5312942890_188530139": {
+  "5312942890_480085569": {
     "market_hash_name": "M4A1-S | Mud-Spec (Minimal Wear)",
-    "calculated_average": 53.13,
-    "order_price": 22.28
-  },
-  "5312942894_188530139": {
-    "market_hash_name": "M4A1-S | Mud-Spec (Battle-Scarred)",
-    "calculated_average": 34.95,
-    "order_price": 16.02
-  },
-  "5312942915_188530139": {
-    "market_hash_name": "M4A1-S | Mud-Spec (Well-Worn)",
-    "calculated_average": 48.86,
-    "order_price": 18.95
-  },
-  "5312942944_188530139": {
-    "market_hash_name": "AWP | Black Nile (Factory New)",
-    "calculated_average": 959.66,
-    "order_price": 799.1
-  },
-  "5312942958_188530139": {
-    "market_hash_name": "AWP | Black Nile (Minimal Wear)",
-    "calculated_average": 484.63,
-    "order_price": 318.4
+    "calculated_average": 44.18,
+    "order_price": 22.03
   },
   "5312942993_188530139": {
     "market_hash_name": "AUG | Snake Pit (Battle-Scarred)",
-    "calculated_average": 4.87,
+    "calculated_average": 4.86,
+    "order_price": 1.6
+  },
+  "310776612_302028390": {
+    "market_hash_name": "Nova | Predator (Field-Tested)",
+    "calculated_average": 6.64,
+    "order_price": 1.1
+  },
+  "310776969_302028390": {
+    "market_hash_name": "Galil AR | Sage Spray (Minimal Wear)",
+    "calculated_average": 4.92,
+    "order_price": 1.61
+  },
+  "310779992_302028390": {
+    "market_hash_name": "Five-SeveN | Forest Night (Well-Worn)",
+    "calculated_average": 3.0,
+    "order_price": 1.04
+  },
+  "310780331_302028390": {
+    "market_hash_name": "Nova | Sand Dune (Well-Worn)",
+    "calculated_average": 3.27,
+    "order_price": 1.14
+  },
+  "519986568_480085569": {
+    "market_hash_name": "SG 553 | Traveler (Battle-Scarred)",
+    "calculated_average": 656.6,
+    "order_price": 324.21
+  },
+  "3035569517_302028390": {
+    "market_hash_name": "MP9 | Slide (Field-Tested)",
+    "calculated_average": 6.19,
+    "order_price": 2.01
+  },
+  "3035569977_302028390": {
+    "market_hash_name": "Five-SeveN | Coolant (Field-Tested)",
+    "calculated_average": 3.74,
     "order_price": 1.02
   },
-  "5312943016_188530139": {
-    "market_hash_name": "M4A1-S | Mud-Spec (Factory New)",
-    "calculated_average": 111.16,
-    "order_price": 24.01
+  "3035600524_302028390": {
+    "market_hash_name": "Nova | Mandrel (Well-Worn)",
+    "calculated_average": 3.69,
+    "order_price": 0.56
   },
-  "5312943038_188530139": {
-    "market_hash_name": "AWP | Black Nile (Battle-Scarred)",
-    "calculated_average": 505.15,
-    "order_price": 314.27
+  "3574250131_188530139": {
+    "market_hash_name": "P250 | Inferno (Battle-Scarred)",
+    "calculated_average": 87.42,
+    "order_price": 43.03
   },
-  "5312943063_188530139": {
-    "market_hash_name": "Tec-9 | Mummy's Rot (Well-Worn)",
-    "calculated_average": 131.13,
-    "order_price": 62.18
+  "4141794809_188530170": {
+    "market_hash_name": "StatTrak™ MP5-SD | Condition Zero (Field-Tested)",
+    "calculated_average": 58.66,
+    "order_price": 29.18
   },
-  "5312947795_188530139": {
-    "market_hash_name": "AWP | Black Nile (Well-Worn)",
-    "calculated_average": 538.62,
-    "order_price": 316.36
+  "4726111819_188530139": {
+    "market_hash_name": "P2000 | Lifted Spirits (Battle-Scarred)",
+    "calculated_average": 10.17,
+    "order_price": 4.03
   },
-  "5322247794_302028390": {
-    "market_hash_name": "P250 | Sand Dune (Minimal Wear)",
-    "calculated_average": 4.95,
-    "order_price": 0.53
+  "5199671606_188530139": {
+    "market_hash_name": "Glock-18 | Umbral Rabbit (Battle-Scarred)",
+    "calculated_average": 113.62,
+    "order_price": 50.01
   },
-  "5323756630_188530139": {
-    "market_hash_name": "MAC-10 | Carnivore (Field-Tested)",
-    "calculated_average": 17.33,
-    "order_price": 3.14
+  "5199691936_188530170": {
+    "market_hash_name": "StatTrak™ Tec-9 | Rebel (Minimal Wear)",
+    "calculated_average": 50.47,
+    "order_price": 0.12
   },
-  "5325178361_188530139": {
-    "market_hash_name": "FAMAS | Djinn (Battle-Scarred)",
-    "calculated_average": 180.67,
-    "order_price": 116.01
+  "5323779924_188530139": {
+    "market_hash_name": "M4A4 | Faded Zebra (Field-Tested)",
+    "calculated_average": 192.3,
+    "order_price": 1.03
   },
-  "5326564408_188530139": {
-    "market_hash_name": "PP-Bizon | Space Cat (Field-Tested)",
-    "calculated_average": 30.31,
-    "order_price": 2.32
+  "5335544800_188530139": {
+    "market_hash_name": "Tec-9 | Avalanche (Battle-Scarred)",
+    "calculated_average": 56.74,
+    "order_price": 26.54
   },
-  "5327989977_188530139": {
-    "market_hash_name": "MP7 | Bloodsport (Battle-Scarred)",
-    "calculated_average": 145.68,
-    "order_price": 73.02
+  "5335565275_188530139": {
+    "market_hash_name": "Dual Berettas | Urban Shock (Well-Worn)",
+    "calculated_average": 135.33,
+    "order_price": 66.02
   },
-  "5327996092_188530139": {
-    "market_hash_name": "Glock-18 | Ironwork (Well-Worn)",
-    "calculated_average": 11.97,
-    "order_price": 0.88
+  "5335566219_188530139": {
+    "market_hash_name": "Tec-9 | Re-Entry (Well-Worn)",
+    "calculated_average": 40.87,
+    "order_price": 19.77
   },
-  "5329542164_188530139": {
-    "market_hash_name": "P250 | Nevermore (Field-Tested)",
-    "calculated_average": 49.92,
-    "order_price": 24.93
+  "5335566228_188530139": {
+    "market_hash_name": "Negev | Lionfish (Well-Worn)",
+    "calculated_average": 31.28,
+    "order_price": 2.36
   },
-  "5329543238_188530139": {
-    "market_hash_name": "AWP | Duality (Battle-Scarred)",
-    "calculated_average": 1036.26,
-    "order_price": 813.71
+  "5335573790_188530139": {
+    "market_hash_name": "MAG-7 | Firestarter (Minimal Wear)",
+    "calculated_average": 50.89,
+    "order_price": 25.06
   },
-  "5329545241_519977179": {
-    "market_hash_name": "R8 Revolver | Blaze (Factory New)",
-    "calculated_average": 209.82,
-    "order_price": 110.1
+  "5335579077_519977179": {
+    "market_hash_name": "Glock-18 | Night (Well-Worn)",
+    "calculated_average": 129.62,
+    "order_price": 69.03
   },
-  "5329568135_188530139": {
-    "market_hash_name": "P2000 | Imperial (Field-Tested)",
-    "calculated_average": 14.78,
-    "order_price": 2.13
+  "5342903713_188530139": {
+    "market_hash_name": "AUG | Momentum (Battle-Scarred)",
+    "calculated_average": 146.3,
+    "order_price": 0.03
   },
-  "5331163476_519977179": {
-    "market_hash_name": "R8 Revolver | Blaze (Factory New)",
-    "calculated_average": 187.99,
-    "order_price": 112.09
+  "5342926321_188530139": {
+    "market_hash_name": "CZ75-Auto | Tigris (Well-Worn)",
+    "calculated_average": 51.86,
+    "order_price": 0.12
   },
-  "5331165113_188530139": {
-    "market_hash_name": "UMP-45 | Primal Saber (Field-Tested)",
-    "calculated_average": 249.98,
-    "order_price": 151.94
+  "5342926789_188530139": {
+    "market_hash_name": "MAG-7 | Heat (Battle-Scarred)",
+    "calculated_average": 34.89,
+    "order_price": 16.4
   },
-  "5331166273_143865972": {
-    "market_hash_name": "Berlin 2019 Minor Challengers (Holo-Foil)",
-    "calculated_average": 83.13,
-    "order_price": 41.58
+  "5344364651_188530139": {
+    "market_hash_name": "USP-S | Cortex (Battle-Scarred)",
+    "calculated_average": 158.97,
+    "order_price": 2.01
   },
-  "5331178753_188530139": {
-    "market_hash_name": "UMP-45 | Primal Saber (Battle-Scarred)",
-    "calculated_average": 191.97,
-    "order_price": 123.01
+  "5344366320_188530139": {
+    "market_hash_name": "MP9 | Food Chain (Battle-Scarred)",
+    "calculated_average": 124.1,
+    "order_price": 12.02
   },
-  "5331179635_188530170": {
-    "market_hash_name": "StatTrak™ P250 | Nevermore (Field-Tested)",
-    "calculated_average": 80.56,
-    "order_price": 40.29
+  "5344366608_188530139": {
+    "market_hash_name": "MP9 | Food Chain (Well-Worn)",
+    "calculated_average": 128.23,
+    "order_price": 12.04
   },
-  "5331179712_188530139": {
-    "market_hash_name": "M4A1-S | Mecha Industries (Battle-Scarred)",
-    "calculated_average": 1951.56,
-    "order_price": 1551.57
+  "5344367960_188530139": {
+    "market_hash_name": "UMP-45 | Oscillator (Field-Tested)",
+    "calculated_average": 7.09,
+    "order_price": 0.5
   },
-  "5331187472_188530139": {
-    "market_hash_name": "MP7 | Powercore (Battle-Scarred)",
-    "calculated_average": 42.92,
-    "order_price": 23.32
+  "5344371009_188530139": {
+    "market_hash_name": "Tec-9 | Brother (Battle-Scarred)",
+    "calculated_average": 35.89,
+    "order_price": 16.8
   },
-  "5332665782_519977179": {
-    "market_hash_name": "M4A4 | The Coalition (Battle-Scarred)",
-    "calculated_average": 1041.91,
-    "order_price": 855.23
+  "5344371015_188530139": {
+    "market_hash_name": "AK-47 | Slate (Well-Worn)",
+    "calculated_average": 205.0,
+    "order_price": 101.01
   },
-  "5332667373_188530139": {
-    "market_hash_name": "Galil AR | Chromatic Aberration (Battle-Scarred)",
-    "calculated_average": 132.86,
-    "order_price": 84.01
+  "5344371348_188530139": {
+    "market_hash_name": "UMP-45 | Moonrise (Field-Tested)",
+    "calculated_average": 43.99,
+    "order_price": 20.64
   },
-  "5332669185_188530139": {
-    "market_hash_name": "Desert Eagle | Kumicho Dragon (Battle-Scarred)",
-    "calculated_average": 1443.35,
-    "order_price": 1151.62
+  "5344371449_188530139": {
+    "market_hash_name": "Five-SeveN | Monkey Business (Battle-Scarred)",
+    "calculated_average": 147.74,
+    "order_price": 0.32
   },
-  "5332669843_188530139": {
-    "market_hash_name": "AK-47 | Frontside Misty (Battle-Scarred)",
-    "calculated_average": 996.99,
-    "order_price": 791.14
+  "5344372651_188530139": {
+    "market_hash_name": "MP7 | Abyssal Apparition (Battle-Scarred)",
+    "calculated_average": 146.08,
+    "order_price": 0.03
   },
-  "5332670945_188530139": {
-    "market_hash_name": "AK-47 | Asiimov (Battle-Scarred)",
-    "calculated_average": 2146.9,
-    "order_price": 1781.86
+  "5344377636_188530139": {
+    "market_hash_name": "FAMAS | Sergeant (Battle-Scarred)",
+    "calculated_average": 177.88,
+    "order_price": 2.17
   },
-  "5332685539_188530139": {
-    "market_hash_name": "Glock-18 | Moonrise (Battle-Scarred)",
-    "calculated_average": 34.36,
+  "5344381521_188530139": {
+    "market_hash_name": "Five-SeveN | Fowl Play (Well-Worn)",
+    "calculated_average": 191.28,
+    "order_price": 0.05
+  },
+  "5344393689_188530139": {
+    "market_hash_name": "Five-SeveN | Fowl Play (Battle-Scarred)",
+    "calculated_average": 185.55,
+    "order_price": 0.04
+  },
+  "5344402187_188530139": {
+    "market_hash_name": "MAG-7 | Heat (Battle-Scarred)",
+    "calculated_average": 35.2,
+    "order_price": 16.41
+  },
+  "5344402416_188530139": {
+    "market_hash_name": "AWP | PAW (Battle-Scarred)",
+    "calculated_average": 237.85,
+    "order_price": 130.08
+  },
+  "5344404050_188530139": {
+    "market_hash_name": "PP-Bizon | Fuel Rod (Battle-Scarred)",
+    "calculated_average": 70.18,
+    "order_price": 25.94
+  },
+  "5345759328_188530139": {
+    "market_hash_name": "Tec-9 | Brother (Battle-Scarred)",
+    "calculated_average": 35.54,
     "order_price": 16.77
   },
-  "5334109011_188530139": {
-    "market_hash_name": "USP-S | Cortex (Well-Worn)",
-    "calculated_average": 170.35,
-    "order_price": 110.18
+  "5345761302_188530139": {
+    "market_hash_name": "PP-Bizon | Fuel Rod (Battle-Scarred)",
+    "calculated_average": 70.79,
+    "order_price": 25.97
   },
-  "5334110142_188530139": {
-    "market_hash_name": "M4A4 | Temukau (Battle-Scarred)",
-    "calculated_average": 2234.33,
-    "order_price": 1813.01
+  "5345761721_302028390": {
+    "market_hash_name": "R8 Revolver | Amber Fade (Field-Tested)",
+    "calculated_average": 106.73,
+    "order_price": 0.03
   },
-  "5334115327_143865972": {
-    "market_hash_name": "Berlin 2019 Legends (Holo-Foil)",
-    "calculated_average": 149.63,
-    "order_price": 90.01
+  "5345769715_188530139": {
+    "market_hash_name": "Five-SeveN | Monkey Business (Battle-Scarred)",
+    "calculated_average": 148.35,
+    "order_price": 0.17
   },
-  "5334118124_188530139": {
-    "market_hash_name": "Glock-18 | Royal Legion (Battle-Scarred)",
-    "calculated_average": 173.41,
-    "order_price": 84.07
+  "5345775914_188530139": {
+    "market_hash_name": "Tec-9 | Fuel Injector (Battle-Scarred)",
+    "calculated_average": 164.28,
+    "order_price": 12.33
   },
-  "5334123618_519977179": {
-    "market_hash_name": "R8 Revolver | Blaze (Factory New)",
-    "calculated_average": 172.48,
-    "order_price": 110.12
+  "5345776999_188530139": {
+    "market_hash_name": "Five-SeveN | Fowl Play (Battle-Scarred)",
+    "calculated_average": 185.55,
+    "order_price": 0.04
   },
-  "5334131273_188530139": {
-    "market_hash_name": "MP7 | Bloodsport (Battle-Scarred)",
-    "calculated_average": 139.26,
-    "order_price": 77.01
+  "5345787078_188530170": {
+    "market_hash_name": "StatTrak™ Desert Eagle | Trigger Discipline (Battle-Scarred)",
+    "calculated_average": 210.45,
+    "order_price": 87.26
   },
-  "5335535979_188530139": {
+  "5347145817_188530139": {
+    "market_hash_name": "AUG | Momentum (Battle-Scarred)",
+    "calculated_average": 123.19,
+    "order_price": 0.03
+  },
+  "5347145824_188530139": {
+    "market_hash_name": "AWP | PAW (Field-Tested)",
+    "calculated_average": 183.39,
+    "order_price": 90.03
+  },
+  "5347145824_480085569": {
+    "market_hash_name": "AWP | PAW (Field-Tested)",
+    "calculated_average": 180.59,
+    "order_price": 90.03
+  },
+  "5347148576_302028390": {
+    "market_hash_name": "R8 Revolver | Amber Fade (Field-Tested)",
+    "calculated_average": 99.54,
+    "order_price": 0.03
+  },
+  "5347150601_188530139": {
+    "market_hash_name": "MAG-7 | Heat (Battle-Scarred)",
+    "calculated_average": 31.15,
+    "order_price": 4.02
+  },
+  "5347150608_188530170": {
+    "market_hash_name": "StatTrak™ Glock-18 | Weasel (Well-Worn)",
+    "calculated_average": 190.65,
+    "order_price": 0.12
+  },
+  "5347158320_188530139": {
+    "market_hash_name": "AWP | PAW (Well-Worn)",
+    "calculated_average": 186.93,
+    "order_price": 0.04
+  },
+  "5347158525_188530139": {
+    "market_hash_name": "MAG-7 | Justice (Battle-Scarred)",
+    "calculated_average": 129.13,
+    "order_price": 0.03
+  },
+  "5348565764_188530139": {
+    "market_hash_name": "SSG 08 | Fever Dream (Field-Tested)",
+    "calculated_average": 35.06,
+    "order_price": 0.12
+  },
+  "5348567013_188530139": {
+    "market_hash_name": "MP9 | Food Chain (Battle-Scarred)",
+    "calculated_average": 132.44,
+    "order_price": 12.02
+  },
+  "5348567101_143865972": {
+    "market_hash_name": "Anubis Collection Package",
+    "calculated_average": 138.71,
+    "order_price": 68.43
+  },
+  "5348572033_302028390": {
+    "market_hash_name": "P250 | Franklin (Field-Tested)",
+    "calculated_average": 100.93,
+    "order_price": 0.12
+  },
+  "5348573376_188530139": {
+    "market_hash_name": "PP-Bizon | Space Cat (Field-Tested)",
+    "calculated_average": 31.19,
+    "order_price": 5.02
+  },
+  "5348573642_188530139": {
+    "market_hash_name": "XM1014 | Incinegator (Battle-Scarred)",
+    "calculated_average": 125.66,
+    "order_price": 61.09
+  },
+  "5348573921_188530139": {
     "market_hash_name": "AWP | Atheris (Well-Worn)",
-    "calculated_average": 219.99,
-    "order_price": 129.03
+    "calculated_average": 220.04,
+    "order_price": 102.67
+  },
+  "5348574759_188530139": {
+    "market_hash_name": "AWP | Capillary (Battle-Scarred)",
+    "calculated_average": 23.07,
+    "order_price": 9.38
+  },
+  "5348575905_188530139": {
+    "market_hash_name": "SG 553 | Pulse (Field-Tested)",
+    "calculated_average": 191.53,
+    "order_price": 4.19
+  },
+  "5348581152_302028390": {
+    "market_hash_name": "R8 Revolver | Amber Fade (Field-Tested)",
+    "calculated_average": 100.92,
+    "order_price": 0.03
+  },
+  "5348583627_188530170": {
+    "market_hash_name": "StatTrak™ Glock-18 | Weasel (Well-Worn)",
+    "calculated_average": 173.31,
+    "order_price": 1.45
+  },
+  "5350130696_188530139": {
+    "market_hash_name": "CZ75-Auto | Tigris (Well-Worn)",
+    "calculated_average": 46.9,
+    "order_price": 0.12
+  },
+  "5350135608_188530139": {
+    "market_hash_name": "Galil AR | Chromatic Aberration (Battle-Scarred)",
+    "calculated_average": 136.51,
+    "order_price": 6.01
+  },
+  "5350141658_188530170": {
+    "market_hash_name": "StatTrak™ Glock-18 | Weasel (Well-Worn)",
+    "calculated_average": 165.9,
+    "order_price": 92.14
+  },
+  "5350146190_302028390": {
+    "market_hash_name": "P250 | Franklin (Field-Tested)",
+    "calculated_average": 103.65,
+    "order_price": 4.01
+  },
+  "5350149190_188530139": {
+    "market_hash_name": "USP-S | Cyrex (Battle-Scarred)",
+    "calculated_average": 123.48,
+    "order_price": 61.75
+  },
+  "310776866_302028390": {
+    "market_hash_name": "AUG | Storm (Minimal Wear)",
+    "calculated_average": 4.85,
+    "order_price": 1.63
+  },
+  "310778036_302028390": {
+    "market_hash_name": "G3SG1 | Desert Storm (Factory New)",
+    "calculated_average": 24.96,
+    "order_price": 11.09
+  },
+  "527649060_188530170": {
+    "market_hash_name": "StatTrak™ SSG 08 | Dark Water (Field-Tested)",
+    "calculated_average": 252.04,
+    "order_price": 139.02
+  },
+  "575553533_302028390": {
+    "market_hash_name": "SG 553 | Fallout Warning (Battle-Scarred)",
+    "calculated_average": 103.79,
+    "order_price": 10.69
+  },
+  "937243353_188530139": {
+    "market_hash_name": "Negev | Man-o'-war (Minimal Wear)",
+    "calculated_average": 26.01,
+    "order_price": 8.81
+  },
+  "1310038399_188530170": {
+    "market_hash_name": "StatTrak™ MAC-10 | Rangeen (Battle-Scarred)",
+    "calculated_average": 62.45,
+    "order_price": 28.91
+  },
+  "1440504234_188530139": {
+    "market_hash_name": "AUG | Ricochet (Field-Tested)",
+    "calculated_average": 15.98,
+    "order_price": 6.41
+  },
+  "2316474996_188530139": {
+    "market_hash_name": "P250 | Red Rock (Well-Worn)",
+    "calculated_average": 569.58,
+    "order_price": 315.01
+  },
+  "3035569050_302028390": {
+    "market_hash_name": "Five-SeveN | Coolant (Factory New)",
+    "calculated_average": 6.21,
+    "order_price": 2.31
+  },
+  "3035570962_302028390": {
+    "market_hash_name": "P250 | Facility Draft (Factory New)",
+    "calculated_average": 6.09,
+    "order_price": 2.15
+  },
+  "3035579746_480085569": {
+    "market_hash_name": "MAC-10 | Calf Skin (Factory New)",
+    "calculated_average": 87.42,
+    "order_price": 13.01
+  },
+  "3035588409_302028390": {
+    "market_hash_name": "PP-Bizon | Facility Sketch (Battle-Scarred)",
+    "calculated_average": 3.68,
+    "order_price": 1.28
+  },
+  "4141791265_188530170": {
+    "market_hash_name": "StatTrak™ UMP-45 | Gold Bismuth (Battle-Scarred)",
+    "calculated_average": 243.87,
+    "order_price": 126.13
+  },
+  "4141839604_188530170": {
+    "market_hash_name": "StatTrak™ SSG 08 | Parallax (Battle-Scarred)",
+    "calculated_average": 211.35,
+    "order_price": 115.89
+  },
+  "4571592940_519977179": {
+    "market_hash_name": "MP7 | Prey (Factory New)",
+    "calculated_average": 35.59,
+    "order_price": 9.85
+  },
+  "4727352499_902658099": {
+    "market_hash_name": "StatTrak™ MP7 | Abyssal Apparition (Battle-Scarred)",
+    "calculated_average": 238.52,
+    "order_price": 126.15
+  },
+  "4910476366_902658099": {
+    "market_hash_name": "StatTrak™ Dual Berettas | Flora Carnivora (Battle-Scarred)",
+    "calculated_average": 108.03,
+    "order_price": 22.04
+  },
+  "4975155891_188530170": {
+    "market_hash_name": "StatTrak™ Music Kit | Humanity's Last Breath, Void",
+    "calculated_average": 81.8,
+    "order_price": 1.01
+  },
+  "5312942819_188530139": {
+    "market_hash_name": "AUG | Snake Pit (Field-Tested)",
+    "calculated_average": 4.81,
+    "order_price": 1.62
+  },
+  "5312942878_188530139": {
+    "market_hash_name": "SSG 08 | Azure Glyph (Field-Tested)",
+    "calculated_average": 20.46,
+    "order_price": 8.08
+  },
+  "5312942878_480085569": {
+    "market_hash_name": "SSG 08 | Azure Glyph (Field-Tested)",
+    "calculated_average": 20.64,
+    "order_price": 9.02
+  },
+  "5335546102_188530139": {
+    "market_hash_name": "M249 | Downtown (Well-Worn)",
+    "calculated_average": 64.38,
+    "order_price": 30.02
+  },
+  "5344366324_188530139": {
+    "market_hash_name": "M4A1-S | Emphorosaur-S (Battle-Scarred)",
+    "calculated_average": 124.51,
+    "order_price": 62.27
+  },
+  "5344370191_188530139": {
+    "market_hash_name": "Dual Berettas | Melondrama (Battle-Scarred)",
+    "calculated_average": 154.4,
+    "order_price": 2.02
+  },
+  "5344383651_188530139": {
+    "market_hash_name": "MAG-7 | BI83 Spectrum (Battle-Scarred)",
+    "calculated_average": 89.86,
+    "order_price": 44.78
+  },
+  "5345764000_188530139": {
+    "market_hash_name": "MAG-7 | BI83 Spectrum (Battle-Scarred)",
+    "calculated_average": 89.86,
+    "order_price": 44.78
+  },
+  "5347148336_188530139": {
+    "market_hash_name": "P250 | See Ya Later (Battle-Scarred)",
+    "calculated_average": 239.77,
+    "order_price": 1.01
+  },
+  "5348582162_188530139": {
+    "market_hash_name": "USP-S | Ticket to Hell (Battle-Scarred)",
+    "calculated_average": 33.9,
+    "order_price": 0.51
+  },
+  "5350129073_188530139": {
+    "market_hash_name": "M4A1-S | Night Terror (Field-Tested)",
+    "calculated_average": 60.17,
+    "order_price": 6.02
+  },
+  "5350130887_188530139": {
+    "market_hash_name": "AWP | Capillary (Well-Worn)",
+    "calculated_average": 24.94,
+    "order_price": 1.01
+  },
+  "5350160309_188530139": {
+    "market_hash_name": "Galil AR | Eco (Battle-Scarred)",
+    "calculated_average": 178.0,
+    "order_price": 0.13
   }
 }

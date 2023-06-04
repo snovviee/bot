@@ -101,9 +101,6 @@ module MarketAccount
       data = seats_json
       orders_total = data.map { |k, v| v[:order_price] }.sum
       log!("Built #{data.size} orders with estimated total #{orders_total}")
-      # rescue => err
-        # log!("Error: #{err}")
-        # retry
     end
 
     def buy!
