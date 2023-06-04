@@ -123,24 +123,41 @@ class Account
   private
 
   def calculated_average(row)
+    result_5 = {
+      count: 0,
+      prices: []
+    }
     result_10 = {
       count: 0,
       prices: []
     }
+    range_5 = five_days_range
     range_10 = ten_days_range
 
     row[:history].each do |e|
+      if range_5.include?(e.first)
+        result_5[:count] += 1
+        result_5[:prices].push(e.last)
+      end
+
       if range_10.include?(e.first)
         result_10[:count] += 1
         result_10[:prices].push(e.last)
       end
     end
-    return if result_10[:count] < 6
 
-    sorted_prices = result_10[:prices].sort
+    return if result_5[:count] < 10
+
+    sorted_prices = result_5[:prices].sort
     without_gap_prices = sorted_prices[2..-3]
     actual_count = (without_gap_prices.size * 0.35).round
     without_gap_prices[-actual_count..-1].sum / actual_count
+  end
+
+  def five_days_range
+    now = Time.now
+    past = now - DAY_COUNT.days
+    (past.to_i..now.to_i)
   end
 
   def ten_days_range
