@@ -93,6 +93,7 @@ class Account
 
             obj_price = obj[:price][:USD].to_f
             equation = market_price * 100 / obj_price
+            puts "EQUATION: #{equation}"
             next if equation < 1.7
 
             {
@@ -156,7 +157,7 @@ class Account
 
   def five_days_range
     now = Time.now
-    past = now - DAY_COUNT.days
+    past = now - 5.days
     (past.to_i..now.to_i)
   end
 
