@@ -14,6 +14,19 @@ class Account
   attr_reader :market_account, :dmarket_account, :steam_account, :order
 
   DOLLAR_TO_RUB = 81.0
+  # market_account/order.rb:10 for build_list
+  EXCLUDED_TITLES = [
+    'Sticker',
+    'Souvenir',
+    'Case',
+    'Name Tag',
+    'Capsule',
+    'Sealed Graffiti',
+    'RMR',
+    'Patch',
+    'Ground Rebel',
+    'Gift Package'
+  ]
 
   def initialize(market:, dmarket:, steam:)
     @dmarket_account = DmarketAccount.new(dmarket)
@@ -72,7 +85,7 @@ class Account
     # get_dm_balance
   end
 
-  def inventory_items
+  def items # dmarket_account.rb:81
     response = dmarket_account.inventory(
       GameID: 'a8db',
       Presentation: 'InventoryPresentationDetailed',
@@ -82,38 +95,50 @@ class Account
   return response if response.success?
 
   # should definitely get an answer
-  # inventory_items
+  # items
   end
 
   def get_bought_items_group
-    return unless inventory_items
+    return unless items
 
-    items_bought = inventory_items.body[:Items]
+    items_bought = items.body[:Items]
     items_bought.group_by { |element| element[:Title] }.transform_values { |values| values.length }
   end
 
+  def build_list # market_account/order.rb:207
+    market_account.client.prices_rub_c_i.body[:items].select do |key, row|
+      excluded = EXCLUDED_TITLES.detect { |e| row[:market_hash_name].match(e) }
+
+      row[:price].to_f > 3 && !excluded && row[:popularity_7d].to_f > 2
+    end
+  end
+
+  def titles
+    market_items = build_list
+    market_items.map { |e| e.last[:market_hash_name]  }
+  end
+
   def buy!
-    titles = File.read("items.txt").split("\n").uniq
+    # titles = File.read("items.txt").split("\n").uniq
 
     while
       balance = get_dm_balance
-      sleep 2
-      break puts "Erorre balance: #{balance} USD" unless balance
+      sleep 1
+      break puts "Error balance: #{balance} USD" unless balance
       break if balance <= 0.5
 
       bought_items = get_bought_items_group
-      sleep 2
-      break puts "Erorre bought_items: #{balance} USD" unless bought_items
+      sleep 1
+      break puts "Error bought_items: #{balance} USD" unless bought_items
 
-      titles.each_slice(10) do |s_titles|
-        sleep 5
+      titles.each_slice(5) do |s_titles|
+        sleep 1
         market_response = market_account.list_items('list_hash_name' => s_titles)
         next unless market_response.success?
 
         market_data = market_response.body[:data]
 
         s_titles.each do |title|
-          sleep 0.3
           row = market_data[title.to_sym]
           market_price = calculated_average(row)
           next unless market_price
