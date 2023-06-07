@@ -64,61 +64,104 @@ class Account
     end
   end
 
+  def get_dm_balance
+    response = dmarket_account.balance
+    return response.body[:usd].to_f / 100 if response.success?
+
+    # should definitely get an answer
+    # get_dm_balance
+  end
+
+  def inventory_items
+    response = dmarket_account.inventory(
+      GameID: 'a8db',
+      Presentation: 'InventoryPresentationDetailed',
+      Limit: 500,
+      'BasicFilters.InMarket'.to_sym => true
+    )
+  return response if response.success?
+
+  # should definitely get an answer
+  # inventory_items
+  end
+
+  def get_bought_items_group
+    return unless inventory_items
+
+    items_bought = inventory_items.body[:Items]
+    items_bought.group_by { |element| element[:Title] }.transform_values { |values| values.length }
+  end
+
   def buy!
     titles = File.read("items.txt").split("\n").uniq
 
-    titles.each_slice(10) do |s_titles|
-      market_response = market_account.list_items('list_hash_name' => s_titles)
-      next unless market_response.success?
+    while
+      balance = get_dm_balance
+      sleep 2
+      break puts "Erorre balance: #{balance} USD" unless balance
+      break if balance <= 0.5
 
-      market_data = market_response.body[:data]
+      bought_items = get_bought_items_group
+      sleep 2
+      break puts "Erorre bought_items: #{balance} USD" unless bought_items
 
-      s_titles.each do |title|
-        row = market_data[title.to_sym]
-        market_price = calculated_average(row)
-        next unless market_price
+      titles.each_slice(10) do |s_titles|
+        sleep 5
+        market_response = market_account.list_items('list_hash_name' => s_titles)
+        next unless market_response.success?
 
-        market_price = (market_price / DOLLAR_TO_RUB).round(2)
-        # market_price = (market_data[title.to_sym][:average] / DOLLAR_TO_RUB).round(2)
+        market_data = market_response.body[:data]
 
-        Thread.new do
-          dm_response = dmarket_account.title_offers(title: title)
-          dm_response_objects = dm_response.body[:objects][0..2]
-          sorted_objects = dm_response_objects.sort_by { |e| e[:price][:USD].to_f }
+        s_titles.each do |title|
+          sleep 0.3
+          row = market_data[title.to_sym]
+          market_price = calculated_average(row)
+          next unless market_price
 
-          result_offers = sorted_objects.map do |obj|
-            next if obj[:title].include? 'Souvenir'
+          market_price = (market_price / DOLLAR_TO_RUB).round(2)
+          # market_price = (market_data[title.to_sym][:average] / DOLLAR_TO_RUB).round(2)
 
-            next unless obj[:inMarket]
+          Thread.new do
+            dm_response = dmarket_account.title_offers(title: title)
+            dm_response_objects = dm_response.body[:objects][0..2]
+            sorted_objects = dm_response_objects.sort_by { |e| e[:price][:USD].to_f }
 
-            obj_price = obj[:price][:USD].to_f
-            equation = market_price * 100 / obj_price
-            puts "EQUATION: #{equation}"
-            next if equation < 1.7
+            result_offers = sorted_objects.map do |obj|
+              quantity_bought_item = bought_items[obj[:title]]
+              next if quantity_bought_item && quantity_bought_item >= 4
+              next if obj[:title].include? 'Souvenir'
 
-            {
-              offerId: obj[:extra][:offerId],
-              price: {
-                amount: obj[:price][:USD],
-                currency: 'USD'
-              },
-              type: 'dmarket'
-            }
-          end.compact
+              next unless obj[:inMarket]
 
-          unless result_offers.empty?
-            buy_body = { offers: result_offers }.to_json
-            dmarket_account.buy(buy_body)
+              obj_price = obj[:price][:USD].to_f
+              equation = market_price * 100 / obj_price
+              puts "EQUATION: #{equation}"
+              next if equation < 1.8
+
+              {
+                offerId: obj[:extra][:offerId],
+                price: {
+                  amount: obj[:price][:USD],
+                  currency: 'USD'
+                },
+                type: 'dmarket'
+              }
+            end.compact
+
+            unless result_offers.empty?
+              buy_body = { offers: result_offers }.to_json
+              dmarket_account.buy(buy_body)
+            end
+          # Thread
           end
+        # s_titles
         end
+      # titles
       end
+    # wile
     end
 
-    response = dmarket_account.balance
-    if response.success?
-      balance = response.body[:usd].to_f / 100
-      puts "Remaining DMarket balance: #{balance} USD"
-    end
+    puts "Remaining DMarket balance: #{get_dm_balance} USD"
   end
 
   private
