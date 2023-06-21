@@ -24,7 +24,7 @@ class Account
   end
 
   delegate :withdraw!, :get_items_into_file!, to: :dmarket_account
-  delegate :accept_offers!, to: :steam_account
+  delegate :accept_offers!, :auth_code!, to: :steam_account
   delegate :trading!,       to: :market_account
   delegate :build!,         to: :order
   delegate :buy!,           to: :order, prefix: :order

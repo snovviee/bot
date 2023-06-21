@@ -1,6 +1,8 @@
 require 'steam-trade'
 
 class SteamAccount
+  include GuardCommands
+
   attr_reader :username, :password, :shared_secret, :identity_secret
 
   APP_ID = 730
@@ -30,6 +32,10 @@ class SteamAccount
 
       sleep(30)
     end
+  end
+
+  def auth_code!
+    puts fa(shared_secret)
   end
 
   def logged
