@@ -14,9 +14,9 @@ GIT
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/steam-trade
-  revision: d9dc3752f6af527ecced55da3a1c1848177167c6
+  revision: bbf8cab0ba65fd83035cbc52897dc341d8b79d09
   specs:
-    steam-trade (0.3.2)
+    steam-trade (0.3.3)
       mechanize (~> 2.7, >= 2.7.0)
 
 GEM
@@ -31,7 +31,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     byebug (11.1.3)
     concurrent-ruby (1.2.2)
-    connection_pool (2.4.0)
+    connection_pool (2.4.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     ed25519 (1.3.0)
@@ -62,11 +62,11 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
-    nokogiri (1.15.0)
+    nokogiri (1.15.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     public_suffix (5.0.1)
-    racc (1.6.2)
+    racc (1.7.1)
     ruby2_keywords (0.0.5)
     rubyntlm (0.6.3)
     tzinfo (2.0.6)
