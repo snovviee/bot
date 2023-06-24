@@ -1,0 +1,50 @@
+{
+	"panda_dm_tosheasuke1981": {
+		"market": {
+		  "api_key": "Y35ayu8uy0F4AA8EQ648s2s88461dY5",
+		  "steam_api_key": "7EEA0AB48E75D10A23EA015237DC6712"
+		},
+		"dmarket": {
+		  "api_key": "43db40cea8bccce2867eaf0faae27d80948685ae3784746a95de45fc8154f1b2",
+		  "secret_key": "9486517b1fd0b662f0faef76d885565a08ca747b5b86572ccd0fc1de323d03d343db40cea8bccce2867eaf0faae27d80948685ae3784746a95de45fc8154f1b2"
+		},
+		"steam": {
+		  "username": "tosheasuke1981",
+		  "password": "M1qB7Te9b919977Te9b",
+		  "shared_secret": "BGCK7gzWEz4watrFRg/yRFT/X78=",
+		  "identity_secret": "WhfJTY3W0IpVdc5EKwQmqVHruvI="
+		}
+	},
+	"panda_tm_t6dKUO4wKQs": {
+		"market": {
+		  "api_key": "bh6v5ua56Rg7R54DiEcUev0k35hh0T9",
+		  "steam_api_key": "038A2F47D7E86E08A50D0F40E84D6401"
+		},
+		"dmarket": {
+		  "api_key": "",
+		  "secret_key": ""
+		},
+		"steam": {
+		  "username": "6dKUO4wKQs",
+		  "password": "#3oUny7QDNxloL",
+		  "shared_secret": "HGUaAOPIAaOl/5CfUch1QgQlIe0=",
+		  "identity_secret": "xop1W0kOINELmKxkMr8O2YuUkkc="
+		}
+	},
+	"blank_template": {
+		"market": {
+		  "api_key": "",
+		  "steam_api_key": ""
+		},
+		"dmarket": {
+		  "api_key": "",
+		  "secret_key": ""
+		},
+		"steam": {
+		  "username": "",
+		  "password": "",
+		  "shared_secret": "",
+		  "identity_secret": ""
+		}
+	}
+}
