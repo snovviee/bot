@@ -1,16 +1,16 @@
 GIT
   remote: https://snovviee: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@github.com/snovviee/dmarket_api
-  revision: bf6bb1f2255918b2b61832f5b0bd7611352a7bc8
+  revision: 40fe61176b29b09a73322a72c294e8fd347897ad
   specs:
-    dmarket_api (0.1.2)
+    dmarket_api (0.1.1)
       ed25519 (~> 1.3.0)
       faraday (~> 2.7.2)
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/market_api
-  revision: b4fce74d05a6459cfe4cdd51699d973cd7990cf4
+  revision: fc690541c25ddc9fe96fe3e9a1f6fa63012fd7eb
   specs:
-    market_api (0.2.1)
+    market_api (0.2.0)
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/steam-trade
