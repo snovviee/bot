@@ -1,0 +1,82 @@
+{
+	"panda_dm_tosheasuke1981": {
+		"market": {
+		  "api_key": "Y35ayu8uy0F4AA8EQ648s2s88461dY5",
+		  "steam_api_key": "7EEA0AB48E75D10A23EA015237DC6712"
+		},
+		"dmarket": {
+		  "api_key": "43db40cea8bccce2867eaf0faae27d80948685ae3784746a95de45fc8154f1b2",
+		  "secret_key": "9486517b1fd0b662f0faef76d885565a08ca747b5b86572ccd0fc1de323d03d343db40cea8bccce2867eaf0faae27d80948685ae3784746a95de45fc8154f1b2"
+		},
+		"steam": {
+		  "username": "tosheasuke1981",
+		  "password": "M1qB7Te9b919977Te9b",
+		  "shared_secret": "BGCK7gzWEz4watrFRg/yRFT/X78=",
+		  "identity_secret": "WhfJTY3W0IpVdc5EKwQmqVHruvI="
+		}
+	},
+	"panda_tm_t6dKUO4wKQs": {
+		"market": {
+		  "api_key": "bh6v5ua56Rg7R54DiEcUev0k35hh0T9",
+		  "steam_api_key": "038A2F47D7E86E08A50D0F40E84D6401"
+		},
+		"dmarket": {
+		  "api_key": "",
+		  "secret_key": ""
+		},
+		"steam": {
+		  "username": "6dKUO4wKQs",
+		  "password": "#3oUny7QDNxloL",
+		  "shared_secret": "HGUaAOPIAaOl/5CfUch1QgQlIe0=",
+		  "identity_secret": "xop1W0kOINELmKxkMr8O2YuUkkc="
+		}
+	},
+	"topsnovvieeua": {
+		"market": {
+		  "api_key": "x3FVZ51Ob9CKC3X07f2T94GfAK92PKT",
+		  "steam_api_key": "B7F9A5A85B0FA7541346B93937FB80FE"
+		},
+		"dmarket": {
+		  "api_key": "4faf64741c387d3eec26f1a8262f2f18b43a5db7c2a816efc71cc4fa4b54863d",
+		  "secret_key": "e7c964f093083a94e71ab083835544684d95f22520061c42315af5708de8152b4faf64741c387d3eec26f1a8262f2f18b43a5db7c2a816efc71cc4fa4b54863d"
+		},
+		"steam": {
+		  "username": "topsnovvieeua",
+		  "password": "Chakbass19",
+		  "shared_secret": "fvl4gMLRlOgS4pDOKM0uulPX9lE=",
+		  "identity_secret": "uGMQI5Ap26n4R9pbLRUNsTHpTIk="
+		}
+	},
+	"xdopro": {
+		"market": {
+		  "api_key": "5vu0evj7v49k0cdY0ZKDx27LuW0YNK8",
+		  "steam_api_key": "1714315FCB66C976CB6E4A7C288CFE13"
+		},
+		"dmarket": {
+		  "api_key": "6f81c11f9e1f7add651c4c76c3359a98114eee61335f70f0b9512ea374986237",
+		  "secret_key": "190e56255392cde0e2453e9cf2145ea91766b3c50650681a698c2ecfaf2228466f81c11f9e1f7add651c4c76c3359a98114eee61335f70f0b9512ea374986237"
+		},
+		"steam": {
+		  "username": "xdopro1",
+		  "password": "loiz086424680",
+		  "shared_secret": "sIjI9M6x+6jBflIh/bTByi+OChY=",
+		  "identity_secret": "m60dFxwnj8v9I44ByDfMXTMdegw="
+		}
+	},
+	"blank_template": {
+		"market": {
+		  "api_key": "",
+		  "steam_api_key": ""
+		},
+		"dmarket": {
+		  "api_key": "",
+		  "secret_key": ""
+		},
+		"steam": {
+		  "username": "",
+		  "password": "",
+		  "shared_secret": "",
+		  "identity_secret": ""
+		}
+	}
+}

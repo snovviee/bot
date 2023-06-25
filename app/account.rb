@@ -6,20 +6,24 @@ require_relative 'account/steam_account'
 require_relative 'account/market_account/trade'
 require_relative 'account/market_account/order'
 require_relative 'account/dm_buy'
+require_relative 'account_data_settings'
 
 class Account
+  include AccountDataSettings
+
   def self.all
     @all ||= []
   end
 
   attr_reader :market_account, :dmarket_account, :steam_account, :order, :dm_buy
 
-  def initialize(market:, dmarket:, steam:)
-    @dmarket_account = DmarketAccount.new(dmarket)
-    @steam_account = SteamAccount.new(steam)
-    @market_account = MarketAccount::Trade.new(market)
-    @order = MarketAccount::Order.new(market)
-    @dm_buy = DmBuy.new(market: market, dmarket: dmarket)
+  def initialize
+    @dmarket_account = DmarketAccount.new(settings[:dmarket])
+    @steam_account = SteamAccount.new(settings[:steam])
+    @market_account = MarketAccount::Trade.new(settings[:market])
+    @order = MarketAccount::Order.new(settings[:market])
+    @dm_buy = DmBuy.new(market: settings[:market], dmarket: settings[:dmarket])
+
     Account.all << self
   end
 
