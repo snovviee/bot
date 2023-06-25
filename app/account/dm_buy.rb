@@ -6,7 +6,7 @@ require_relative 'market_account/trade'
 class DmBuy
   attr_reader :market_account, :dmarket_account
 
-  DOLLAR_TO_RUB = 81.0
+  DOLLAR_TO_RUB = 83.0
   # market_account/order.rb:10 for build_list
   EXCLUDED_TITLES = [
     'Sticker',
@@ -33,7 +33,7 @@ class DmBuy
       balance = get_dm_balance
       sleep 1
       break puts "Error balance: #{balance} USD" unless balance
-      break if balance <= 0.5
+      break if balance <= 0.10
 
       bought_items = get_bought_items_group
       sleep 1
@@ -48,28 +48,14 @@ class DmBuy
 
         s_titles.each do |title|
           row = market_data[title.to_sym]
+          # market_price = (market_data[title.to_sym][:average] / DOLLAR_TO_RUB).round(2)
           market_price = calculated_average(row)
           next unless market_price
 
-          market_price = (market_price / DOLLAR_TO_RUB).round(2)
-          # market_price = (market_data[title.to_sym][:average] / DOLLAR_TO_RUB).round(2)
-
           Thread.new do
-            dm_response = dmarket_account.title_offers(title: title)
-            dm_response_objects = dm_response.body[:objects][0..2]
-            sorted_objects = dm_response_objects.sort_by { |e| e[:price][:USD].to_f }
-
-            result_offers = sorted_objects.map do |obj|
-              quantity_bought_item = bought_items[obj[:title]]
-              next if quantity_bought_item && quantity_bought_item >= 4
-              next if obj[:title].include? 'Souvenir'
-
+            result_offers = get_dm_objects_by_title(title).map do |obj|
               next unless obj[:inMarket]
-
-              obj_price = obj[:price][:USD].to_f
-              equation = market_price * 100 / obj_price
-              puts "EQUATION: #{equation}"
-              next if equation < 1.8
+              next unless all_conditions_to_buy?(obj, market_price, bought_items)
 
               {
                 offerId: obj[:extra][:offerId],
@@ -95,6 +81,8 @@ class DmBuy
     end
 
     puts "Remaining DMarket balance: #{get_dm_balance} USD"
+  rescue
+    retry
   end
 
   private
@@ -127,6 +115,11 @@ class DmBuy
     items_bought.group_by { |element| element[:Title] }.transform_values { |values| values.length }
   end
 
+  def titles
+    market_items = build_list
+    market_items.map { |e| e.last[:market_hash_name]  }
+  end
+
   def build_list # market_account/order.rb:207
     market_account.client.prices_rub_c_i.body[:items].select do |key, row|
       excluded = EXCLUDED_TITLES.detect { |e| row[:market_hash_name].match(e) }
@@ -135,9 +128,33 @@ class DmBuy
     end
   end
 
-  def titles
-    market_items = build_list
-    market_items.map { |e| e.last[:market_hash_name]  }
+  def get_dm_objects_by_title(title, count = 2)
+    dm_response = dmarket_account.title_offers(title: title)
+    dm_response_objects = dm_response.body[:objects]
+    correct_dm_response_objects_by_title = dm_response_objects.select {|obj| obj[:title] == title }
+    sorted_objects = correct_dm_response_objects_by_title.sort_by { |e| e[:price][:USD].to_f }
+    sorted_objects[0..count]
+  end
+
+  def all_conditions_to_buy?(obj, market_price, bought_items)
+    quantity_bought_item = bought_items[obj[:title]] || 0
+    return if quantity_bought_item >= 4
+    return if obj[:title].include? 'Souvenir'
+
+    obj_price = obj[:price][:USD].to_f
+    return if obj_price > 400
+
+    equation = market_price * 100 / obj_price
+    return if equation > 4
+    return if equation < 1.9
+
+    puts "EQUATION: #{equation}, DM: #{obj[:title]} - #{obj_price} TM: #{market_price} COUNT: #{quantity_bought_item}"
+
+    # return if quantity_bought_item >= 3 && obj_price > 40
+    # return if quantity_bought_item >= 2 && obj_price > 70
+    # return if quantity_bought_item >= 1 && obj_price > 140
+
+    true
   end
 
   def calculated_average(row)
@@ -169,7 +186,10 @@ class DmBuy
     sorted_prices = result_5[:prices].sort
     without_gap_prices = sorted_prices[2..-3]
     actual_count = (without_gap_prices.size * 0.35).round
-    without_gap_prices[-actual_count..-1].sum / actual_count
+    price = without_gap_prices[-actual_count..-1].sum / actual_count
+    return unless price
+
+    (price / DOLLAR_TO_RUB).round(2)
   end
 
   def five_days_range
