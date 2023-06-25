@@ -104,7 +104,7 @@ class Account
 
   def try_to_send_offers
     response = market_account.p2p
-    if response.body[:success] == true
+    if response.success? && response.body[:success] == true
       try_to_send_offer_from(response.body)
       market_account.update_inventory
 
