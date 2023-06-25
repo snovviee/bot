@@ -31,20 +31,36 @@
 		  "identity_secret": "xop1W0kOINELmKxkMr8O2YuUkkc="
 		}
 	},
-	"blank_template": {
+	"topsnovvieeua": {
 		"market": {
-		  "api_key": "",
-		  "steam_api_key": ""
+		  "api_key": "x3FVZ51Ob9CKC3X07f2T94GfAK92PKT",
+		  "steam_api_key": "B7F9A5A85B0FA7541346B93937FB80FE"
 		},
 		"dmarket": {
-		  "api_key": "",
-		  "secret_key": ""
+		  "api_key": "4faf64741c387d3eec26f1a8262f2f18b43a5db7c2a816efc71cc4fa4b54863d",
+		  "secret_key": "e7c964f093083a94e71ab083835544684d95f22520061c42315af5708de8152b4faf64741c387d3eec26f1a8262f2f18b43a5db7c2a816efc71cc4fa4b54863d"
 		},
 		"steam": {
-		  "username": "",
-		  "password": "",
-		  "shared_secret": "",
-		  "identity_secret": ""
+		  "username": "topsnovvieeua",
+		  "password": "Chakbass19",
+		  "shared_secret": "fvl4gMLRlOgS4pDOKM0uulPX9lE=",
+		  "identity_secret": "uGMQI5Ap26n4R9pbLRUNsTHpTIk="
+		}
+	},
+	"xdopro": {
+		"market": {
+		  "api_key": "5vu0evj7v49k0cdY0ZKDx27LuW0YNK8",
+		  "steam_api_key": "1714315FCB66C976CB6E4A7C288CFE13"
+		},
+		"dmarket": {
+		  "api_key": "6f81c11f9e1f7add651c4c76c3359a98114eee61335f70f0b9512ea374986237",
+		  "secret_key": "190e56255392cde0e2453e9cf2145ea91766b3c50650681a698c2ecfaf2228466f81c11f9e1f7add651c4c76c3359a98114eee61335f70f0b9512ea374986237"
+		},
+		"steam": {
+		  "username": "xdopro1",
+		  "password": "loiz086424680",
+		  "shared_secret": "sIjI9M6x+6jBflIh/bTByi+OChY=",
+		  "identity_secret": "m60dFxwnj8v9I44ByDfMXTMdegw="
 		}
 	}
 }
