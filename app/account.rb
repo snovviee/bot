@@ -18,11 +18,12 @@ class Account
   attr_reader :market_account, :dmarket_account, :steam_account, :order, :dm_buy
 
   def initialize
-    @dmarket_account = DmarketAccount.new(dmarket_keys)
-    @steam_account = SteamAccount.new(steam_keys)
-    @market_account = MarketAccount::Trade.new(market_keys)
-    @order = MarketAccount::Order.new(market_keys)
-    @dm_buy = DmBuy.new(market: market_keys, dmarket: dmarket_keys)
+    @dmarket_account = DmarketAccount.new(settings[:dmarket])
+    @steam_account = SteamAccount.new(settings[:steam])
+    @market_account = MarketAccount::Trade.new(settings[:market])
+    @order = MarketAccount::Order.new(settings[:market])
+    @dm_buy = DmBuy.new(market: settings[:market], dmarket: settings[:dmarket])
+
     Account.all << self
   end
 

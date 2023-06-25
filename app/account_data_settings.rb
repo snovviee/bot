@@ -1,7 +1,11 @@
 module AccountDataSettings
   class InvalidNick < StandardError
+    def initialize(nick)
+      @nick = nick
+    end
+
     def message
-      'your "NICK" is missing'
+      "your #{@nick} is invalid"
     end
   end
 
@@ -16,29 +20,19 @@ module AccountDataSettings
   private
 
   def settings
-    raise NotFoundNick unless nick
+    @settings ||= begin
+      raise NotFoundNick unless nick
 
+      file_data.tap { |d| raise InvalidNick.new(nick) unless d[nick] }[nick]
+    end
+  end
+
+  def file_data
     json_data = File.read(FILE_SETTINGS_PATH)
-    hash_data = JSON.parse(json_data, symbolize_names: true)
-    select_the_account = hash_data[nick.to_sym]
-    raise InvalidNick unless select_the_account
-
-    select_the_account
+    JSON.parse(json_data, symbolize_names: true)
   end
 
   def nick
-    ENV.fetch('NICK', false)
-  end
-
-  def market_keys
-    settings[:market]
-  end
-
-  def dmarket_keys
-    settings[:dmarket]
-  end
-
-  def steam_keys
-    settings[:steam]
+    ENV.fetch('NICK', nil)&.to_sym
   end
 end
