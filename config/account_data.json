@@ -62,5 +62,21 @@
 		  "shared_secret": "sIjI9M6x+6jBflIh/bTByi+OChY=",
 		  "identity_secret": "m60dFxwnj8v9I44ByDfMXTMdegw="
 		}
+	},
+	"blank_template": {
+		"market": {
+		  "api_key": "",
+		  "steam_api_key": ""
+		},
+		"dmarket": {
+		  "api_key": "",
+		  "secret_key": ""
+		},
+		"steam": {
+		  "username": "",
+		  "password": "",
+		  "shared_secret": "",
+		  "identity_secret": ""
+		}
 	}
 }
