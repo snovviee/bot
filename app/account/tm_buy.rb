@@ -6,8 +6,8 @@ require_relative 'market_account/trade'
 class TmBuy
   attr_reader :market_account, :dmarket_account
 
-  GAME_ID = 'a8db'
-  DOLLAR_TO_RUB = 74.0
+  GAME_ID_CS = 'a8db'
+  DOLLAR_TO_RUB = 79.0
   EXCLUDED_TITLES = [
     'Sticker',
     'Souvenir',
@@ -28,61 +28,63 @@ class TmBuy
   end
 
   def buy!
-    # loop do
-    titles_with_ids.each_slice(5) do |sliced_titles_with_ids|
-      sliced_titles_with_ids.each do |title_with_ids|
-        best_offer = best_offer(title_with_ids)
+    loop do
+      titles_with_ids.each_slice(5) do |sliced_titles_with_ids|
+        sliced_titles_with_ids.each do |title_with_ids|
+          best_offer = best_offer(title_with_ids)
 
-        title = title_with_ids[:title]
-        params = {
-          Title: title,
-          GameID: GAME_ID,
-          Currency: 'USD',
-          Period: '7D'
-        }
-        history_values = dmarket_account.history(params)[:SalesHistory]
-        avg = average_from_history_values(history_values).round(2)
-        next if avg.zero?
-
-        mp_dollar = (best_offer / DOLLAR_TO_RUB).round(2)
-        equation = avg / mp_dollar
-
-        puts "EQUATION: #{equation}"
-        if equation > 1
-          existing_data = File.exist?(FILE_PATH) ? JSON.parse(File.read(FILE_PATH)) : {}
-
-          market_link = "https://market-old.csgo.com/item/#{title_with_ids[:class_id]}-#{title_with_ids[:instance_id]}"
-          dmarket_link = "https://dmarket.com/ru/ingame-items/item-list/csgo-skins?title=#{title}"
-
-          data = {
-            "#{title}": {
-              equation: equation.round(2),
-              dmarket: {
-                price: avg,
-                link: dmarket_link
-              },
-              market: {
-                price: best_offer,
-                price_incorrect_dollar: mp_dollar,
-                link: market_link
-              }
-            }
+          title = title_with_ids[:title]
+          params = {
+            Title: title,
+            GameID: GAME_ID_CS,
+            Currency: 'USD',
+            Period: '1M'
           }
 
-          updated_data = existing_data.merge(data)
+          history_values = dmarket_account.history(params)[:SalesHistory]
+          avg = average_from_history_values(history_values).round(2)
+          next if avg.zero?
 
-          File.write(FILE_PATH, JSON.pretty_generate(updated_data))
+          mp_dollar = (best_offer / DOLLAR_TO_RUB).round(2)
+          equation = avg / mp_dollar
+          next if equation == 'Infinity'
 
-          # File.open('tm_buy_test.txt', 'a+') do |f|
-          #   f.write "EQUATION: #{equation.round(2)}, #{title}, DM: #{avg}$ TM: #{mp_dollar}$, links: #{market_link} | #{dmarket_link}"
-          #   f.write "\n"
-          # end
+          puts "EQUATION: #{equation}"
+          if equation > 1
+            existing_data = File.exist?(FILE_PATH) ? JSON.parse(File.read(FILE_PATH)) : {}
+
+            market_link = "https://market-old.csgo.com/item/#{title_with_ids[:class_id]}-#{title_with_ids[:instance_id]}"
+            dmarket_link = "https://dmarket.com/ru/ingame-items/item-list/csgo-skins?title=#{title}"
+
+            data = {
+              "#{title}": {
+                equation: equation.round(2),
+                dmarket: {
+                  price: avg,
+                  link: dmarket_link
+                },
+                market: {
+                  price: best_offer,
+                  price_incorrect_dollar: mp_dollar,
+                  link: market_link
+                }
+              }
+            }
+
+            updated_data = existing_data.merge(data)
+
+            File.write(FILE_PATH, JSON.pretty_generate(updated_data))
+
+            # File.open('tm_buy_test.txt', 'a+') do |f|
+            #   f.write "EQUATION: #{equation.round(2)}, #{title}, DM: #{avg}$ TM: #{mp_dollar}$, links: #{market_link} | #{dmarket_link}"
+            #   f.write "\n"
+            # end
+          end
         end
       end
     end
-    # end
-  # rescue
-    # retry
+  rescue
+    retry
   end
 
   private
@@ -113,9 +115,11 @@ class TmBuy
       price_in_cents / 100.0
     end.compact
 
-    return 0 if prices.empty?
+    return 0 if prices.empty? || prices.count < 25
 
-    prices.sum / prices.size
+    sorted_prices = prices.sort
+    without_gap_prices = sorted_prices[3..-11]
+    without_gap_prices.sum / without_gap_prices.size
   end
 
   def items
@@ -149,7 +153,8 @@ class TmBuy
     market_account.client.prices_rub_c_i.body[:items].select do |key, row|
       excluded = EXCLUDED_TITLES.detect { |e| row[:market_hash_name].match(e) }
 
-      row[:price].to_f > 3 && !excluded && row[:popularity_7d].to_f > 2
+      # row[:price].to_f > 3  && !excluded && row[:popularity_7d].to_f > 2
+      row[:price].to_f > 80 && row[:price].to_f < 11000  && !excluded && row[:popularity_7d].to_f > 2
     end
   end
 end
