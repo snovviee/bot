@@ -7,7 +7,7 @@ class TmBuy
   attr_reader :market_account, :dmarket_account
 
   GAME_ID_CS = 'a8db'
-  DOLLAR_TO_RUB = 74.0
+  DOLLAR_TO_RUB = 80.0
   EXCLUDED_TITLES = [
     'Sticker',
     'Souvenir',
@@ -102,22 +102,20 @@ class TmBuy
     deviation <= percentage
   end
 
+
   def average_from_history_values(history_values)
-    calculated_hash = {}
+    prices = history_values[:Prices].map do |e|
+      next if e.empty?
 
-    history_values[:Prices].each_with_index do |price, index|
-      next if price.empty?
+      price_in_cents = e.to_i
+      price_in_cents / 100.0
+    end.compact
 
-      hash_key = history_values[:Labels][index]
-      calculated_hash[hash_key] = {}
+    return 0 if prices.empty? || prices.count < 16
 
-      price_in_dollars = price.to_i / 100.0
-      calculated_hash[hash_key][:prices] = [price_in_dollars] * history_values[:Items][index]
-    end
-    return 0 if calculated_hash.empty? || calculated_hash.keys.size < 25
-
-    prices = calculated_hash.values.each_with_object([]) { |el, arr| arr.concat(el.values.flatten) }
-    prices.sum / prices.size
+    sorted_prices = prices.sort
+    without_gap_prices =  prices.count > 20 ? sorted_prices[1...-18] : sorted_prices[1...-13]
+    without_gap_prices.sum / without_gap_prices.size
   end
 
   def titles_with_ids
