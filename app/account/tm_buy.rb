@@ -7,7 +7,7 @@ class TmBuy
   attr_reader :market_account, :dmarket_account
 
   GAME_ID_CS = 'a8db'
-  DOLLAR_TO_RUB = 79.0
+  DOLLAR_TO_RUB = 74.0
   EXCLUDED_TITLES = [
     'Sticker',
     'Souvenir',
@@ -32,6 +32,7 @@ class TmBuy
       titles_with_ids.each_slice(5) do |sliced_titles_with_ids|
         sliced_titles_with_ids.each do |title_with_ids|
           best_offer = best_offer(title_with_ids)
+          next if best_offer.zero?
 
           title = title_with_ids[:title]
           params = {
@@ -47,7 +48,6 @@ class TmBuy
 
           mp_dollar = (best_offer / DOLLAR_TO_RUB).round(2)
           equation = avg / mp_dollar
-          next if equation == 'Infinity'
 
           puts "EQUATION: #{equation}"
           if equation > 1
@@ -74,17 +74,12 @@ class TmBuy
             updated_data = existing_data.merge(data)
 
             File.write(FILE_PATH, JSON.pretty_generate(updated_data))
-
-            # File.open('tm_buy_test.txt', 'a+') do |f|
-            #   f.write "EQUATION: #{equation.round(2)}, #{title}, DM: #{avg}$ TM: #{mp_dollar}$, links: #{market_link} | #{dmarket_link}"
-            #   f.write "\n"
-            # end
           end
         end
       end
     end
-  rescue
-    retry
+  # rescue
+    # retry
   end
 
   private
@@ -108,32 +103,21 @@ class TmBuy
   end
 
   def average_from_history_values(history_values)
-    prices = history_values[:Prices].map do |e|
-      next if e.empty?
+    calculated_hash = {}
 
-      price_in_cents = e.to_i
-      price_in_cents / 100.0
-    end.compact
+    history_values[:Prices].each_with_index do |price, index|
+      next if price.empty?
 
-    return 0 if prices.empty? || prices.count < 25
+      hash_key = history_values[:Labels][index]
+      calculated_hash[hash_key] = {}
 
-    sorted_prices = prices.sort
-    without_gap_prices = sorted_prices[3..-11]
-    without_gap_prices.sum / without_gap_prices.size
-  end
+      price_in_dollars = price.to_i / 100.0
+      calculated_hash[hash_key][:prices] = [price_in_dollars] * history_values[:Items][index]
+    end
+    return 0 if calculated_hash.empty? || calculated_hash.keys.size < 25
 
-  def items
-    dmarket_account.inventory(
-      GameID: 'a8db',
-      Presentation: 'InventoryPresentationDetailed',
-      Limit: 500,
-      'BasicFilters.InMarket'.to_sym => true
-    )
-  end
-
-  def titles
-    market_items = build_list
-    market_items.map { |e| e.last[:market_hash_name]  }
+    prices = calculated_hash.values.each_with_object([]) { |el, arr| arr.concat(el.values.flatten) }
+    prices.sum / prices.size
   end
 
   def titles_with_ids
@@ -149,11 +133,10 @@ class TmBuy
     end
   end
 
-  def build_list # market_account/order.rb:207
+  def build_list
     market_account.client.prices_rub_c_i.body[:items].select do |key, row|
       excluded = EXCLUDED_TITLES.detect { |e| row[:market_hash_name].match(e) }
 
-      # row[:price].to_f > 3  && !excluded && row[:popularity_7d].to_f > 2
       row[:price].to_f > 80 && row[:price].to_f < 11000  && !excluded && row[:popularity_7d].to_f > 2
     end
   end
