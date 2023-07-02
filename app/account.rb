@@ -6,6 +6,7 @@ require_relative 'account/steam_account'
 require_relative 'account/market_account/trade'
 require_relative 'account/market_account/order'
 require_relative 'account/dm_buy'
+require_relative 'account/tm_buy'
 require_relative 'account_data_settings'
 
 class Account
@@ -15,7 +16,7 @@ class Account
     @all ||= []
   end
 
-  attr_reader :market_account, :dmarket_account, :steam_account, :order, :dm_buy
+  attr_reader :market_account, :dmarket_account, :steam_account, :order, :dm_buy, :tm_buy
 
   def initialize
     @dmarket_account = DmarketAccount.new(settings[:dmarket])
@@ -23,6 +24,7 @@ class Account
     @market_account = MarketAccount::Trade.new(settings[:market])
     @order = MarketAccount::Order.new(settings[:market])
     @dm_buy = DmBuy.new(market: settings[:market], dmarket: settings[:dmarket])
+    @tm_buy = TmBuy.new(market: settings[:market], dmarket: settings[:dmarket])
 
     Account.all << self
   end
@@ -33,6 +35,7 @@ class Account
   delegate :build!,         to: :order
   delegate :buy!,           to: :order, prefix: :order
   delegate :buy!,           to: :dm_buy
+  delegate :buy!,           to: :tm_buy, prefix: :tm
 
   def send_offers!
     show_market_balance
