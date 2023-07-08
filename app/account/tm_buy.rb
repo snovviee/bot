@@ -4,7 +4,7 @@ require_relative 'dmarket_account'
 require_relative 'market_account/trade'
 
 class TmBuy
-  attr_reader :market_account, :dmarket_account
+  attr_reader :market_account, :dmarket_account, :market_api
 
   GAME_ID_CS = 'a8db'
   DOLLAR_TO_RUB = 74.0
@@ -25,6 +25,7 @@ class TmBuy
   def initialize(market:, dmarket:)
     @dmarket_account = DmarketAccount.new(dmarket)
     @market_account = MarketAccount::Trade.new(market)
+    @market_api = market[:api_key]
   end
 
   def buy!
@@ -53,8 +54,10 @@ class TmBuy
           if equation > 1
             existing_data = File.exist?(FILE_PATH) ? JSON.parse(File.read(FILE_PATH)) : {}
 
-            market_link = "https://market-old.csgo.com/item/#{title_with_ids[:class_id]}-#{title_with_ids[:instance_id]}"
             dmarket_link = "https://dmarket.com/ru/ingame-items/item-list/csgo-skins?title=#{title}"
+            market_link = "https://market-old.csgo.com/item/#{title_with_ids[:class_id]}-#{title_with_ids[:instance_id]}"
+            price_to_buy = (best_offer * 100) + 5
+            buy_link = "https://market.csgo.com/api/v2/buy?key=#{market_api}&hash_name=#{title}&price=#{price_to_buy}"
 
             data = {
               "#{title}": {
@@ -66,7 +69,8 @@ class TmBuy
                 market: {
                   price: best_offer,
                   price_incorrect_dollar: mp_dollar,
-                  link: market_link
+                  link: market_link,
+                  buy_link: buy_link
                 }
               }
             }
