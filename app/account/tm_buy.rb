@@ -7,7 +7,7 @@ class TmBuy
   attr_reader :market_account, :dmarket_account
 
   GAME_ID_CS = 'a8db'
-  DOLLAR_TO_RUB = 80.0
+  DOLLAR_TO_RUB = 74.0
   EXCLUDED_TITLES = [
     'Sticker',
     'Souvenir',
@@ -135,7 +135,7 @@ class TmBuy
     market_account.client.prices_rub_c_i.body[:items].select do |key, row|
       excluded = EXCLUDED_TITLES.detect { |e| row[:market_hash_name].match(e) }
 
-      row[:price].to_f > 80 && row[:price].to_f < 11000  && !excluded && row[:popularity_7d].to_f > 2
+      row[:price].to_f > 3 && row[:price].to_f < 11000  && !excluded
     end
   end
 end
