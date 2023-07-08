@@ -5,15 +5,26 @@ module MarketAccount
     attr_reader :steam_api_key
 
     delegate :trade_check, :remove_all, :money_send, :ping, :update_inventory,
-             :market_inventory, :steam_inventory, :list_items, :add_to_sale,
-             :bind_steam_api_key, :best_offer, :set_prices, :balance, :p2p, to: :client
+             :market_inventory, :steam_inventory, :list_items, :add_to_sale, :change_currency_to_usd,
+             :bind_steam_api_key, :best_offer, :set_prices, :balance, :p2p, :balance, to: :client
 
     def trading!
       puts "Handled percent: #{min_percent}"
       puts "Current sum: #{items_sum}"
 
       remove_all if removing?
-      money_send if allow_money_transfer
+      if allow_money_transfer
+        money_send(
+          amount: balance.body[:money],
+          whom: 'x3FVZ51Ob9CKC3X07f2T94GfAK92PKT',
+          pay_password: 'Dvadcat8'
+        )
+      end
+
+      if change_currency_to_usd?
+        remove_all
+        change_currency_to_usd
+      end
 
       loop do
         trade_check
@@ -40,6 +51,10 @@ module MarketAccount
 
     def removing?
       ENV.fetch('REMOVE_ITEMS', false)
+    end
+
+    def change_currency_to_usd?
+      ENV.fetch('CHANGE_CURRENCY_TO_USD', false)
     end
 
     def allow_money_transfer
