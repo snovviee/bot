@@ -6,7 +6,8 @@ module MarketAccount
 
     delegate :trade_check, :remove_all, :money_send, :ping, :update_inventory,
              :market_inventory, :steam_inventory, :list_items, :add_to_sale, :change_currency_to_usd,
-             :bind_steam_api_key, :best_offer, :set_prices, :balance, :p2p, :balance, to: :client
+             :bind_steam_api_key, :best_offer, :set_prices, :balance, :p2p, :balance,
+             :ping_v2, :update_inventory_v2, to: :client
 
     def trading!
       puts "Handled percent: #{min_percent}"
@@ -30,10 +31,11 @@ module MarketAccount
         trade_check
         bind_steam_api_key('steam-api-key' => steam_api_key)
 
-        ping
+        ping_v2
 
-        update_inventory
+        update_inventory_v2
         add_items_to_sale
+        # add_items_to_sale(cur: 'USD', price: 99999)
 
         tmp_limits = item_limits
 
@@ -73,13 +75,13 @@ module MarketAccount
       items.map { |e| e[:price] }.sum
     end
 
-    def add_items_to_sale
+    def add_items_to_sale(cur: 'RUB', price: 999999999)
       steam_inventory.body[:items].each_slice(5) do |s_items|
         threads = []
 
         s_items.each do |item|
           threads << Thread.new do
-            add_to_sale(id: item[:id], price: 999999999, cur: 'RUB')
+            add_to_sale(id: item[:id], price: price, cur: cur)
           end
         end
 
@@ -90,7 +92,7 @@ module MarketAccount
     rescue NoMethodError
       puts 'Trying to refetch'
 
-      update_inventory
+      update_inventory_v2
       add_items_to_sale
     end
 

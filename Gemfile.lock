@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/market_api
-  revision: bd60d77f9bfe9e64a000f5dbe7d5284e929564e0
+  revision: 2b40905ce2f3f0d9f0165c5964ac3f23dbec99f0
   specs:
     market_api (0.2.0)
 
