@@ -83,10 +83,10 @@ class Account
   end
 
   def show_market_balance
-    response = market_account.balance
+    response = market_account.balance_v2
     if response.success?
-      balance = response.body[:money] * 0.01
-      puts "Current Balance: #{balance} RUB"
+      balance = response.body[:money] * 0.001
+      puts "Current Balance: #{balance} USD"
     end
   end
 
@@ -113,7 +113,7 @@ class Account
     response = market_account.p2p
     if response.success? && response.body[:success] == true
       try_to_send_offer_from(response.body)
-      market_account.update_inventory
+      market_account.update_inventory_v2
 
       show_market_balance
     end

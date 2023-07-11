@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://snovviee: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@github.com/snovviee/market_api
-  revision: 2b40905ce2f3f0d9f0165c5964ac3f23dbec99f0
+  revision: 24596eba0628d366c307270496120d1891cbbff3
   specs:
     market_api (0.2.0)
 
@@ -65,7 +65,7 @@ GEM
     nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    public_suffix (5.0.1)
+    public_suffix (5.0.3)
     racc (1.7.1)
     ruby2_keywords (0.0.5)
     rubyntlm (0.6.3)

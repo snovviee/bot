@@ -4,43 +4,42 @@ module MarketAccount
   class Trade < Base
     attr_reader :steam_api_key
 
-    delegate :trade_check, :remove_all, :money_send, :ping, :update_inventory,
-             :market_inventory, :steam_inventory, :list_items, :add_to_sale, :change_currency_to_usd,
-             :bind_steam_api_key, :best_offer, :set_prices, :balance, :p2p, :balance,
-             :ping_v2, :update_inventory_v2, to: :client
+    delegate :money_send, :market_inventory, :steam_inventory, :list_items, :best_offer,
+             :add_to_sale, :change_currency_to_usd, :bind_steam_api_key,
+             :p2p, :balance_v2, :ping_v2, :update_inventory_v2, :remove_all_v2,
+             :search_list_items_by_hash_name_all, :set_prices_v2, :trade_check_v2, to: :client
 
     def trading!
       puts "Handled percent: #{min_percent}"
       puts "Current sum: #{items_sum}"
 
-      remove_all if removing?
+      remove_all_v2 if removing?
       if allow_money_transfer
         money_send(
-          amount: balance.body[:money],
+          amount: balance_v2.body[:money],
           whom: 'x3FVZ51Ob9CKC3X07f2T94GfAK92PKT',
           pay_password: 'Dvadcat8'
         )
       end
 
       if change_currency_to_usd?
-        remove_all
+        remove_all_v2
         change_currency_to_usd
       end
 
       loop do
-        trade_check
+        trade_check_v2
         bind_steam_api_key('steam-api-key' => steam_api_key)
 
         ping_v2
 
         update_inventory_v2
         add_items_to_sale
-        # add_items_to_sale(cur: 'USD', price: 99999)
 
         tmp_limits = item_limits
 
         150.times do
-          ping
+          ping_v2
           change_price(tmp_limits)
         end
       end
@@ -75,7 +74,7 @@ module MarketAccount
       items.map { |e| e[:price] }.sum
     end
 
-    def add_items_to_sale(cur: 'RUB', price: 999999999)
+    def add_items_to_sale(cur: 'USD', price: 9999999)
       steam_inventory.body[:items].each_slice(5) do |s_items|
         threads = []
 
@@ -108,20 +107,20 @@ module MarketAccount
           market_hash_name = item[:market_hash_name]
           next unless names.include?(market_hash_name)
 
-          new_market_hash_name = market_hash_name
-          if result[market_hash_name]
-            unless result[:class_id] == item[:classid].to_i && result[:instance_id] == item[:instanceid].to_i
-              new_market_hash_name = market_hash_name + "_" + item[:classid] + "_" + item[:instanceid]
-            end
-          end
+          # new_market_hash_name = market_hash_name
+          # if result[market_hash_name]
+          #   unless result[:class_id] == item[:classid].to_i && result[:instance_id] == item[:instanceid].to_i
+          #     new_market_hash_name = market_hash_name + "_" + item[:classid] + "_" + item[:instanceid]
+          #   end
+          # end
           next if result[new_market_hash_name]
 
           result[new_market_hash_name] = {
-            class_id: item[:classid].to_i,
-            instance_id: item[:instanceid].to_i,
+            # class_id: item[:classid].to_i,
+            # instance_id: item[:instanceid].to_i,
             min: averages[market_hash_name.to_sym][:average] * min_percent,
             max: averages[market_hash_name.to_sym][:average] * max_percent,
-            price: 666666,
+            price: 6999999,
             id: item[:item_id]
           }
         end
@@ -140,21 +139,24 @@ module MarketAccount
     end
 
     def change_price(limits)
-      limits.each_slice(5) do |s_limits|
+      limits.each_slice(10) do |s_limits|
+        item_titles = s_limits.map { |el| el[0] }
+        response = get_list_items(item_titles)
+        next unless response
+
+        results = JSON.parse(response.body, symbolize_names: true)[:data]
         threads = []
 
         s_limits.each do |name, limit|
-          threads << Thread.new do
-            response = best_offer(limit[:class_id], limit[:instance_id])
-            offer = 0.0
-            if response.success?
-              offer = response.body[:best_offer].to_f / 100
-            end
+          select_item = results[name.to_sym]
+          item_prices = select_item.map { |i| i[:price].to_f / 1000 }
 
+          threads << Thread.new do
+            offer = item_prices.min
             next if offer == limit[:price] && offer <= limit[:max]
 
-            limit[:price] = correct_price(offer, limit)
-            set_prices(limit[:class_id], limit[:instance_id], (limit[:price] * 100).round)
+            limit[:price] = correct_price(offer, limit, item_prices)
+            set_prices_v2(limit[:id], (limit[:price] * 1000).round)
           end
         end
 
@@ -165,12 +167,27 @@ module MarketAccount
       retry
     end
 
-    def correct_price(offer, limit)
-      max = limit[:max]
-      return max if offer.zero? || max == offer
+    def get_list_items(item_titles)
+      response = search_list_items_by_hash_name_all(item_titles)
+      unless response.kind_of? Net::HTTPSuccess
+        5.times do
+          sleep 0.5
+          response = search_list_items_by_hash_name_all(item_titles)
+          return response if response.kind_of? Net::HTTPSuccess
+        end
+      end
 
-      price = offer - 0.01
-      price = max unless (limit[:min]..max).include?(price)
+      response if response.kind_of? Net::HTTPSuccess
+    end
+
+    def correct_price(offer, limit, item_prices)
+      min = limit[:min]
+      max = limit[:max]
+      price = offer - 0.001
+      if limit[:price] + 0.01 < offer || !(min..max).include?(price)
+        # all prices may be less than the min threshold, then set the max. lol
+        return item_prices.detect { |i_price| i_price >= min } || max - 0.001
+      end
 
       price
     end
