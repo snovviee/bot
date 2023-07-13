@@ -71,6 +71,8 @@ module MarketAccount
     end
 
     def items_sum
+      return 0 if items.empty?
+
       items.map { |e| e[:price] }.sum
     end
 
@@ -113,9 +115,9 @@ module MarketAccount
           #     new_market_hash_name = market_hash_name + "_" + item[:classid] + "_" + item[:instanceid]
           #   end
           # end
-          next if result[new_market_hash_name]
+          # next if result[new_market_hash_name]
 
-          result[new_market_hash_name] = {
+          result[market_hash_name] = {
             # class_id: item[:classid].to_i,
             # instance_id: item[:instanceid].to_i,
             min: averages[market_hash_name.to_sym][:average] * min_percent,
@@ -132,7 +134,7 @@ module MarketAccount
     def items
       response = market_inventory
       if response.success?
-        response.body[:items]
+        response.body[:items] || []
       else
         []
       end
@@ -140,6 +142,7 @@ module MarketAccount
 
     def change_price(limits)
       limits.each_slice(10) do |s_limits|
+        ping_v2
         item_titles = s_limits.map { |el| el[0] }
         response = get_list_items(item_titles)
         next unless response
