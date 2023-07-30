@@ -7,7 +7,7 @@ class TmBuy
   attr_reader :market_account, :dmarket_account, :market_api
 
   GAME_ID_CS = 'a8db'
-  DOLLAR_TO_RUB = 74.0
+  DOLLAR_TO_RUB = 90.0
   EXCLUDED_TITLES = [
     'Sticker',
     'Souvenir',
@@ -37,13 +37,12 @@ class TmBuy
 
           title = title_with_ids[:title]
           params = {
-            Title: title,
-            GameID: GAME_ID_CS,
-            Currency: 'USD',
-            Period: '1M'
+            title: title,
+            gameId: GAME_ID_CS,
+            period: '1M'
           }
 
-          history_values = dmarket_account.history(params)[:SalesHistory]
+          history_values = dmarket_account.trade_aggregator(params)
           avg = average_from_history_values(history_values).round(2)
           next if avg.zero?
 
@@ -51,7 +50,7 @@ class TmBuy
           equation = avg / mp_dollar
 
           puts "EQUATION: #{equation}"
-          if equation > 1
+          if equation > 1.1
             existing_data = File.exist?(FILE_PATH) ? JSON.parse(File.read(FILE_PATH)) : {}
 
             dmarket_link = "https://dmarket.com/ru/ingame-items/item-list/csgo-skins?title=#{title}"
@@ -108,17 +107,16 @@ class TmBuy
 
 
   def average_from_history_values(history_values)
-    prices = history_values[:Prices].map do |e|
+    prices = history_values[:avgPrice].map do |e|
       next if e.empty?
 
-      price_in_cents = e.to_i
-      price_in_cents / 100.0
+      price_in_cents = e.to_f
     end.compact
 
     return 0 if prices.empty? || prices.count < 16
 
     sorted_prices = prices.sort
-    without_gap_prices =  prices.count > 20 ? sorted_prices[1...-18] : sorted_prices[1...-13]
+    without_gap_prices =  prices.count > 20 ? sorted_prices[0...-18] : sorted_prices[0...-13]
     without_gap_prices.sum / without_gap_prices.size
   end
 
@@ -139,7 +137,7 @@ class TmBuy
     market_account.client.prices_rub_c_i.body[:items].select do |key, row|
       excluded = EXCLUDED_TITLES.detect { |e| row[:market_hash_name].match(e) }
 
-      row[:price].to_f > 3 && row[:price].to_f < 11000  && !excluded
+      row[:price].to_f > 100 && row[:price].to_f < 11000  && !excluded
     end
   end
 end
