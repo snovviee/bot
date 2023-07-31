@@ -5,7 +5,7 @@ module MarketAccount
     attr_reader :steam_api_key
 
     delegate :money_send, :market_inventory, :steam_inventory, :list_items, :best_offer,
-             :add_to_sale, :change_currency_to_usd, :bind_steam_api_key,
+             :add_to_sale, :change_currency_to_usd, :bind_steam_api_key, :operation_history,
              :p2p, :balance_v2, :ping_v2, :update_inventory_v2, :remove_all_v2,
              :search_list_items_by_hash_name_all, :set_prices_v2, :trade_check_v2, to: :client
 

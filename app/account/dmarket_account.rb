@@ -24,7 +24,9 @@ class DmarketAccount
     )
   end
 
-  delegate :inventory_sync, :last_sales, :history, :buy, :title_offers, :withdraw, :balance, :inventory, to: :client
+  delegate :inventory_sync, :last_sales, :buy, :title_offers, :withdraw, :balance, :inventory,
+           :user_offers, :user_offers_closed, :user_offers_create, :user_offers_edit, :offers_delete,
+           :deposit_assets, :trade_aggregator, to: :client
 
   def get_items_into_file!(cursor = nil)
     params = {
