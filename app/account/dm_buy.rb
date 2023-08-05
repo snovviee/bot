@@ -6,7 +6,7 @@ require_relative 'market_account/trade'
 class DmBuy
   attr_reader :market_account, :dmarket_account
 
-  DOLLAR_TO_RUB = 83.0
+  DOLLAR_TO_RUB = 95.0
   # market_account/order.rb:10 for build_list
   EXCLUDED_TITLES = [
     'Sticker',
@@ -31,13 +31,12 @@ class DmBuy
 
     while
       balance = get_dm_balance
+      puts "Remaining DMarket balance: #{get_dm_balance} USD"
       sleep 1
-      break puts "Error balance: #{balance} USD" unless balance
       break if balance <= 0.10
 
       bought_items = get_bought_items_group
       sleep 1
-      break puts "Error bought_items: #{balance} USD" unless bought_items
 
       titles.each_slice(5) do |s_titles|
         sleep 1
@@ -79,9 +78,8 @@ class DmBuy
       end
     # wile
     end
-
-    puts "Remaining DMarket balance: #{get_dm_balance} USD"
-  rescue
+  rescue => e
+    puts "Error #{e}"
     retry
   end
 
@@ -92,7 +90,8 @@ class DmBuy
     return response.body[:usd].to_f / 100 if response.success?
 
     # should definitely get an answer
-    # get_dm_balance
+    puts "Error! #{response.status}, #{response.reason_phrase}"
+    get_dm_balance
   end
 
   def items # dmarket_account.rb:81
@@ -105,12 +104,11 @@ class DmBuy
   return response if response.success?
 
   # should definitely get an answer
-  # items
+    puts "Error! #{response.status}, #{response.reason_phrase}"
+    items
   end
 
   def get_bought_items_group
-    return unless items
-
     items_bought = items.body[:Items]
     items_bought.group_by { |element| element[:Title] }.transform_values { |values| values.length }
   end
@@ -141,66 +139,59 @@ class DmBuy
     return if quantity_bought_item >= 4
     return if obj[:title].include? 'Souvenir'
 
-    obj_price = obj[:price][:USD].to_f
-    return if obj_price > 400
+    obj_price = obj[:price][:USD].to_f / 100
+    return if obj_price > 5
 
-    equation = market_price * 100 / obj_price
+    equation = market_price / obj_price
     return if equation > 4
     return if equation < 1.9
 
     puts "EQUATION: #{equation}, DM: #{obj[:title]} - #{obj_price} TM: #{market_price} COUNT: #{quantity_bought_item}"
 
-    # return if quantity_bought_item >= 3 && obj_price > 40
-    # return if quantity_bought_item >= 2 && obj_price > 70
-    # return if quantity_bought_item >= 1 && obj_price > 140
+    # return if quantity_bought_item >= 3 && obj_price > 0.4
+    # return if quantity_bought_item >= 2 && obj_price > 0.7
+    # return if quantity_bought_item >= 1 && obj_price > 1.4
 
     true
   end
 
+  CALCULATED_OPTION = { days: 30,
+                        sales_per_days: 25,
+                        delete_min: 2,
+                        delete_max: 13,
+                        percentage_of_sales_quantity: 80,
+                        percentage_off_min_price: true }
+
   def calculated_average(row)
-    result_5 = {
-      count: 0,
-      prices: []
-    }
-    result_10 = {
-      count: 0,
-      prices: []
-    }
-    range_5 = five_days_range
-    range_10 = ten_days_range
+    result = { count: 0, prices: [] }
+    range = days_range
 
     row[:history].each do |e|
-      if range_5.include?(e.first)
-        result_5[:count] += 1
-        result_5[:prices].push(e.last)
-      end
-
-      if range_10.include?(e.first)
-        result_10[:count] += 1
-        result_10[:prices].push(e.last)
+      if range.include?(e.first)
+        result[:count] += 1
+        result[:prices].push(e.last)
       end
     end
 
-    return if result_5[:count] < 10
+    return if result[:count] < CALCULATED_OPTION[:sales_per_days]
 
-    sorted_prices = result_5[:prices].sort
-    without_gap_prices = sorted_prices[2..-3]
-    actual_count = (without_gap_prices.size * 0.35).round
-    price = without_gap_prices[-actual_count..-1].sum / actual_count
+    sorted_prices = result[:prices].sort
+    without_gap_prices = sorted_prices[CALCULATED_OPTION[:delete_min]...-CALCULATED_OPTION[:delete_max]]
+    actual_count = (without_gap_prices.size * CALCULATED_OPTION[:percentage_of_sales_quantity].to_f / 100).round
+    if CALCULATED_OPTION[:percentage_off_min_price]
+      price = without_gap_prices[0...actual_count].sum / actual_count
+    else
+      price = without_gap_prices[-actual_count..-1].sum / actual_count
+    end
+
     return unless price
 
     (price / DOLLAR_TO_RUB).round(2)
   end
 
-  def five_days_range
+  def days_range
     now = Time.now
-    past = now - 5.days
-    (past.to_i..now.to_i)
-  end
-
-  def ten_days_range
-    now = Time.now
-    past = now - 10.days
+    past = now - CALCULATED_OPTION[:days].days
     (past.to_i..now.to_i)
   end
 end
