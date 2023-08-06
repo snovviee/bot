@@ -72,8 +72,37 @@ module MarketAccount
 
     def items_sum
       return 0 if items.empty?
+      scrape_items = items
+      return 0 if scrape_items.first[:price] > 100
 
-      items.map { |e| e[:price] }.sum
+      same_items = scrape_items.each_with_object(Hash.new(0)) do |item, price|
+        prices = scrape_items.map { |e| e[:price] if e[:market_hash_name] == item[:market_hash_name] }.compact
+        price[item[:market_hash_name]] = prices
+      end
+
+      result = Hash.new
+      titles = scrape_items.map { |item| item[:market_hash_name] }
+      titles.each_slice(50) do |s_titles|
+        response = get_list_items(s_titles)
+        next unless response
+
+        results = JSON.parse(response.body, symbolize_names: true)[:data]
+        same_items.each do |name, prices|
+          sales_amount = prices.count
+          actual_price = prices.detect { |price| price < 100 }
+          next unless actual_price
+
+          select_item = results[name.to_sym]
+          item_prices = select_item.map { |i| i[:price].to_f / 1000 }
+          best_offer = item_prices.min
+          result[name] = { my: (actual_price * sales_amount).round(3), best: (best_offer * sales_amount).round(3) }
+        end
+      end
+
+      final_prices = result.map { |e| e.last }
+      my_amount = final_prices.map { |e| e[:my] }.sum
+      best_amount = final_prices.map { |e| e[:best] }.sum
+      "MY: #{my_amount.round(3)}, BEST: #{best_amount.round(3)}"
     end
 
     def add_items_to_sale(cur: 'USD', price: 9999999)
@@ -109,15 +138,15 @@ module MarketAccount
           market_hash_name = item[:market_hash_name]
           next unless names.include?(market_hash_name)
 
-          # new_market_hash_name = market_hash_name
+          new_market_hash_name = market_hash_name
           # if result[market_hash_name]
-          #   unless result[:class_id] == item[:classid].to_i && result[:instance_id] == item[:instanceid].to_i
-          #     new_market_hash_name = market_hash_name + "_" + item[:classid] + "_" + item[:instanceid]
-          #   end
+            # unless result[:class_id] == item[:classid].to_i && result[:instance_id] == item[:instanceid].to_i
+              # new_market_hash_name = market_hash_name + "_" + item[:classid] + "_" + item[:instanceid]
+            # end
           # end
-          # next if result[new_market_hash_name]
+          next if result[new_market_hash_name]
 
-          result[market_hash_name] = {
+          result[new_market_hash_name] = {
             # class_id: item[:classid].to_i,
             # instance_id: item[:instanceid].to_i,
             min: averages[market_hash_name.to_sym][:average] * min_percent,
@@ -155,10 +184,10 @@ module MarketAccount
           item_prices = select_item.map { |i| i[:price].to_f / 1000 }
 
           threads << Thread.new do
-            offer = item_prices.min
-            next if offer == limit[:price] && offer <= limit[:max]
+            best_offer = item_prices.min
+            next if best_offer == limit[:price] && best_offer <= limit[:max]
 
-            limit[:price] = correct_price(offer, limit, item_prices)
+            limit[:price] = correct_price(limit, item_prices)
             set_prices_v2(limit[:id], (limit[:price] * 1000).round)
           end
         end
@@ -183,11 +212,12 @@ module MarketAccount
       response if response.kind_of? Net::HTTPSuccess
     end
 
-    def correct_price(offer, limit, item_prices)
+    def correct_price(limit, item_prices)
       min = limit[:min]
       max = limit[:max]
-      price = offer - 0.001
-      if limit[:price] + 0.01 < offer || !(min..max).include?(price)
+      best_offer = item_prices - [limit[:price]]
+      price = best_offer - 0.001
+      if limit[:price] + 0.01 < best_offer || !(min..max).include?(price)
         # all prices may be less than the min threshold, then set the max. lol
         return item_prices.detect { |i_price| i_price >= min } || max - 0.001
       end
