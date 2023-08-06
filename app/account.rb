@@ -88,7 +88,7 @@ class Account
   def show_market_balance
     response = market_account.balance_v2
     if response.success?
-      balance = response.body[:money] * 0.001
+      balance = response.body[:money]
       puts "Current Balance: #{balance} USD"
     end
   end
