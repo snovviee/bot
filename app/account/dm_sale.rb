@@ -49,10 +49,9 @@ class DmSale
       dm_objects_by_title = get_dm_objects_by_title(title)
       item_prices = dm_objects_by_title.map { |i| i[:price][:USD].to_f / 100 }
       best_offer = item_prices.min
-
       next if best_offer == limit[:price] && best_offer <= limit[:max]
 
-      limit[:price] = correct_price(best_offer, limit, item_prices)
+      limit[:price] = correct_price(limit, item_prices)
       offers = limit[:dm_offers].map do |offer|
         {
           "OfferID" => offer[:offer_id],
@@ -75,9 +74,12 @@ class DmSale
     sorted_objects[0..count]
   end
 
-  def correct_price(best_offer, limit, item_prices)
+  def correct_price(limit, item_prices)
     min = limit[:min]
     max = limit[:max]
+    my_item_prices = limit[:dm_offers].map { |offer| offer[:price] }
+    item_prices_without_me = item_prices - my_item_prices
+    best_offer = item_prices_without_me.min
     price = best_offer - 0.01
     if limit[:price] + 0.1 < best_offer || !(min..max).include?(price)
       return item_prices.detect { |i_price| i_price >= min } || max - 0.01
