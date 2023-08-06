@@ -215,7 +215,8 @@ module MarketAccount
     def correct_price(limit, item_prices)
       min = limit[:min]
       max = limit[:max]
-      best_offer = item_prices - [limit[:price]]
+      item_prices_without_me = item_prices - [limit[:price]]
+      best_offer = item_prices_without_me.min
       price = best_offer - 0.001
       if limit[:price] + 0.01 < best_offer || !(min..max).include?(price)
         # all prices may be less than the min threshold, then set the max. lol
