@@ -93,6 +93,8 @@ module MarketAccount
           next unless actual_price
 
           select_item = results[name.to_sym]
+          next if select_item.nil?
+
           item_prices = select_item.map { |i| i[:price].to_f / 1000 }
           best_offer = item_prices.min
           result[name] = { my: (actual_price * sales_amount).round(3), best: (best_offer * sales_amount).round(3) }
