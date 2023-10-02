@@ -78,5 +78,21 @@
 		  "shared_secret": "",
 		  "identity_secret": ""
 		}
+	},
+	"steambotcsgo1551": {
+		"market": {
+		  "api_key": "ATT3D35e2E098HCKMTvRX7p1mD1cUFz",
+		  "steam_api_key": ""
+		},
+		"dmarket": {
+		  "api_key": "",
+		  "secret_key": ""
+		},
+		"steam": {
+		  "username": "steambotcsgo1551",
+		  "password": "Dvadcat1",
+		  "shared_secret": "WLdnCbMFoeC5mBcYX6T/76Y3A8A=",
+		  "identity_secret": "T0YIOEbIWEG9F2JufGZesyXNmas="
+		}
 	}
 }
