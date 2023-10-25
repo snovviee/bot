@@ -35,6 +35,7 @@ class SteamAccount
   end
 
   def auth_code!
+    logged
     puts fa(shared_secret)
   end
 
